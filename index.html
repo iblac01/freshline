@@ -389,6 +389,36 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
 .dropin .kb{border-color:rgba(255,255,255,.7);color:#fff;opacity:1}
 @media (max-width:560px){.m-big{font-size:38px}.pass-stub{width:64px}.tile{height:98px}}
 
+/* ---------- account ---------- */
+.acct-btn #acct-lbl{max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct-btn.on{border-color:rgba(255,106,61,.55)}
+#acct{position:fixed;inset:0;z-index:35;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(6,7,10,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.acct-card{position:relative;width:min(420px,100%);max-height:calc(100vh - 40px);overflow-y:auto;background:#0d0e11;border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px 28px 24px;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.acct-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.acct-h{font-size:40px;line-height:.95;margin:6px 0 8px}
+.acct-sub{margin:0 0 18px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.7)}
+.acct-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:12px;background:rgba(255,255,255,.06);margin-bottom:16px}
+.acct-tabs button{padding:9px 10px;border-radius:9px;font-size:13px;font-weight:700;color:rgba(255,255,255,.65);background:transparent;border:0;cursor:pointer}
+.acct-tabs button[aria-selected="true"]{background:#fff;color:#111}
+.acct-form{display:flex;flex-direction:column;gap:12px}
+.af{display:flex;flex-direction:column;gap:6px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.af input{font:500 15px "DM Sans",sans-serif;letter-spacing:0;text-transform:none;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:11px 12px;outline:none}
+.af input:focus{border-color:#ff6a3d;background:rgba(255,255,255,.09)}
+.acct-form.mode-in .up-only,.acct-form.mode-up .in-only{display:none}
+.acct-err{margin:0;min-height:18px;font-size:13px;color:#ff8a63}
+.acct-err.ok{color:#7fe0a8}
+.acct-go{width:100%;justify-content:space-between}
+.acct-go[disabled]{opacity:.6;pointer-events:none}
+.acct-link{align-self:center;font-size:13px;color:rgba(255,255,255,.6);text-decoration:underline;text-underline-offset:3px;background:none;border:0;padding:4px;cursor:pointer}
+.acct-x{color:#fff;cursor:pointer}
+.acct-off{margin:8px 0 0;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6);padding:12px;border-radius:10px;background:rgba(255,255,255,.05)}
+.acct-recs{display:flex;flex-direction:column;gap:6px;margin:4px 0 12px}
+.acct-recs div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.05);font-size:14px}
+.acct-recs b{font-family:var(--brush);font-weight:800;font-style:italic;font-size:20px;letter-spacing:.01em}
+.acct-recs .tot{background:rgba(255,106,61,.14)}
+.acct-sync{margin:0 0 14px;font-size:12px;color:rgba(255,255,255,.55)}
+.acct-out-btn{width:100%;padding:10px}
+@media (max-width:560px){.acct-btn #acct-lbl{display:none}.acct-card{padding:22px 18px 18px}.acct-h{font-size:34px}}
 /* ---------- news ---------- */
 #news{position:fixed;inset:0;z-index:4;background:#000;color:#fff}
 .nw-scroll{position:absolute;left:0;right:0;bottom:0;top:72px;overflow-y:auto;overscroll-behavior:contain;-webkit-mask-image:linear-gradient(transparent,#000 26px);mask-image:linear-gradient(transparent,#000 26px)}
@@ -440,6 +470,7 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
     <button type="button" class="tab brush" id="nav-locker">Locker</button>
     <button type="button" class="tab brush" id="nav-howto">How to play</button>
     <span class="sp"></span>
+    <button type="button" class="iconbtn acct-btn" id="lob-acct" aria-haspopup="dialog"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span id="acct-lbl">LOG IN</span></button>
     <button type="button" class="iconbtn" id="lob-music" aria-label="Music on or off" title="Music">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg>
     </button>
@@ -597,6 +628,34 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
 </div>
 
 <!-- SETTINGS -->
+<div id="acct" hidden role="dialog" aria-modal="true" aria-labelledby="acct-title">
+  <div class="acct-card">
+    <button type="button" class="acct-x" id="acct-x" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="acct-out">
+      <span class="nw-meta">Freshline account</span>
+      <h2 class="brush acct-h" id="acct-title">Save your records</h2>
+      <p class="acct-sub">Log in and your best score on every park is saved to your account, so it follows you to any computer or phone.</p>
+      <div class="acct-tabs" role="tablist"><button type="button" role="tab" data-am="in" aria-selected="true">Log in</button><button type="button" role="tab" data-am="up" aria-selected="false">Create account</button></div>
+      <form id="acct-form" class="acct-form" novalidate>
+        <label class="af up-only">Rider name<input id="af-name" maxlength="16" autocomplete="nickname" spellcheck="false" placeholder="3–16 letters, numbers or _"></label>
+        <label class="af">Email<input id="af-email" type="email" autocomplete="email" spellcheck="false" placeholder="you@example.com"></label>
+        <label class="af">Password<input id="af-pass" type="password" autocomplete="current-password" placeholder="At least 6 characters"></label>
+        <p class="acct-err" id="acct-err" role="alert"></p>
+        <button type="submit" class="dropin acct-go" id="acct-go"><span id="acct-go-t">Log in</span><span class="di-r"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button type="button" class="acct-link in-only" id="acct-forgot">Forgot your password?</button>
+      </form>
+      <p class="acct-off" id="acct-off" hidden>Online accounts aren't switched on for this copy of the game yet. Your records are still saved on this device.</p>
+    </div>
+    <div id="acct-in" hidden>
+      <span class="nw-meta">Logged in</span>
+      <h2 class="brush acct-h" id="acct-user">RIDER</h2>
+      <p class="acct-sub" id="acct-mail"></p>
+      <div class="acct-recs" id="acct-recs"></div>
+      <p class="acct-sync" id="acct-sync">Your records save to your account automatically.</p>
+      <button type="button" class="small-btn acct-out-btn" id="acct-logout">Log out</button>
+    </div>
+  </div>
+</div>
 <div id="settings" hidden>
   <div class="panel set-panel" role="dialog" aria-label="Settings">
     <button type="button" class="set-back" id="set-back2">‹ &nbsp;Back</button>
@@ -1768,7 +1827,7 @@ var keys={},pressed={},released={};
 var ALIAS={KeyJ:"ArrowLeft",KeyL:"ArrowRight",KeyK:"ArrowDown",ShiftRight:"ShiftLeft"};
 function code(e){return ALIAS[e.code]||e.code}
 window.addEventListener("keydown",function(e){
-  if(e.target&&e.target.tagName==="INPUT"&&e.target.type!=="range"){if(e.key==="Enter"){e.target.blur();e.preventDefault()}return}
+  if(e.target&&e.target.tagName==="INPUT"&&e.target.type!=="range"){if(e.target.closest&&e.target.closest("#acct-form"))return;if(e.key==="Enter"){e.target.blur();e.preventDefault()}return}
   var c=code(e);
   if(state==="ride"&&/^(Space|Arrow|Tab)/.test(c))e.preventDefault();
   if(!keys[c])pressed[c]=true;keys[c]=true;
@@ -2146,7 +2205,7 @@ function zoneName(){
 
 /* ---------- rider visual + camera ---------- */
 var camLook=new THREE.Vector3(),camInit=false;
-var fpEye=new THREE.Vector3(),fpQ=new THREE.Quaternion(),fpCam=new THREE.Quaternion(),fpWas=false,fpShown=null;
+var fpTmp=new THREE.Vector3(),fpEyeL=new THREE.Vector3(),fpEye=new THREE.Vector3(),fpQ=new THREE.Quaternion(),fpCam=new THREE.Quaternion(),fpWas=false,fpShown=null;
 // first-person mouse look: the cursor's spot on screen sets where you look (centre = straight ahead)
 var fpLook={x:0,y:0,tx:0,ty:0},fpLookQ=new THREE.Quaternion(),fpLookE=new THREE.Euler(0,0,0,"YXZ");
 window.addEventListener("mousemove",function(e){var nx=e.clientX/innerWidth*2-1,ny=e.clientY/innerHeight*2-1;
@@ -2298,9 +2357,14 @@ function updateRiderVisual(dt){
   // first person: camera in the goggles, turning with the head through spins and flips (third person during a crash)
   var fpOn=!!st.fp&&R.mode!=="crash";setFP(fpOn);
   if(fpOn){
-    rider.root.updateMatrixWorld(true);rider.head.updateWorldMatrix(true,false);
-    rider.head.localToWorld(fpEye.set(0,0.035,0.06));fpQ.setFromRotationMatrix(rider.head.matrixWorld);fpQ.multiply(FP_FLIP);
-    if(!fpWas)fpCam.copy(fpQ);else fpCam.slerp(fpQ,1-Math.exp(-(R.mode==="air"?16:12)*dt));
+    // the view turns with the whole body (steady through flips and spins), not with the head's nods and look-arounds;
+    // the eye sits where the head is, measured in the body's own frame and lightly smoothed so crouches and landings don't bob it
+    rider.root.updateMatrixWorld(true);
+    rider.head.getWorldPosition(fpTmp);rider.pivot.worldToLocal(fpTmp);fpTmp.z+=rider.board?0.24:0.1;fpTmp.y+=rider.board?0.08:0.035;
+    if(!fpWas)fpEyeL.copy(fpTmp);else fpEyeL.lerp(fpTmp,1-Math.exp(-10*dt));
+    fpEye.copy(fpEyeL);rider.pivot.localToWorld(fpEye);
+    rider.pivot.getWorldQuaternion(fpQ);fpQ.multiply(FP_FLIP);
+    if(!fpWas||Math.abs(fpCam.dot(fpQ))<0.2)fpCam.copy(fpQ);else fpCam.slerp(fpQ,1-Math.exp(-24*dt));
     // turn the view toward the cursor: up to ~110 degrees left/right and ~65 up/down
     fpLook.x=damp(fpLook.x,fpLook.tx,9,dt);fpLook.y=damp(fpLook.y,fpLook.ty,9,dt);
     fpLookE.set(-fpLook.y*1.15,-fpLook.x*1.9,0);fpLookQ.setFromEuler(fpLookE);
@@ -2400,8 +2464,79 @@ function splash(dur,then){
 }
 
 // lobby
+/* ================= ONLINE ACCOUNTS (Firebase) =================
+   Paste your Firebase web config here to switch on accounts, e.g.
+   var FIREBASE_CONFIG={apiKey:"...",authDomain:"...",projectId:"...",storageBucket:"...",messagingSenderId:"...",appId:"..."};   */
+var FIREBASE_CONFIG=null;
+var acctOpen=false,acctMode="in";
+function loadScript(src){return new Promise(function(ok,bad){var sc=document.createElement("script");sc.src=src;sc.onload=ok;sc.onerror=function(){bad(new Error("load"))};document.head.appendChild(sc)})}
+var Cloud={on:false,user:null,name:"",busy:false,
+  init:function(){
+    var cfg=window.__fbTestConfig||FIREBASE_CONFIG;if(!cfg)return;var self=this,V="https://www.gstatic.com/firebasejs/10.12.2/";
+    var ready=window.__fbMock?Promise.resolve():loadScript(V+"firebase-app-compat.js").then(function(){return Promise.all([loadScript(V+"firebase-auth-compat.js"),loadScript(V+"firebase-firestore-compat.js")])});
+    ready.then(function(){
+      var fb=window.__fbMock||window.firebase;if(!fb.apps||!fb.apps.length)fb.initializeApp(cfg);
+      self.auth=fb.auth();self.db=fb.firestore();self.on=true;
+      self.auth.onAuthStateChanged(function(u){self.user=u||null;if(u)self.pull();else{self.name="";acctRender()}});
+      acctRender();
+    }).catch(function(){acctRender()});
+  },
+  users:function(){return this.db.collection("users")},
+  names:function(){return this.db.collection("usernames")},
+  // on log in: keep the higher record for every park, then save the merged set to the account
+  pull:function(){var self=this,u=this.user;
+    this.users().doc(u.uid).get().then(function(d){
+      var cloud=(d.exists&&d.data())||{},cb=cloud.best||{},merged={},changed=false;
+      PARKS.forEach(function(pk){var a=cb[pk.id]||0,b=save.best[pk.id]||0;if(a||b)merged[pk.id]=Math.max(a,b);if(b>a)changed=true});
+      self.name=cloud.name||self.pendingName||(u.email||"").split("@")[0].slice(0,16).toUpperCase();
+      save.best=merged;save.name=self.name;persist();
+      if(!d.exists||changed||self.pendingName){self.users().doc(u.uid).set({name:self.name,best:merged,updated:Date.now()},{merge:true})}
+      self.pendingName="";afterAccountChange();
+    }).catch(function(){acctRender()});
+  },
+  push:function(){if(!this.on||!this.user)return;this.users().doc(this.user.uid).set({best:save.best,updated:Date.now()},{merge:true}).catch(function(){})},
+  signUp:function(name,email,pass){var self=this,key=name.toLowerCase();
+    return this.names().doc(key).get().then(function(d){if(d.exists)throw {code:"name-taken"};return self.auth.createUserWithEmailAndPassword(email,pass)})
+      .then(function(cred){self.pendingName=name.toUpperCase();return self.names().doc(key).set({uid:cred.user.uid}).then(function(){return self.users().doc(cred.user.uid).set({name:name.toUpperCase(),best:save.best,updated:Date.now()},{merge:true})})});
+  },
+  logIn:function(email,pass){return this.auth.signInWithEmailAndPassword(email,pass)},
+  reset:function(email){return this.auth.sendPasswordResetEmail(email)},
+  logOut:function(){var self=this;return this.auth.signOut().then(function(){save.best={};save.name="";persist();afterAccountChange()})}
+};
+function afterAccountChange(){var rn=$("#rname");if(rn){rn.value=save.name||"";rn.readOnly=!!Cloud.user;rn.title=Cloud.user?"Your account name":""}refreshBest();acctRender()}
+function acctErr(e){var c=(e&&e.code)||"";return ({"name-taken":"That rider name is already taken. Try another one.","auth/email-already-in-use":"There's already an account with that email. Try logging in.","auth/invalid-email":"That email doesn't look right.","auth/weak-password":"Your password needs at least 6 characters.","auth/missing-password":"Type your password.","auth/user-not-found":"Wrong email or password.","auth/wrong-password":"Wrong email or password.","auth/invalid-credential":"Wrong email or password.","auth/invalid-login-credentials":"Wrong email or password.","auth/too-many-requests":"Too many tries. Wait a minute and try again.","auth/network-request-failed":"Can't reach the server. Check your internet and try again."})[c]||"Something went wrong. Please try again."}
+function acctRender(){
+  var lbl=$("#acct-lbl"),btn=$("#lob-acct");if(!lbl)return;
+  lbl.textContent=Cloud.user?(Cloud.name||"ACCOUNT"):"LOG IN";btn.classList.toggle("on",!!Cloud.user);btn.setAttribute("aria-label",Cloud.user?"Account: "+(Cloud.name||""):"Log in or create an account");
+  $("#acct-out").hidden=!!Cloud.user;$("#acct-in").hidden=!Cloud.user;
+  var configured=!!(window.__fbTestConfig||FIREBASE_CONFIG);$("#acct-form").hidden=!configured;$(".acct-tabs").hidden=!configured;$("#acct-off").hidden=configured;
+  var f=$("#acct-form");f.classList.toggle("mode-in",acctMode==="in");f.classList.toggle("mode-up",acctMode==="up");
+  document.querySelectorAll(".acct-tabs button").forEach(function(b){b.setAttribute("aria-selected",b.getAttribute("data-am")===acctMode)});
+  $("#acct-go-t").textContent=acctMode==="in"?"Log in":"Create account";$("#af-pass").setAttribute("autocomplete",acctMode==="in"?"current-password":"new-password");
+  if(Cloud.user){$("#acct-user").textContent=Cloud.name||"RIDER";$("#acct-mail").textContent=Cloud.user.email||"";
+    var h="",tot=0;PARKS.forEach(function(pk){var v=save.best[pk.id]||0;tot+=v;h+="<div><span>"+pk.name+"</span><b>"+(v?fmt(v):"—")+"</b></div>"});
+    h+="<div class='tot'><span>Total</span><b>"+fmt(tot)+"</b></div>";$("#acct-recs").innerHTML=h}
+}
+function openAcct(){acctOpen=true;$("#acct").hidden=false;$("#acct-err").textContent="";$("#acct-err").className="acct-err";acctRender();setTimeout(function(){var el=Cloud.user?$("#acct-logout"):(acctMode==="up"?$("#af-name"):$("#af-email"));if(el&&!el.closest("[hidden]"))el.focus();else $("#acct-x").focus()},30)}
+function closeAcct(){acctOpen=false;$("#acct").hidden=true;$("#lob-acct").focus()}
 var rname=$("#rname");rname.value=save.name||"";
-rname.addEventListener("input",function(){save.name=rname.value.toUpperCase();persist()});
+rname.addEventListener("input",function(){if(Cloud.user)return;save.name=rname.value.toUpperCase();persist()});
+$("#lob-acct").addEventListener("click",openAcct);$("#acct-x").addEventListener("click",closeAcct);
+$("#acct").addEventListener("click",function(e){if(e.target.id==="acct")closeAcct()});
+document.querySelectorAll(".acct-tabs button").forEach(function(b){b.addEventListener("click",function(){acctMode=b.getAttribute("data-am");$("#acct-err").textContent="";acctRender()})});
+$("#acct-form").addEventListener("submit",function(e){e.preventDefault();if(Cloud.busy||!Cloud.on)return;
+  var name=$("#af-name").value.trim(),email=$("#af-email").value.trim(),pass=$("#af-pass").value,err=$("#acct-err");err.className="acct-err";
+  if(acctMode==="up"&&!/^[A-Za-z0-9_]{3,16}$/.test(name)){err.textContent="Rider name: 3–16 letters, numbers or _ (no spaces).";return}
+  if(!email){err.textContent="Type your email.";return}if(pass.length<6){err.textContent="Your password needs at least 6 characters.";return}
+  Cloud.busy=true;$("#acct-go").disabled=true;err.textContent=acctMode==="up"?"Creating your account…":"Logging in…";err.className="acct-err ok";
+  (acctMode==="up"?Cloud.signUp(name,email,pass):Cloud.logIn(email,pass)).then(function(){err.textContent="";$("#af-pass").value=""})
+    .catch(function(x){err.className="acct-err";err.textContent=acctErr(x)}).then(function(){Cloud.busy=false;$("#acct-go").disabled=false});
+});
+$("#acct-forgot").addEventListener("click",function(){var email=$("#af-email").value.trim(),err=$("#acct-err");if(!Cloud.on)return;
+  if(!email){err.className="acct-err";err.textContent="Type your email above first, then press this again.";return}
+  Cloud.reset(email).then(function(){err.className="acct-err ok";err.textContent="Check your email for a link to reset your password."}).catch(function(x){err.className="acct-err";err.textContent=acctErr(x)})});
+$("#acct-logout").addEventListener("click",function(){Cloud.logOut()});
+acctRender();Cloud.init();
 var DAILY=["CORK 720","720","BIO 540","BACKFLIP","FLATSPIN 540","CORK 540","540","FRONTFLIP","SIDEFLIP","BIO 720","CORK 1080","360"];
 function todayKey(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
 function dailyTrick(){var d=new Date();return DAILY[Math.floor((d.getTime()-d.getTimezoneOffset()*60000)/86400000)%DAILY.length]}
@@ -2552,7 +2687,7 @@ $("#r-lobby").addEventListener("click",goLobby);
 function finishRun(){
   S.finished=true;
   var p=PARKS[parkIdx],prev=save.best[p.id]||0,pb=S.score>prev;
-  if(pb&&S.score>0){save.best[p.id]=Math.round(S.score);persist()}
+  if(pb&&S.score>0){save.best[p.id]=Math.round(S.score);persist();Cloud.push()}
   clearTimeout(finTimer);finTimer=setTimeout(function(){
     $("#r-park").textContent=p.name+" · Solo";$("#r-score").textContent=fmt(S.score);
     $("#r-pb").textContent=pb&&S.score>0?"New personal best!":(prev?"Personal best "+fmt(prev):"");
@@ -2565,6 +2700,7 @@ function finishRun(){
 }
 
 function globalKey(c,e){
+  if(acctOpen){if(c==="Escape"){closeAcct();e.preventDefault()}return}
   if(overlay){if(c==="Escape"){closeSettings();e.preventDefault()}return}
   if(baseMenu){if(c==="Escape"){closeMenu();e.preventDefault()}return}
   if(state==="lobby"){if(c==="Escape"){openMenu();return}if(c==="KeyN"){cycleLight();return}if(c==="Enter"&&(!document.activeElement||document.activeElement.tagName!=="BUTTON")){e.preventDefault();openParks()}}
