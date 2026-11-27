@@ -138,6 +138,39 @@ button{cursor:pointer}
 .pinfo p{font-size:14px;color:#c9cdd2;line-height:1.45}
 .pinfo .pb{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--ice);text-transform:uppercase}
 .pinfo .pill{margin-top:6px}
+.pmode{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.pmode[hidden]{display:none}
+.pmode button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;text-align:left;font-family:inherit}
+.pmode button b{font-size:14px;font-weight:800}
+.pmode button small{font-size:11px;color:rgba(255,255,255,.55)}
+.pmode button[aria-checked=true]{border-color:#ff6a3d;background:rgba(255,106,61,.16)}
+.h-map .dist.hurry{color:#ff6a3d;animation:hurry .5s ease-in-out infinite alternate}
+@keyframes hurry{to{transform:scale(1.12)}}
+.trick.gap b{color:#ffd27a}
+.pm-sel{position:relative;display:flex;gap:6px;margin:6px 0 2px}
+.pm-sel[hidden]{display:none}
+.pm-sel button{flex:1;font:800 11px "DM Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 4px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:rgba(255,255,255,.75);cursor:pointer}
+.pm-sel button[aria-checked=true]{background:#ff6a3d;border-color:#ff6a3d;color:#fff}
+.h-pg{position:absolute;top:150px;right:28px;min-width:220px;padding:10px 12px;border-radius:12px;background:rgba(10,11,14,.55);color:#fff;pointer-events:none;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.h-pg[hidden]{display:none}
+.h-pg h5{margin:0 0 6px;font:800 11px "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.h-pg .r{display:flex;justify-content:space-between;gap:14px;font-size:14px;font-weight:700;padding:2px 0}
+.h-pg .r.me{color:#ffb08f}
+.h-pg .r.out{opacity:.45;text-decoration:line-through}
+.h-pg .lt{letter-spacing:.2em;font-weight:900}
+.h-pg .lt i{font-style:normal;opacity:.25}
+.h-pg .pg-ph{margin-top:8px;font-size:13px;font-weight:700;color:#ffd27a;white-space:normal;max-width:260px}
+.r-battle{margin:6px 0 2px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06)}
+.r-battle[hidden]{display:none}
+.r-battle b.win{display:block;margin-bottom:6px;color:#ffd27a;font-size:15px}
+.r-battle .r{display:flex;justify-content:space-between;font-size:14px;padding:2px 0}
+.r-battle .r.me{color:#ffb08f;font-weight:800}
+.h-clock{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:44px;line-height:1;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35);pointer-events:none}
+.h-clock[hidden]{display:none}
+.h-bal{position:absolute;left:50%;bottom:178px;transform:translateX(-50%);width:180px;height:8px;border-radius:4px;background:linear-gradient(90deg,#ff6a3d,#ffd27a 30%,#7fe0a0 50%,#ffd27a 70%,#ff6a3d);opacity:.9;pointer-events:none}
+.h-bal[hidden]{display:none}
+.h-bal i{position:absolute;top:-4px;width:4px;height:16px;margin-left:-2px;border-radius:2px;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.5)}
+.h-clock.hurry{color:#ff6a3d;animation:hurry .5s ease-in-out infinite alternate}
 .lb{margin-top:2px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
 .lb-h{display:flex;justify-content:space-between;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .lb ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;max-height:226px;overflow-y:auto}
@@ -154,6 +187,16 @@ button{cursor:pointer}
 #locker{position:fixed;top:86px;right:36px;bottom:20px;width:350px;max-width:calc(100% - 32px);padding:18px 20px;display:flex;flex-direction:column;gap:11px;overflow-y:auto}
 #locker h2{font-size:40px;line-height:1}
 .opt{display:flex;flex-direction:column;gap:8px}
+#replay{position:fixed;left:50%;top:22px;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;background:rgba(10,11,14,.6);color:#fff;font-size:13px;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+#replay[hidden]{display:none}
+#replay b{font-size:22px;color:#ff6a3d}
+#replay small{color:rgba(255,255,255,.65);font-weight:600}
+.rp-dot{width:10px;height:10px;border-radius:50%;background:#ff3d3d;animation:hurry .6s ease-in-out infinite alternate}
+.binds{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.binds button{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;font-size:12px;text-align:left;cursor:pointer}
+.binds button b{flex:none;min-width:44px;text-align:center;padding:3px 6px;border-radius:6px;background:rgba(255,255,255,.12);font-size:12px}
+.binds button.wait b{background:#ff6a3d}
+.binds button.custom b{background:rgba(255,106,61,.35)}
 .segs{display:flex;gap:4px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px;padding:4px}
 .segs button{flex:1;background:none;border:0;border-radius:7px;padding:8px 10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .segs button[aria-pressed="true"]{background:var(--paper);color:#141517}
@@ -365,6 +408,13 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
 .tm.k.on{transform:rotate(45deg) scale(.9)}
 .tm-n{font-size:11px;font-weight:600;color:#6a7385;margin-left:2px}
 .tm-n b{color:#1b2230;font-weight:800}
+.pass-xp{display:block;height:4px;border-radius:2px;background:rgba(27,34,48,.12);margin:2px 0 6px;overflow:hidden}
+.pass-xp u{display:block;height:100%;width:0;background:#ff6a3d;border-radius:2px}
+.r-xp{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:13px;font-weight:700;color:rgba(255,255,255,.8)}
+.r-xp i{order:3;flex:1 0 100%}
+#results .res{max-height:calc(100vh - 32px);overflow-y:auto;overscroll-behavior:contain}
+.r-xp i{height:6px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden}.r-xp i u{display:block;height:100%;background:#ff6a3d}
+.r-xp b{color:#ffd27a}
 .pass-best{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1b2230}
 .pass-stub{position:relative;width:78px;flex:none;border-left:2px dashed rgba(27,34,48,.2);display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:6px;padding:12px 0 10px}
 .pass-stub .hole{width:14px;height:14px;border-radius:50%;background:rgba(27,34,48,.14);box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
@@ -580,6 +630,7 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
 .trails{flex-wrap:wrap;gap:6px}.trails .tm{width:13px;height:13px}
 /* ---------- global chat ---------- */
 .chat-btn{position:relative}
+body.cur-hide,body.cur-hide *{cursor:none!important}
 .topnav .tab{white-space:nowrap}
 @media (max-width:1560px){.topnav .chat-btn .chat-lbl{display:none}}
 .chat-tabs{display:flex;gap:6px;padding:10px 12px 0}
@@ -776,9 +827,10 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
   <div class="lob-col">
     <section class="pass" aria-label="Rider lift pass">
       <div class="pass-main">
-        <div class="pass-head"><span class="pass-brand">Freshline</span><span class="pass-kind">Season lift pass</span></div>
+        <div class="pass-head"><span class="pass-brand">Freshline</span><span class="pass-kind" id="pass-lvl">Season lift pass</span></div>
         <label class="pass-label" for="rname">Rider</label>
         <input id="rname" maxlength="16" aria-label="Rider name" placeholder="Your name">
+        <i class="pass-xp" title="Rider XP"><u id="pass-xpb"></u></i>
         <div class="pass-foot">
           <div class="trails" aria-label="Parks with a best score"><span class="tm g" title="Bluebird Park" id="tm-0"></span><span class="tm b" title="Pine Alley" id="tm-1"></span><span class="tm k" title="Summit Line" id="tm-2"></span><span class="tm g" title="Whoop Woods" id="tm-3"></span><span class="tm b" title="Rail Yard" id="tm-4"></span><span class="tm b" title="Frost Skatepark" id="tm-5"></span><span class="tm kk" title="Titan Air" id="tm-6"></span><span class="tm-n"><b id="rc-n">0</b>/7 parks</span></div>
           <span class="pass-best" id="rider-best">Set a best on every park</span>
@@ -800,6 +852,9 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
       </svg>
       <span class="m-cap">Game mode · Free ride</span>
       <span class="m-big">Solo</span>
+      <div class="pm-sel" id="pm-sel" role="radiogroup" aria-label="Party game" hidden>
+        <button type="button" role="radio" data-pm="ride">Ride together</button><button type="button" role="radio" data-pm="battle">Trick battle</button><button type="button" role="radio" data-pm="skate">S.K.A.T.E.</button>
+      </div>
       <p>7 parks open · ride at your own pace</p>
       <button type="button" class="dropin" id="ride"><span>Drop in</span><span class="di-r"><span class="kb">ENTER</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
     </section>
@@ -881,6 +936,10 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
     <p id="pi-desc"></p>
     <span class="pb" id="pi-best"></span>
     <section class="lb" id="lb" hidden aria-label="Leaderboard"><div class="lb-h"><span>Top riders</span><span class="lb-n" id="lb-n"></span></div><ol id="lb-list"></ol></section>
+    <div class="pmode" id="pmode" role="radiogroup" aria-label="Session type" hidden>
+      <button type="button" role="radio" data-m="timed"><b>2:00 Session</b><small>Scored · leaderboard</small></button>
+      <button type="button" role="radio" data-m="free"><b>Free ride</b><small>No clock · just ride</small></button>
+    </div>
     <button type="button" class="pill" id="drop"><span class="brush">Ride solo</span><span class="arrow">↗</span></button>
   </aside>
 </div>
@@ -916,11 +975,14 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
   <button type="button" class="iconbtn menubtn" id="h-menu"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>MENU <span class="kb">ESC</span></button>
   <div class="h-score sh"><div class="lab brush">Score</div><div class="val brush" id="h-score">0</div></div>
   <div id="h-keys">
-    <span class="kb">A</span><span class="kb">D</span> carve/spin · <span class="kb">W</span> tuck/front · <span class="kb">S</span> brake/back · <span class="kb">SPACE</span> load + pop · <span class="kb">←</span><span class="kb">→</span>/<span class="kb">J</span><span class="kb">L</span> roll · <span class="kb">↓</span>/<span class="kb">K</span> chill<br>
-    <span class="kb">SHIFT</span><span class="kb">Q</span><span class="kb">E</span> grabs · <span class="kb">B</span> butter · <span class="kb">R</span> restart · <span class="kb">N</span> day/night · <span class="kb">V</span> view · <span class="kb">H</span> hide hints
+    <span class="kb">A</span><span class="kb">D</span> carve/spin · <span class="kb">W</span> <span class="kh-w">tuck/front</span> · <span class="kb">S</span> <span class="kh-s">brake/back</span> · <span class="kb">SPACE</span> load + pop · <span class="kb">←</span><span class="kb">→</span>/<span class="kb">J</span><span class="kb">L</span> roll · <span class="kb">↓</span>/<span class="kb">K</span> chill<br>
+    <span class="kb">SHIFT</span><span class="kb">Q</span><span class="kb">E</span> grabs · <span class="kb">B</span> <span class="kh-b">butter</span> · <span class="kb">R</span> <span class="kh-r">restart</span> · <span class="kb">N</span> day/night · <span class="kb">V</span> view · <span class="kb">H</span> hide hints
   </div>
   <div id="live" class="brush sh"></div>
   <div id="pop" class="sh"></div>
+  <div class="h-clock brush" id="h-clock" hidden>2:00</div>
+  <div class="h-bal" id="h-bal" hidden><i></i></div>
+  <div class="h-pg" id="h-pg" hidden></div>
   <div class="h-line" id="h-line"><span class="lab brush">Line</span><span class="v brush" id="h-lpts">0</span><span class="m brush" id="h-lmult"></span><div class="bar"><i id="h-lbar"></i></div></div>
   <div class="charge" id="h-chargew"><i id="h-charge"></i></div>
   <div id="h-hint" class="brush sh" hidden></div>
@@ -945,6 +1007,8 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
     <div data-ctx="ride">
       <div class="dr-sep"></div>
       <button type="button" class="row-btn" id="dr-restart"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span><b>Restart run</b><small>Back to the top of the park</small></span><span class="kb" style="margin-left:auto">R</span></button>
+      <button type="button" class="row-btn" id="dr-replay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span><b>Instant replay</b><small>Watch your last 12 seconds</small></span><span class="kb" style="margin-left:auto">T</span></button>
+      <button type="button" class="row-btn" id="dr-end" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><span><b>End session</b><small>Bank your score and see the results</small></span></button>
       <button type="button" class="row-btn" id="dr-park2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m3 20 6-12 4 7 3-4 5 9z"/></svg><span><b>Change park</b></span></button>
       <button type="button" class="row-btn danger" id="dr-lobby"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l-5-5 5-5M5 12h11M14 4h5v16h-5"/></svg><span><b>Return to lobby</b></span></button>
     </div>
@@ -974,6 +1038,7 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
   <p class="chat-note" id="fr-note"></p>
   <div class="fr-body" id="fr-body"></div>
 </aside>
+<div id="replay" hidden><span class="rp-dot"></span><b class="brush">Replay</b><span id="rp-cam">Chase cam</span><small><span class="kb">C</span> camera · <span class="kb">SPACE</span> slow-mo · <span class="kb">ESC</span> back</small></div>
 <div id="mp-tags" aria-hidden="true"></div>
 <button type="button" id="mp-add" hidden aria-label="Invite friends to your party"><span>+</span><small>Invite</small></button>
 <div id="mp-toasts" role="status" aria-live="polite"></div>
@@ -1043,6 +1108,8 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
       </div>
       <div data-pane="controls">
         <div class="sec"><div class="opt-row"><div><b>Auto landing</b><p>On: let go of your spin and flip keys near the snow and a nearly finished trick turns round by itself. Off: you land every trick yourself.</p></div><div class="segs" data-set="autoland"><button type="button" data-v="1">On</button><button type="button" data-v="0">Off</button></div></div></div>
+        <div class="sec"><span class="cap">Key bindings</span><p class="set-note">Click an action, then press the key you want for it. Esc cancels.</p><div class="binds" id="binds"></div><button type="button" class="ghost" id="binds-reset" style="margin-top:8px">Reset to defaults</button></div>
+        <div class="sec"><div class="opt-row"><div><b>Ghost of your best run</b><p>On the downhill parks, a see-through rider replays your personal best so you can race it. G turns it on or off while riding.</p></div><div class="segs" data-set="ghost"><button type="button" data-v="1">On</button><button type="button" data-v="0">Off</button></div></div></div>
         <div class="sec"><span class="cap">Keys</span>
           <dl class="ctrl">
             <dt>A / D</dt><dd>Carve on snow, spin in the air. Hold with S for a cork, with W for a bio, or with a roll key for a flatspin.</dd>
@@ -1083,12 +1150,15 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
     <h2 class="brush">Run complete</h2>
     <div class="score" id="r-score">0</div>
     <span class="pbm" id="r-pb"></span>
+    <div class="r-battle" id="r-battle" hidden></div>
+    <div class="r-xp" id="r-xp"><span id="r-xp-t">+0 XP</span><i><u id="r-xp-b"></u></i><b id="r-xp-l">LVL 1</b></div>
     <div class="r-flk" id="r-flk"><svg class="flk" width="26" height="26" aria-hidden="true"><use href="#flake-coin"/></svg><b id="r-flk-n">+0</b><span>Flakes</span><small id="r-flk-why"></small></div>
     <dl><dt>Tricks &amp; airtime</dt><dd id="r-s1"></dd><dt>Grabs</dt><dd id="r-s2"></dd><dt>Rails</dt><dd id="r-s3"></dd><dt>Stomped landings</dt><dd id="r-s4"></dd></dl>
     <dl class="small-dl"><dt>Time</dt><dd id="r-time"></dd><dt>Tricks landed</dt><dd id="r-tricks"></dd><dt>Crashes</dt><dd id="r-crash"></dd><dt>Top speed</dt><dd id="r-speed"></dd></dl>
     <span class="cap">Best tricks</span>
     <ol class="toplist" id="r-top"></ol>
     <button type="button" class="pill" id="r-again"><span class="brush">Ride again</span><span class="kb">R</span></button>
+    <button type="button" class="ghost" id="r-replay">Watch replay <span class="kb">T</span></button>
     <button type="button" class="ghost" id="r-parks">Change park</button>
     <button type="button" class="ghost" id="r-lobby">Return to lobby</button>
   </div>
@@ -1141,15 +1211,36 @@ var PARKS=[
    rows:[[60,["r",20,-24],["r",26,0],["r",20,24]],[140,["k","S",-16],["r",30,16]],[220,["r",14,-30],["r",14,-10],["r",14,10],["r",14,30]],[300,["k","M",0]],
          [390,["r",36,-12],["r",36,12]],[475,["k","S",-20],["k","S",0],["k","S",20]],[560,["r",18,-26],["r",30,0],["r",18,26]],[650,["k","M",-14],["r",26,16]],
          [735,["r",44,0],["r",16,-28],["r",16,28]],[820,["k","S",-16],["k","S",16]],[900,["r",22,-20],["r",22,0],["r",22,20]],[990,["r",40,-12],["r",40,12]],[1070,["k","M",0]]]},
-  {id:"skate",vs:60,slope:0.6,name:"Frost Skatepark",diff:"Medium",desc:"A snow skatepark instead of a straight line down: a full superpipe, a wide bowl with a box and a kicker in the middle, a mini ramp and rail boxes. Carve wall to wall, air out of the pipe and land back in.",end:1010,
-   rows:[[40,["k","S",0]],[90,["p",300,0,8,7,5.2]],[430,["r",16,-14],["r",20,0],["r",16,14]],
-         [490,["p",160,0,19,6,4.2]],[545,["r",18,0]],[600,["k","S",0]],
-         [700,["p",200,0,6,5,3.4]],[945,["k","M",0]]]},
+  {id:"skate",free:true,vs:62,name:"Frost Skatepark",diff:"Medium",desc:"A real skatepark buried in snow. No hill: push to build speed, hang out on the decks, drop in, carve the bowl, air out of the halfpipe and grind the rails. Ride as long as you like.",end:150,spawn:[0,-8,0],
+   parts:[{t:"rim",cx:0,cz:75,ax:60,az:75,rc:12,tw:4.5,H:3.6,dk:7},
+     {t:"pipe",nm:"Halfpipe",cx:-32,cz:62,ax:4.5,az:46,tw:5,H:4,dk:3,bk:11,tp:10},
+     {t:"bowl",nm:"Bowl",cx:30,cz:45,ax:8,az:12,rc:6,tw:4,H:3.3,dk:3,bk:9},
+     {t:"pipe",nm:"Mini ramp",cx:-30,cz:128,ax:2.5,az:14,tw:3,H:2.1,dk:2.5,bk:5,tp:5},
+     {t:"ramp",nm:"Deck ramp",cx:-44,w:2.5,z0:9,z1:-4.5,H:3.6},{t:"ramp",nm:"Deck ramp",cx:44,w:2.5,z0:9,z1:-4.5,H:3.6},
+     {t:"ramp",nm:"Deck ramp",cx:14,w:2.5,z0:141,z1:154.5,H:3.6},
+     {t:"box",nm:"Funbox",cx:30,cz:118,ax:5,az:10,rc:1.5,H:1.3,sl:3.5},
+     {t:"box",nm:"Hip",cx:0,cz:95,ax:3,az:3,rc:1,H:1.1,sl:3.2},
+     {t:"rail",nm:"Rail garden",x:-1.5,z0:20,len:12},{t:"rail",nm:"Rail garden",x:-1.5,z0:45,len:12},
+     {t:"rail",nm:"Funbox rail",x:30,z0:110,len:12},{t:"rail",nm:"Flat bar",x:4,z0:116,len:12},
+     {t:"spine",nm:"Spine",cx:50,cz:92,ax:8,tw:3.5,H:2.4,tp:3},
+     {t:"box",nm:"Ledge",cx:49.5,cz:112,ax:6.5,az:0.3,rc:0.1,H:0.45,sl:0.25},
+     {t:"box",nm:"Stair set",cx:49.5,cz:138,ax:7,az:6,rc:0.6,H:1.6,sl:0.7},
+     {t:"stair",nm:"Stair set",x0:42.5,x1:56.5,zb:124,zt:132.2,H:1.6}],
+   lines:[{kind:"handrail",nm:"Handrail",pts:[[49.5,134],[49.5,132.2],[49.5,124],[49.5,122.6]],ys:[2.5,2.5,0.9,0.9]},
+     {kind:"ledge",nm:"Ledge",pts:[[43.2,112],[55.8,112]],ys:[0.5,0.5]}],rows:[]},
   {id:"titan",vs:122,slope:1.2,glide:0.5,name:"Titan Air",diff:"Insane",desc:"The biggest air on the mountain. A steep, fast pitch into giant XXL and MEGA kickers with ten metres of height and three seconds of hang time. Commit.",end:1400,
    rows:[[150,["k","XXL",0]],[420,["k","MEGA",0]],[690,["k","XXL",-18],["k","XXL",18]],[960,["k","MEGA",0]],[1210,["k","MEGA",0]]]}
 ];
 var P=null;
 function setupPark(def){
+  if(def.free){
+    // flat skatepark: built from shapes (rim, pipes, bowl, boxes, rails) instead of a slope with features on it
+    var fp={def:def,free:true,vs:def.vs,slope:0,glide:1,feats:[],rails:[],parts:[],end:def.end,zMin:-60,zMax:def.end+60,base:new Float32Array(4),bst:1e9};
+    def.parts.forEach(function(q){var o=Object.assign({},q);if(o.t==="rail"){o.type="r";o.zs=o.z0+2.5;o.ze=o.zs+o.len;fp.rails.push(o)}else{o.type="part";fp.parts.push(o)}fp.feats.push(o)});
+    var P0=P;P=fp;fp.rails.forEach(function(r){r.yb=freeBase(r.x,r.zs+r.len/2)});P=P0;
+    fp.copes=buildCopes(fp);
+    return fp;
+  }
   var p={def:def,vs:def.vs,slope:def.slope||1,glide:def.glide||1,feats:[],rails:[],end:def.end,zMin:-70,zMax:def.end+700};
   def.rows.forEach(function(row){
     var z=row[0];
@@ -1169,13 +1260,132 @@ function setupPark(def){
 }
 function baseZ(z){var f=(z-P.zMin)/P.bst,i=Math.floor(f);if(i<0)return P.base[0];if(i>=P.base.length-1)return P.base[P.base.length-1];var t=f-i;return P.base[i]*(1-t)+P.base[i+1]*t}
 function baseH(x,z){
+  if(P.free)return 0;
   var y=baseZ(z),ax=Math.abs(x);
   if(ax>HW){var d=ax-HW;y+=d<20?d*d*0.02:8+(d-20)*0.8}
   y+=0.5*ss(HW-2,HW+14,ax)*Math.sin(z*0.06+x*0.09);
   if(z<-30){var e=-30-z;y+=e*e*0.08}
   return y;
 }
+/* ---- flat skatepark shapes ---- */
+var FA=0.94,FK=1-Math.sqrt(1-FA*FA),FM=1;
+// a skatepark transition: a circular curve that is nearly vertical at the coping
+function tProf(u){u=u<0?0:u>1?1:u;return (1-Math.sqrt(1-FA*FA*u*u))/FK}
+function sdRR(x,z,q){var qx=Math.abs(x-q.cx)-q.ax+q.rc,qz=Math.abs(z-q.cz)-q.az+q.rc;return Math.hypot(Math.max(qx,0),Math.max(qz,0))+Math.min(Math.max(qx,qz),0)-q.rc}
+// distance out from a shape's flat floor (pipes are open at both ends and shrink away there)
+function partD(q,x,z){
+  if(q.t==="pipe"){var u=Math.abs(z-q.cz);if(u>q.az){FM=0;return null}FM=ss(0,q.tp,q.az-u);return Math.abs(x-q.cx)-q.ax}
+  FM=1;return sdRR(x,z,q);
+}
+function partH(q,x,z){
+  if(q.t==="spine"){var su=Math.abs(x-q.cx);if(su>q.ax)return 0;var sm=ss(0,q.tp,q.ax-su),sd=Math.abs(z-q.cz);if(sd>=q.tw||sm<=0)return 0;return q.H*tProf((q.tw-sd)/q.tw)*sm}
+  if(q.t==="stair"){if(z<q.zb||z>q.zt+0.3)return 0;var se=1-ss(0,0.6,Math.max(q.x0-x,x-q.x1,0));if(se<=0||x<q.x0-0.6||x>q.x1+0.6)return 0;return q.H*clamp((z-q.zb)/(q.zt-q.zb),0,1)*se}
+  if(q.t==="ramp"){var u=(z-q.z0)/(q.z1-q.z0);if(u<=0)return 0;var mr=1-ss(q.w,q.w+1.4,Math.abs(x-q.cx));return mr<=0?0:q.H*Math.min(u,1)*mr}
+  var d=partD(q,x,z);if(d===null||FM<=0)return 0;
+  if(q.t==="box")return d<=0?q.H:d>=q.sl?0:q.H*(1-ss(0,q.sl,d));
+  if(d<=0)return 0;var h,e;
+  if(d<=q.tw)h=q.H*tProf(d/q.tw);
+  else if(d<=q.tw+q.dk)h=q.H;
+  else if(q.t==="rim"){e=d-q.tw-q.dk;h=q.H+Math.min(e,30)*0.3*ss(0,5,e)+(e>30?(e-30)*0.12:0)}
+  else{e=d-q.tw-q.dk;h=e>=q.bk?0:q.H*(1-ss(0,q.bk,e))}
+  return h*FM;
+}
+function insideOf(x,z){for(var i=0;i<P.parts.length;i++){var q=P.parts[i];if(q.t!=="pipe"&&q.t!=="bowl")continue;var d=partD(q,x,z);if(d!==null&&d<=0&&FM>0.3)return q}return null}
+/* ---- grindable coping on every lip ---- */
+function buildCopes(fp){
+  var out=[];
+  fp.parts.forEach(function(q){
+    var c=null;
+    if(q.t==="pipe")[-1,1].forEach(function(sg){var x=q.cx+sg*(q.ax+q.tw);out.push(copeMake(q,[[x,q.cz-q.az+q.tp],[x,q.cz+q.az-q.tp]],false,[-sg,0]))});
+    else if(q.t==="rim"||q.t==="bowl"){
+      var ax=q.ax-q.rc,az=q.az-q.rc,rc=q.rc+q.tw,N=10,pts=[];
+      [[1,1,0],[-1,1,Math.PI/2],[-1,-1,Math.PI],[1,-1,Math.PI*1.5]].forEach(function(k){for(var t=0;t<=N;t++){var a=k[2]+t/N*Math.PI/2;pts.push([q.cx+k[0]*ax+Math.cos(a)*rc,q.cz+k[1]*az+Math.sin(a)*rc])}});
+      out.push(copeMake(q,pts,true,null));
+    }
+  });
+  (fp.def.lines||[]).forEach(function(L){var c=copeMake(null,L.pts,false,[0,0]);c.ys=L.ys;c.y=L.ys[0];c.nm=L.nm;c.kind=L.kind;c.solid=L.kind==="handrail";out.push(c)});
+  return out;
+}
+function copeMake(q,pts,closed,inw){
+  var cum=[0],n=pts.length,segs=closed?n:n-1;
+  for(var i=0;i<segs;i++){var a=pts[i],b=pts[(i+1)%n];cum.push(cum[i]+Math.hypot(b[0]-a[0],b[1]-a[1]))}
+  return {cope:true,q:q,pts:pts,closed:closed,cum:cum,len:cum[segs],segs:segs,y:q?q.H+0.13:0,inw:inw,nm:(q&&q.nm)||"Quarter pipe",kind:"coping"};
+}
+// point and direction at a distance along the coping
+function copeAt(c,s,o){
+  if(c.closed){s=((s%c.len)+c.len)%c.len}else s=clamp(s,0,c.len);
+  var i=0;while(i<c.segs-1&&c.cum[i+1]<s)i++;
+  var a=c.pts[i],b=c.pts[(i+1)%c.pts.length],L=c.cum[i+1]-c.cum[i]||1,t=(s-c.cum[i])/L;
+  o.x=a[0]+(b[0]-a[0])*t;o.z=a[1]+(b[1]-a[1])*t;o.tx=(b[0]-a[0])/L;o.tz=(b[1]-a[1])/L;o.s=s;
+  o.y=c.ys?c.ys[i]+(c.ys[(i+1)%c.ys.length]-c.ys[i])*t:c.y;return o;
+}
+// nearest spot on the coping to (x,z)
+function copeNear(c,x,z,o){
+  var best=1e9;
+  for(var i=0;i<c.segs;i++){var a=c.pts[i],b=c.pts[(i+1)%c.pts.length],dx=b[0]-a[0],dz=b[1]-a[1],L2=dx*dx+dz*dz||1,t=clamp(((x-a[0])*dx+(z-a[1])*dz)/L2,0,1),px=a[0]+dx*t,pz=a[1]+dz*t,d=Math.hypot(x-px,z-pz);
+    if(d<best){best=d;var L=Math.sqrt(L2);o.d=d;o.s=c.cum[i]+t*L;o.tx=dx/L;o.tz=dz/L;o.x=px;o.z=pz}}
+  return o;
+}
+function copeIn(c,x,z,o){
+  if(c.inw){o.x=c.inw[0];o.z=c.inw[1];return o}
+  var e=0.2,gx=sdRR(x+e,z,c.q)-sdRR(x-e,z,c.q),gz=sdRR(x,z+e,c.q)-sdRR(x,z-e,c.q),l=Math.hypot(gx,gz)||1;o.x=-gx/l;o.z=-gz/l;return o;
+}
+var CN={},CA={},CI={},CA2={};
+// lock into a grind on the coping: coming up the wall at an angle, or dropping onto it from the air
+function tryCope(fromWall){
+  if(!P.free||!P.copes||R.railCD>0)return false;
+  var hsp=Math.hypot(R.vx,R.vz);
+  for(var i=0;i<P.copes.length;i++){
+    var c=P.copes[i];if(fromWall&&c.kind!=="coping")continue;
+    copeNear(c,R.x,R.z,CN);if(CN.d>(fromWall?0.9:0.6))continue;
+    var dy=R.y-copeAt(c,CN.s,CA).y;if(dy<-0.45||dy>0.6)continue;
+    var along=R.vx*CN.tx+R.vz*CN.tz;if(Math.abs(along)<1.2)continue;
+    if(fromWall){if(!(R.vy<2.2||Math.abs(along)>0.5*R.vy))continue}
+    else if(R.vy>2.5||Math.abs(along)<0.35*hsp)continue;
+    mountCope(c,CN.s,along>0?1:-1,Math.max(2.6,Math.sqrt(along*along+(fromWall?0.35*Math.max(0,R.vy)*Math.max(0,R.vy):0))));
+    return true;
+  }
+  return false;
+}
+function mountCope(c,sPos,dir,speed){
+  var by=wrapPi(bodyYaw());
+  if(R.mode==="air"){var up=tmpV.set(0,1,0).applyQuaternion(R.q);if(up.y<0.4){crash("Crash");return}}
+  copeAt(c,sPos,CA);var tAng=Math.atan2(CA.tx*dir,CA.tz*dir),rel=Math.round(wrapPi(by-tAng)/(Math.PI/2))*(Math.PI/2);
+  if(R.mode==="air"&&A&&A.fromRail&&R.lastRail&&R.lastRail!==c)addLink({kind:"gap",name:"RAIL TRANSFER",key:"GAP rail transfer",D:900});
+  if(R.railTrick&&R.railTrick.rail===c){R.railTrick.hops++}
+  else{if(R.railTrick)addLink(evalRail(R.railTrick));if(R.mode==="air"&&A)addLink(evalAir(A,"on"));R.railTrick={rail:c,t:0,swaps:0,hops:0,slide:Math.abs(Math.sin(rel))>0.5,cope:true}}
+  R.mode="rail";R.rail=c;R.rs=speed;R.rdir=dir;R.cs=CA.s;R.railRel=rel;R.railAng=by;R.railTarget=tAng+rel;R.copeSlow=0;
+  R.x=CA.x;R.z=CA.z;R.y=CA.y;R.vy=0;R.vx=CA.tx*dir*speed;R.vz=CA.tz*dir*speed;
+  if(R.butterOn){R.butterOn=false;R.butter=0}
+  A=null;$("#live").textContent="";sfx("clank",1);updateLineHud();
+}
+function copeStep(dt){
+  var c=R.rail,rd=R.rdir||1,stall=c.kind==="coping"&&k("KeyS");
+  if(stall){R.rs=Math.max(0,R.rs-14*dt);if(R.rs<0.4){R.railTrick.stall=(R.railTrick.stall||0)+dt;R.copeSlow=0}}
+  else if(R.railTrick.stall>0&&R.rs<0.4){leaveRail(false);return} // let go of S: drop back in
+  else{
+    var slope=c.ys?(copeAt(c,R.cs+0.3*rd,CA2).y-copeAt(c,R.cs,CA).y)/0.3:0;
+    R.rs-=(0.9+0.0015*R.rs*R.rs+G*slope*0.9)*dt;if(R.rs<2.2){R.rs=2.2;R.copeSlow+=dt}
+  }
+  R.cs+=R.rs*rd*dt;
+  if(!c.closed&&(R.cs<=0||R.cs>=c.len)){leaveRail(false);return}
+  copeAt(c,R.cs,CA);R.cs=CA.s;R.x=CA.x;R.z=CA.z;R.y=CA.y;R.vx=CA.tx*rd*R.rs;R.vz=CA.tz*rd*R.rs;R.vy=0;
+  R.railTarget=Math.atan2(CA.tx*rd,CA.tz*rd)+R.railRel;R.railAng+=wrapPi(R.railTarget-R.railAng)*Math.min(1,dt*14);
+  R.railTrick.t+=dt;
+  if(Math.random()<0.3)emit(R.x+(Math.random()-0.5)*0.2,R.y,R.z,(Math.random()-0.5)*1.5,0.5+Math.random(),(Math.random()-0.5)*1.5,0.35);
+  if(R.copeSlow>0.6)leaveRail(false); // too slow to keep grinding: drop back in
+}
+function wallOf(x,z){var best=null,bh=0.02;P.parts.forEach(function(q){if(q.t==="ramp"||q.t==="box"||q.t==="stair")return;var h=partH(q,x,z);if(h>bh){bh=h;best=q}});return best}
+function freeBase(x,z){var o=0,Q=P.parts;for(var i=0;i<Q.length;i++){var h=partH(Q[i],x,z);if(h>o)o=h}return o}
+function freeH(x,z){
+  var o=freeBase(x,z),L=P.rails;
+  // little snow ramps up to both ends of every rail
+  for(var i=0;i<L.length;i++){var r=L[i],m=1-ss(0.9,1.5,Math.abs(x-r.x));if(m<=0)continue;
+    var a=z<r.zs?(z-r.z0)/2.5:z>r.ze?(r.ze+2.5-z)/2.5:-1;if(a>0&&a<=1){var hr=r.yb+0.6*a*m;if(hr>o)o=hr}}
+  return o;
+}
 function featH(x,z){
+  if(P.free)return freeH(x,z);
   var o=0,F=P.feats;
   for(var i=0;i<F.length;i++){
     var f=F[i],u=z-f.z0;
@@ -1206,7 +1416,7 @@ function featH(x,z){
   return o;
 }
 function H(x,z){return baseH(x,z)+featH(x,z)}
-function railY(r,z){return baseH(r.x,z)+1.0}
+function railY(r,z){return P.free?r.yb+0.6:baseH(r.x,z)+1.0}
 function normalAt(x,z,out){var e=0.4;var gx=(H(x+e,z)-H(x-e,z))/(2*e),gz=(H(x,z+e)-H(x,z-e))/(2*e);return out.set(-gx,1,-gz).normalize()}
 
 /* ================= THREE ================= */
@@ -1291,7 +1501,24 @@ var dotTex=(function(){var c=document.createElement("canvas");c.width=c.height=3
 /* ================= WORLD ================= */
 var world=null;
 function disposeGroup(g){g.traverse(function(o){if(o.geometry)o.geometry.dispose();if(o.material){(Array.isArray(o.material)?o.material:[o.material]).forEach(function(m){if(m.map&&m.map!==cordTex&&m.map!==dotTex)m.map.dispose();m.dispose()})}})}
+function freeColor(x,z,out){
+  var e=0.25,h=H(x,z),gx=(H(x+e,z)-H(x-e,z))/(2*e),gz=(H(x,z+e)-H(x,z-e))/(2*e),sl=Math.hypot(gx,gz);
+  var n=Math.sin(x*12.9898+z*78.233)*43758.5453;n=(n-Math.floor(n))*0.02-0.01;
+  var r=0.88+n,g=0.9+n,b=0.945+n,rim=P.parts[0],dr=sdRR(x,z,rim);
+  if(dr>rim.tw+rim.dk+0.5){var t=ss(rim.tw+rim.dk,rim.tw+rim.dk+8,dr);r-=0.05*t;g-=0.04*t;b-=0.015*t}
+  // walls go cool blue the steeper they get, so every transition reads from across the park
+  var t2=ss(0.15,2.6,sl);r=lerp(r,0.6,t2*0.75);g=lerp(g,0.7,t2*0.75);b=lerp(b,0.87,t2*0.75);
+  // decks: bright and clean
+  if(h>0.4&&sl<0.05){r=0.96+n;g=0.965+n;b=0.98+n}
+  // a darker band just under every coping
+  P.parts.forEach(function(q){if(q.t!=="rim"&&q.t!=="bowl"&&q.t!=="pipe")return;var d=partD(q,x,z);if(d===null||FM<0.6)return;var u=q.tw-d;if(u>0&&u<0.35){r-=0.12;g-=0.1;b-=0.05}});
+  P.parts.forEach(function(q){if(q.t!=="stair"||x<q.x0||x>q.x1||z<q.zb||z>q.zt)return;var f=((q.zt-z)/0.55)%1;if(f<0.12){r-=0.1;g-=0.08;b-=0.04}});
+  // painted lines on the flat
+  if(h<0.01&&dr<0){var gl=Math.abs(((x+500)%10)-5)<0.08||Math.abs(((z+500)%10)-5)<0.08;if(gl){r-=0.06;g-=0.045;b-=0.01}}
+  return out.setRGB(r,g,b);
+}
 function colorAt(x,z,out){
+  if(P.free)return freeColor(x,z,out);
   var ax=Math.abs(x),r=0.86,g=0.88,b=0.915;
   if(ax>HW){var t=ss(HW,HW+14,ax);r-=0.05*t;g-=0.04*t;b-=0.015*t}
   var F=P.feats;
@@ -1358,6 +1585,7 @@ function buildWorld(def){
   if(world){scene.remove(world.group);disposeGroup(world.group)}
   P=setupPark(def);
   var group=new THREE.Group();
+  if(P.free){buildFreeWorld(group);return}
   // terrain
   var xs=[];for(var xx=-130;xx<-(HW+8);xx+=4)xs.push(xx);for(xx=-(HW+8);xx<-36;xx+=2)xs.push(xx);for(xx=-36;xx<=36;xx++)xs.push(xx);for(xx=38;xx<=HW+8;xx+=2)xs.push(xx);for(xx=HW+12;xx<=130;xx+=4)xs.push(xx);
   // terrain is built in chunks so the parts behind you or off-screen are skipped; normals come
@@ -1440,6 +1668,97 @@ function buildWorld(def){
     IT.forEach(function(m){m.setMatrixAt(i,M)});
   }
   IT.forEach(function(m){m.castShadow=true;group.add(m)});
+  scene.add(group);
+  world={group:group,glow:glow,lampMat:L3.material,pools:pools};
+  applyLighting(lightKey());
+}
+
+
+/* ================= FLAT SKATEPARK WORLD ================= */
+function buildFreeWorld(group){
+  P.obs=[];var snowM=null;
+  var rim=P.parts[0],M=new THREE.Matrix4(),i,j,v;
+  // terrain: half-metre grid over the park so the copings stay sharp, coarser out in the hills
+  var lx=rim.ax+rim.tw+rim.dk+2,z0=rim.cz-rim.az-rim.tw-rim.dk-2,z1=rim.cz+rim.az+rim.tw+rim.dk+2;
+  var xs=[],zs=[];for(v=-130;v<-lx;v+=3)xs.push(v);for(v=-lx;v<=lx+1e-6;v+=0.5)xs.push(v);for(v=lx+3;v<=130;v+=3)xs.push(v);
+  for(v=z0-70;v<z0;v+=3)zs.push(v);for(v=z0;v<=z1+1e-6;v+=0.5)zs.push(v);for(v=z1+3;v<=z1+70;v+=3)zs.push(v);
+  var nx=xs.length,c=new THREE.Color(),nrm=new THREE.Vector3(),tMat=new THREE.MeshLambertMaterial({vertexColors:true});
+  for(var r0=0;r0<zs.length-1;r0+=48){
+    var r1=Math.min(zs.length-1,r0+48),nz=r1-r0+1,pos=new Float32Array(nx*nz*3),col=new Float32Array(nx*nz*3),nor=new Float32Array(nx*nz*3);
+    for(j=0;j<nz;j++){var z=zs[r0+j];for(i=0;i<nx;i++){var x=xs[i],q3=(j*nx+i)*3;pos[q3]=x;pos[q3+1]=H(x,z);pos[q3+2]=z;freeColor(x,z,c);col[q3]=c.r;col[q3+1]=c.g;col[q3+2]=c.b;normalAt(x,z,nrm);nor[q3]=nrm.x;nor[q3+1]=nrm.y;nor[q3+2]=nrm.z}}
+    var idx=new Uint32Array((nx-1)*(nz-1)*6),q=0;
+    for(j=0;j<nz-1;j++)for(i=0;i<nx-1;i++){var a=j*nx+i,b=(j+1)*nx+i,cc=a+1,d=b+1;idx[q++]=a;idx[q++]=b;idx[q++]=cc;idx[q++]=cc;idx[q++]=b;idx[q++]=d}
+    var geo=new THREE.BufferGeometry();geo.setAttribute("position",new THREE.BufferAttribute(pos,3));geo.setAttribute("color",new THREE.BufferAttribute(col,3));geo.setAttribute("normal",new THREE.BufferAttribute(nor,3));geo.setIndex(new THREE.BufferAttribute(idx,1));geo.computeBoundingSphere();
+    var terrain=new THREE.Mesh(geo,tMat);terrain.receiveShadow=true;group.add(terrain);
+  }
+  // mountains all the way round
+  var mMat=new THREE.MeshLambertMaterial({vertexColors:true});
+  for(i=0;i<26;i++){var ang=(i/26)*Math.PI*2+Math.random()*0.2,rr=110+Math.random()*120,hh=130+Math.random()*170,mx=Math.sin(ang)*(390+Math.random()*170),mz=rim.cz+Math.cos(ang)*(390+Math.random()*170);
+    var mesh=new THREE.Mesh(mountainGeo(rr,hh),mMat);mesh.position.set(mx,-55+hh/2,mz);mesh.rotation.y=Math.random()*6;group.add(mesh)}
+  // steel coping along every lip
+  var copMat=new THREE.MeshLambertMaterial({color:0x6f7a86}),rrPts=function(q,off){var pts=[],ax=q.ax-q.rc,az=q.az-q.rc,rc=q.rc+off,N=12;
+      [[1,1,0],[-1,1,Math.PI/2],[-1,-1,Math.PI],[1,-1,Math.PI*1.5]].forEach(function(k){for(var t=0;t<=N;t++){var a=k[2]+t/N*Math.PI/2;pts.push(new THREE.Vector3(q.cx+k[0]*ax+Math.cos(a)*rc,q.H+0.04,q.cz+k[1]*az+Math.sin(a)*rc))}});return pts};
+  P.parts.forEach(function(q){
+    if(q.t==="rim"||q.t==="bowl"){var pts=rrPts(q,q.tw);group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true),pts.length*3,0.09,6,true),copMat))}
+    else if(q.t==="pipe"){[-1,1].forEach(function(sg){var len=2*(q.az-q.tp),m=new THREE.Mesh(new THREE.CylinderGeometry(0.09,0.09,len,8),copMat);m.rotation.x=Math.PI/2;m.position.set(q.cx+sg*(q.ax+q.tw),q.H+0.04,q.cz);group.add(m)})}
+  });
+  // rails
+  var railMat=new THREE.MeshLambertMaterial({color:0x2c3137}),postMat=new THREE.MeshLambertMaterial({color:0x3a4047});
+  P.rails.forEach(function(r){
+    var y=r.yb+0.55,m=new THREE.Mesh(new THREE.CylinderGeometry(0.065,0.065,r.len,12),railMat);m.rotation.x=Math.PI/2;m.position.set(r.x,y,r.zs+r.len/2);m.castShadow=true;group.add(m);
+    for(var zz=r.zs+0.3;zz<=r.ze-0.2;zz+=(r.len-0.5)/4){var pst=new THREE.Mesh(new THREE.BoxGeometry(0.08,0.58,0.08),postMat);pst.position.set(r.x,r.yb+0.26,zz);pst.castShadow=true;group.add(pst);var ft=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.05,0.24),postMat);ft.position.set(r.x,r.yb+0.02,zz);group.add(ft)}
+  });
+  // handrail down the stairs, the concrete ledge, and steel along the top of the spine
+  (P.copes||[]).forEach(function(c){
+    if(c.kind==="handrail"){for(var i=0;i<c.segs;i++){var a=c.pts[i],b=c.pts[i+1],ya=c.ys[i]-0.05,yb=c.ys[i+1]-0.05,va=new THREE.Vector3(a[0],ya,a[1]),vb=new THREE.Vector3(b[0],yb,b[1]),len=va.distanceTo(vb),m=new THREE.Mesh(new THREE.CylinderGeometry(0.055,0.055,len+0.06,10),railMat);m.position.copy(va).add(vb).multiplyScalar(0.5);m.quaternion.setFromUnitVectors(UP,vb.clone().sub(va).normalize());m.castShadow=true;group.add(m)}
+      for(var sp2=0.4;sp2<c.len-0.2;sp2+=1.8){copeAt(c,sp2,CA);var gy=H(CA.x,CA.z),pst=new THREE.Mesh(new THREE.BoxGeometry(0.07,CA.y-gy,0.07),postMat);pst.position.set(CA.x,(CA.y+gy)/2-0.05,CA.z);pst.castShadow=true;group.add(pst)}}
+    else if(c.kind==="ledge"){var a2=c.pts[0],b2=c.pts[1],lx=b2[0]-a2[0],lz=b2[1]-a2[1],ll=Math.hypot(lx,lz),ledge=new THREE.Mesh(new THREE.BoxGeometry(ll,0.46,0.6),new THREE.MeshLambertMaterial({color:0xa9aeb4}));ledge.position.set((a2[0]+b2[0])/2,0.23,(a2[1]+b2[1])/2);ledge.rotation.y=-Math.atan2(lz,lx);ledge.castShadow=ledge.receiveShadow=true;group.add(ledge);
+      var lsn=new THREE.Mesh(new THREE.BoxGeometry(ll-0.1,0.04,0.5),snowM||new THREE.MeshLambertMaterial({color:0xf4f7fb}));lsn.position.set(ledge.position.x,0.48,ledge.position.z);lsn.rotation.y=ledge.rotation.y;group.add(lsn);
+      [-0.3,0.3].forEach(function(o){var e=new THREE.Mesh(new THREE.BoxGeometry(ll,0.05,0.05),copMat);e.position.set(ledge.position.x,0.47,ledge.position.z+o);e.rotation.y=ledge.rotation.y;group.add(e)})}
+  });
+  P.parts.forEach(function(q){if(q.t!=="spine")return;var m=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,2*(q.ax-q.tp),8),copMat);m.rotation.z=Math.PI/2;m.position.set(q.cx,q.H+0.03,q.cz);group.add(m)});
+  // benches on the decks, where you hang out before dropping in
+  var wood=new THREE.MeshLambertMaterial({color:0x8a5a35}),steel=new THREE.MeshLambertMaterial({color:0x2f343a});snowM=new THREE.MeshLambertMaterial({color:0xf4f7fb});
+  function bench(x,z,ry){var b=new THREE.Group();
+    [0.12,-0.12].forEach(function(o){var pl=new THREE.Mesh(new THREE.BoxGeometry(1.9,0.05,0.2),wood);pl.position.set(0,0.46,o);pl.castShadow=true;b.add(pl)});
+    [0.58,0.78].forEach(function(yy){var bk=new THREE.Mesh(new THREE.BoxGeometry(1.9,0.13,0.04),wood);bk.position.set(0,yy,-0.24);bk.rotation.x=-0.12;bk.castShadow=true;b.add(bk)});
+    [-0.8,0.8].forEach(function(o){var lg=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.46,0.42),steel);lg.position.set(o,0.23,-0.02);b.add(lg);var up=new THREE.Mesh(new THREE.BoxGeometry(0.05,0.42,0.05),steel);up.position.set(o,0.66,-0.25);b.add(up)});
+    var sn=new THREE.Mesh(new THREE.BoxGeometry(1.7,0.04,0.36),snowM);sn.position.set(0.05,0.5,0);b.add(sn);
+    b.position.set(x,H(x,z),z);b.rotation.y=ry;group.add(b);
+    P.obs.push({x:x,z:z-0.02*Math.cos(ry),y:H(x,z),c:Math.cos(ry),s:Math.sin(ry),hx:0.98,hz:0.3,top:0.85})}
+  var dk=rim.tw+rim.dk*0.62,ex=rim.ax+dk,s0=rim.cz-rim.az-dk,s1=rim.cz+rim.az+dk;
+  bench(-9,s0,0);bench(9,s0,0);bench(-28,s1,Math.PI);bench(10,s1,Math.PI);
+  bench(-ex,40,Math.PI/2);bench(-ex,112,Math.PI/2);bench(ex,30,-Math.PI/2);bench(ex,100,-Math.PI/2);
+  P.parts.forEach(function(q){
+    if(q.t==="pipe"&&q.H>3){var o=q.ax+q.tw+q.dk*0.62;bench(q.cx-o,q.cz-15,Math.PI/2);bench(q.cx+o,q.cz+15,-Math.PI/2)}
+    if(q.t==="bowl"){var o2=q.az+q.tw+q.dk*0.62;bench(q.cx,q.cz-o2,0);bench(q.cx,q.cz+o2,Math.PI)}
+  });
+  // a sign over the far deck
+  var sg=banner("FROST SKATEPARK",24);sg.position.set(0,H(0,s1+3),s1+3);group.add(sg);
+  // lamp posts around the outside of the park
+  var lamps=[],lo=rim.tw+rim.dk+3.5;
+  for(v=rim.cz-rim.az;v<=rim.cz+rim.az+1;v+=37.5){lamps.push([-(rim.ax+lo),v]);lamps.push([rim.ax+lo,v])}
+  [-30,30].forEach(function(xx){lamps.push([xx,rim.cz-rim.az-lo]);lamps.push([xx,rim.cz+rim.az+lo])});
+  var lpGeo=new THREE.CylinderGeometry(0.11,0.15,9,8);lpGeo.translate(0,4.5,0);
+  var slGeo=new THREE.CylinderGeometry(0.22,0.22,1.5,8);slGeo.translate(0,0.75,0);
+  var hdGeo=new THREE.BoxGeometry(0.9,0.22,0.45);hdGeo.translate(0,9.05,0);
+  var L1=new THREE.InstancedMesh(lpGeo,new THREE.MeshLambertMaterial({color:0x6e7782}),lamps.length),L2=new THREE.InstancedMesh(slGeo,new THREE.MeshLambertMaterial({color:0xe2733a}),lamps.length),L3=new THREE.InstancedMesh(hdGeo,new THREE.MeshLambertMaterial({color:0x2f343a}),lamps.length);
+  lamps.forEach(function(p,k){M.makeTranslation(p[0],H(p[0],p[1])-0.1,p[1]);L1.setMatrixAt(k,M);L2.setMatrixAt(k,M);L3.setMatrixAt(k,M)});
+  [L1,L2,L3].forEach(function(m){m.castShadow=true;group.add(m)});
+  var gpos=new Float32Array(lamps.length*3);lamps.forEach(function(p,k){gpos[k*3]=p[0];gpos[k*3+1]=H(p[0],p[1])+8.85;gpos[k*3+2]=p[1]});
+  var gg=new THREE.BufferGeometry();gg.setAttribute("position",new THREE.BufferAttribute(gpos,3));
+  var poolMat=new THREE.MeshBasicMaterial({color:0xffb766,map:dotTex,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending,polygonOffset:true,polygonOffsetFactor:-2,fog:true}),pools=new THREE.Group();
+  lamps.forEach(function(p){var n=10,r=17,pp=[],uu=[],ii=[];for(var a=0;a<=n;a++)for(var b=0;b<=n;b++){var px=p[0]-r+2*r*a/n,pz=p[1]-r+2*r*b/n;pp.push(px,H(px,pz)+0.06,pz);uu.push(a/n,b/n)}
+    for(a=0;a<n;a++)for(b=0;b<n;b++){var i0=a*(n+1)+b;ii.push(i0,i0+1,i0+n+1,i0+1,i0+n+2,i0+n+1)}
+    var pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.Float32BufferAttribute(pp,3));pg.setAttribute("uv",new THREE.Float32BufferAttribute(uu,2));pg.setIndex(ii);pools.add(new THREE.Mesh(pg,poolMat))});
+  pools.material=poolMat;pools.visible=false;group.add(pools);
+  var glow=new THREE.Points(gg,new THREE.PointsMaterial({color:0xffc27a,size:5,map:dotTex,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending}));glow.visible=false;group.add(glow);
+  // spruce forest outside the park
+  var nT=520,pa=pineAssets(),pm=pineMats(),IT=[new THREE.InstancedMesh(pa.fol,pm.fol,nT),new THREE.InstancedMesh(pa.trk,pm.bark,nT)];
+  var Qq=new THREE.Quaternion(),Sv=new THREE.Vector3(),V=new THREE.Vector3(),k2=0,tries=0;
+  while(k2<nT&&tries<20000){tries++;var tx=(Math.random()*2-1)*125,tz=rim.cz+(Math.random()*2-1)*(rim.az+70),dd=sdRR(tx,tz,rim);if(dd<rim.tw+rim.dk+9+Math.random()*4)continue;
+    var sc=0.7+Math.random()*0.9;V.set(tx,H(tx,tz)-0.3,tz);Qq.setFromAxisAngle(YAX,Math.random()*6);Sv.set(sc,sc*(0.9+Math.random()*0.45),sc);M.compose(V,Qq,Sv);IT.forEach(function(m){m.setMatrixAt(k2,M)});k2++}
+  IT.forEach(function(m){m.count=k2;m.castShadow=true;group.add(m)});
   scene.add(group);
   world={group:group,glow:glow,lampMat:L3.material,pools:pools};
   applyLighting(lightKey());
@@ -1982,6 +2301,18 @@ function wrapTex(id){
     var gg=x.createLinearGradient(0,0,0,H);gg.addColorStop(0,"#1a0b3d");gg.addColorStop(0.5,"#3b1470");gg.addColorStop(1,"#0b1a4a");x.fillStyle=gg;x.fillRect(0,0,W,H);
     for(var n=0;n<10;n++){var cx=rr()*W,cy=rr()*H,rad=50+rr()*110,cl=n%2?"255,90,200":"80,200,255",rg=x.createRadialGradient(cx,cy,0,cx,cy,rad);rg.addColorStop(0,"rgba("+cl+",0.45)");rg.addColorStop(1,"rgba("+cl+",0)");x.fillStyle=rg;x.fillRect(0,0,W,H)}
     for(var st=0;st<260;st++){var sz=rr()<0.08?3:1.4;x.fillStyle="rgba(255,255,255,"+(0.4+rr()*0.6)+")";x.beginPath();x.arc(rr()*W,rr()*H,sz,0,Math.PI*2);x.fill()}
+  }else if(id==="glacier"){
+    var gl=x.createLinearGradient(0,0,0,H);gl.addColorStop(0,"#e9f6ff");gl.addColorStop(1,"#7cc4ef");x.fillStyle=gl;x.fillRect(0,0,W,H);
+    x.strokeStyle="rgba(255,255,255,.85)";x.lineWidth=3;for(var gi=0;gi<26;gi++){x.beginPath();var gx0=rr()*W,gy0=rr()*H;x.moveTo(gx0,gy0);for(var gs=0;gs<4;gs++){gx0+=(rr()-0.5)*40;gy0+=20+rr()*30;x.lineTo(gx0,gy0)}x.stroke()}
+    x.fillStyle="#1d4f7a";x.fillRect(0,H*0.46,W,20);x.fillStyle="#fff";x.fillRect(0,H*0.46+20,W,5);
+  }else if(id==="goldrush"){
+    var go=x.createLinearGradient(0,0,W,0);go.addColorStop(0,"#8a5a12");go.addColorStop(0.5,"#ffd86b");go.addColorStop(1,"#8a5a12");x.fillStyle=go;x.fillRect(0,0,W,H);
+    x.fillStyle="rgba(255,255,255,.35)";for(var gd=0;gd<H;gd+=46){x.fillRect(0,gd,W,4)}
+    x.fillStyle="#141417";x.font="900 58px sans-serif";x.save();x.translate(W/2+18,H*0.62);x.rotate(-Math.PI/2);x.fillText("GOLD",0,0);x.restore();
+  }else if(id==="aurora"){
+    x.fillStyle="#07142a";x.fillRect(0,0,W,H);
+    [["80,255,170",0],["90,180,255",0.33],["200,110,255",0.66]].forEach(function(A2){for(var au=0;au<6;au++){var ay=(A2[1]+au*0.17)%1*H,ag=x.createLinearGradient(0,ay-120,0,ay+120);ag.addColorStop(0,"rgba("+A2[0]+",0)");ag.addColorStop(0.5,"rgba("+A2[0]+",0.55)");ag.addColorStop(1,"rgba("+A2[0]+",0)");x.fillStyle=ag;x.beginPath();x.moveTo(0,ay-60);x.bezierCurveTo(W*0.3,ay-140,W*0.7,ay+40,W,ay-80);x.lineTo(W,ay+60);x.bezierCurveTo(W*0.7,ay+150,W*0.3,ay-20,0,ay+70);x.fill()}});
+    for(var as=0;as<120;as++){x.fillStyle="rgba(255,255,255,"+(0.3+rr()*0.7)+")";x.fillRect(rr()*W,rr()*H,1.5,1.5)}
   }else{
     x.fillStyle="#e8ecef";x.fillRect(0,0,W,H);
     ["#c9d0d7","#9fa9b4","#707b87"].forEach(function(cl,li){x.fillStyle=cl;for(var b=0;b<30-li*6;b++){x.save();x.translate(rr()*W,rr()*H);x.rotate(rr()*Math.PI);x.beginPath();x.ellipse(0,0,14+rr()*26,26+rr()*50,0,0,Math.PI*2);x.fill();x.restore()}});
@@ -2562,6 +2893,10 @@ function poseRider(crouch,grab,ctx){
   function base(s,out){
     if(board)out.set(s*0.5,-0.02,0.1);
     else out.set(s*0.31,0.05,0.5);                          // athletic: hands forward, poles trailing
+    if(!air&&ctx.push>0.01&&!board){
+      // double-pole push: plant the poles forward, drive them back past the hips
+      var pf=0.5+0.5*Math.sin(ctx.pushPh||0);_v2.set(s*0.3,lerp(0.2,-0.08,pf),lerp(0.66,-0.18,pf));out.lerp(_v2,ctx.push);
+    }
     if(!air){
       var t=ctx.tuck;out.x=lerp(out.x,s*0.22,t);out.y=lerp(out.y,0.04,t);out.z=lerp(out.z,0.42,t);
       var sp=ctx.spread;out.x=lerp(out.x,s*0.8,sp);out.y=lerp(out.y,0.3,sp);out.z=lerp(out.z,0.12,sp);
@@ -2665,7 +3000,7 @@ function applyVolumes(){if(!AU.ctx)return;var t=AU.ctx.currentTime;AU.mus.gain.s
 function aset(p,v,tc){if(!AU.ctx)return;p.setTargetAtTime(v,AU.ctx.currentTime,tc||0.08)}
 function updateAudio(){
   if(!AU.ctx)return;
-  var riding=state==="ride",sp=riding?Math.hypot(R.vx,R.vz):0,air=riding&&R.mode==="air",rail=riding&&R.mode==="rail",gnd=riding&&R.mode==="ground";
+  var riding=state==="ride",sp=riding?(P&&P.free&&R.mode==="ground"?Math.hypot(R.vx,R.vy,R.vz):Math.hypot(R.vx,R.vz)):0,air=riding&&R.mode==="air",rail=riding&&R.mode==="rail",gnd=riding&&R.mode==="ground";
   var spin=air&&A?A.rate:0;
   var w=riding?Math.pow(clamp(sp/30,0,1),1.4)*0.5+(air?0.06:0):(state==="lobby"||state==="parks"||state==="locker"?0.05:0);
   aset(AU.windL.g.gain,w);aset(AU.windL.f.frequency,250+sp*38+spin*0.4);
@@ -2690,6 +3025,8 @@ function sfx(name,amt){
   else if(name==="bad"){tone("triangle",300,180,0.3,0.12)}
   else if(name==="grab"){noise("highpass",2600,0.7,0.07,0.12)}
   else if(name==="click"){tone("square",1700,null,0.03,0.04)}
+  else if(name==="scrape"){noise("bandpass",2800,2,0.16,0.2*amt,1400);tone("triangle",700,420,0.12,0.05*amt)}
+  else if(name==="thud"){tone("sine",140,60,0.12,0.4*amt);noise("lowpass",700,0.6,0.1,0.25*amt)}
   else if(name==="swap"){noise("bandpass",3600,4,0.08,0.18);tone("triangle",1100,null,0.08,0.06)}
 }
 /* soft generated music: warm chords, a slow bass and bell notes */
@@ -2712,7 +3049,24 @@ window.addEventListener("pointerdown",gesture);window.addEventListener("keydown"
 /* ================= INPUT ================= */
 var keys={},pressed={},released={};
 var ALIAS={KeyJ:"ArrowLeft",KeyL:"ArrowRight",KeyK:"ArrowDown",ShiftRight:"ShiftLeft"};
-function code(e){return ALIAS[e.code]||e.code}
+// rebindable keys: each action has a default key; a custom key stands in for it
+var ACTIONS=[["KeyA","Carve left / spin left"],["KeyD","Carve right / spin right"],["KeyW","Tuck · push / frontflip"],["KeyS","Brake · stall / backflip"],["Space","Load + pop / hop"],["ArrowLeft","Roll left"],["ArrowRight","Roll right"],["ArrowDown","Chill (slow-mo air)"],["ShiftLeft","Grab: mute"],["KeyQ","Grab: tail"],["KeyE","Grab: japan"],["KeyB","Butter / manual"],["KeyR","Restart / back to start"],["KeyT","Instant replay"],["KeyG","Ghost on / off"]];
+var BIND={},BREV={};
+function bindsLoad(){BIND=Object.assign({},save.binds||{});BREV={};Object.keys(BIND).forEach(function(a){BREV[BIND[a]]=a})}
+function code(e){var p=e.code;if(BREV[p])return BREV[p];if(BIND[p]&&BIND[p]!==p)return "_off";return ALIAS[p]||p}
+function keyLabel(c){return {Space:"Space",ShiftLeft:"L-Shift",ShiftRight:"R-Shift",ArrowLeft:"←",ArrowRight:"→",ArrowUp:"↑",ArrowDown:"↓",ControlLeft:"L-Ctrl",AltLeft:"L-Alt",Enter:"Enter",Tab:"Tab",Backquote:"`"}[c]||c.replace(/^Key|^Digit/,"")}
+var bindWait=null;
+function bindsUI(){var box=$("#binds");if(!box)return;box.textContent="";ACTIONS.forEach(function(a){var b=document.createElement("button");b.type="button";var cur=BIND[a[0]]||a[0];
+  b.className=(bindWait===a[0]?"wait":"")+(BIND[a[0]]&&BIND[a[0]]!==a[0]?" custom":"");var sp=document.createElement("span");sp.textContent=a[1];var kb=document.createElement("b");kb.textContent=bindWait===a[0]?"…":keyLabel(cur);b.appendChild(sp);b.appendChild(kb);
+  b.addEventListener("click",function(){bindWait=a[0];bindsUI()});box.appendChild(b)})}
+window.addEventListener("keydown",function(e){
+  if(bindWait){e.preventDefault();e.stopImmediatePropagation();
+    if(e.code!=="Escape"){var act=bindWait,ph=e.code;save.binds=save.binds||{};
+      // a key can only do one thing: if another action had it, that action goes back to its default
+      Object.keys(save.binds).forEach(function(o){if(save.binds[o]===ph)delete save.binds[o]});
+      if(ph===act)delete save.binds[act];else save.binds[act]=ph;persist();bindsLoad()}
+    bindWait=null;bindsUI();return}
+},true);
 window.addEventListener("keydown",function(e){
   if(e.target&&e.target.tagName==="INPUT"&&e.target.type!=="range"){if(e.target.closest&&e.target.closest("#acct-form,#chat-form,#fr-form")){if(e.key==="Escape"&&e.target.id==="chat-in"){closeChat();e.preventDefault()}if(e.key==="Escape"&&e.target.id==="fr-q"){closeFriends();e.preventDefault()}return}if(e.key==="Enter"){e.target.blur();e.preventDefault()}return}
   var c=code(e);
@@ -2727,7 +3081,7 @@ function k(c){return !!keys[c]}
 
 /* ================= STATE / SAVE ================= */
 var state="splash",parkIdx=0;
-var DEFSET={camH:1.3,camD:3.0,fov:58,quality:1,hints:1,wind:0.5,fx:0.6,music:0.35,autoland:1,snow:1,view:1,light:1,fp:0};
+var DEFSET={camH:1.3,camD:3.0,fov:58,quality:1,hints:1,wind:0.5,fx:0.6,music:0.35,autoland:1,snow:1,view:1,light:1,fp:0,ghost:1};
 var save={name:"",best:{},park:0,daily:"",flakes:250,owned:{},kit:{gear:"ski",head:"helmet",headC:0,jacket:0,stripe:0,pants:0,skis:0,gog:0,back:"none",wrap:"none",top:"puffer",legs:"none",eyes:"none",boots:"none"},set:Object.assign({},DEFSET)};
 try{var sv=JSON.parse(localStorage.getItem("freshline.v3")||"null");if(sv){save.name=sv.name||"";save.daily=sv.daily||"";save.best=sv.best||{};save.park=sv.park|0;save.flakes=typeof sv.flakes==="number"?sv.flakes:250;save.owned=sv.owned||{};save.quests=sv.quests||null;Object.assign(save.kit,sv.kit||{});Object.assign(save.set,sv.set||{})}}catch(e){}
 function persist(){try{localStorage.setItem("freshline.v3",JSON.stringify(save))}catch(e){}}
@@ -2788,8 +3142,11 @@ function resetRun(){
   var z=-12;
   R={x:0,z:z,y:H(0,z),vx:0,vy:0,vz:4,hd:0,sw:false,mode:"ground",q:new THREE.Quaternion(),charge:0,butter:0,bT:0,bCD:0,butterOn:false,
      lean:0,rail:null,rs:0,railAng:0,railTarget:0,railCD:0,railTrick:null,crashT:0,still:0,camDir:new THREE.Vector3(0,0,1)};
+  R.rdir=1;
+  if(P.free){var spn=P.def.spawn;R.x=spn[0];R.z=spn[1];R.hd=spn[2];R.y=H(R.x,R.z);R.vx=0;R.vz=0;R.camDir.set(Math.sin(R.hd),0,Math.cos(R.hd))}
   A=null;
-  S={runId:Date.now()+Math.random(),score:0,line:null,recent:[],banked:[],crashes:0,time:0,topSpeed:0,butters:0,finished:false,sum:{tricks:0,grabs:0,rails:0,stomp:0}};
+  var pr=typeof PRUN!=="undefined"?PRUN:null,timed=!!(P&&P.free&&(pr&&pr.mode==="battle"?true:pr&&pr.mode==="skate"?false:save.skMode!=="free"));
+  S={prun:pr,timed:timed,freeRide:!!(P&&P.free&&!timed)||!!(pr&&pr.mode==="skate"),left:timed?120:0,timeUp:false,upT:0,comboT:0,gaps:0,runId:Date.now()+Math.random(),score:0,line:null,recent:[],banked:[],crashes:0,time:0,topSpeed:0,butters:0,finished:false,sum:{tricks:0,grabs:0,rails:0,stomp:0}};
   $("#pop").innerHTML="";$("#live").textContent="";
   for(var i=0;i<PN;i++){pLife[i]=0;pPos[i*3+1]=-1e5}
   updateLineHud();
@@ -2813,6 +3170,7 @@ function evalAir(a,ctx){
   else if(flips>=1){family=a.pitch>0?(board?"TAMEDOG":"FRONTFLIP"):(board?"WILDCAT":"BACKFLIP");inv=flips+rolls;base=mult(flips)+family+(spin>=180?" "+spin:"")}
   else if(rolls>=1){family="SIDEFLIP";inv=rolls;base=mult(rolls)+"SIDEFLIP"+(spin>=180?" "+spin:"")}
   else if(spin>=step){family="SPIN "+dir;base=board?pre+spin:String(spin)}
+  else if(a.pipe){family="AIR TO FAKIE";base="AIR TO FAKIE"}
   else{family="STRAIGHT AIR";base="STRAIGHT AIR"}
   if(ctx!=="jump"&&family==="STRAIGHT AIR")return null;
   var turns=off?spin/360:Math.max(spin/360,flips+rolls);
@@ -2828,8 +3186,8 @@ function evalAir(a,ctx){
 }
 function evalRail(t){
   var hp=0;for(var i=0;i<t.hops;i++)hp+=600*[1,0.75,0.55,0.4][Math.min(i,3)];
-  var name=(t.slide?"RAIL SLIDE":"RAIL")+(t.swaps?" · "+t.swaps*90+"° SWAP":"")+(t.hops?" · "+t.hops+" HOP"+(t.hops>1?"S":""):"");
-  return {kind:"rail",name:name,key:null,R:1000*t.t+600*t.swaps+hp};
+  var ck=t.rail&&t.rail.kind,name=(t.stall>0.3?(t.slide?"BLUNT STALL":"AXLE STALL"):ck==="handrail"?(t.slide?"HANDRAIL SLIDE":"HANDRAIL 50-50"):ck==="ledge"?(t.slide?"LEDGE SLIDE":"LEDGE GRIND"):t.cope?(t.slide?"COPING SLIDE":"50-50 GRIND"):t.slide?"RAIL SLIDE":"RAIL")+(t.swaps?" · "+t.swaps*90+"° SWAP":"")+(t.hops?" · "+t.hops+" HOP"+(t.hops>1?"S":""):"");
+  return {kind:"rail",name:name,key:t.stall>0.3?"STALL":null,R:1000*t.t+600*t.swaps+hp+(t.stall>0.3?500:0)+(ck==="handrail"?800:0)};
 }
 function addLink(l){
   if(!l)return;
@@ -2841,7 +3199,7 @@ function addLink(l){
     if(reps)tag=ORD[Math.min(reps,3)]+" "+l.key+" · "+Math.round(f*100)+"%";
   }
   l.f=f;l.pts=((l.D||0)+(l.A||0)+(l.E||0)+(l.R||0))*f;
-  S.line.links.push(l);
+  S.line.links.push(l);if(P&&P.free)S.comboT=COMBO_T;
   popTrick(l.name,"+"+fmt(l.pts),tag,tag?"rep":"");
   sfx("chime");updateLineHud();
 }
@@ -2855,11 +3213,45 @@ function bankLine(call,factor){
   total+=bonus;S.score+=total;
   line.links.forEach(function(l){if(l.key){S.recent.push(l.key);if(S.recent.length>3)S.recent.shift()}S.banked.push({name:l.name,pts:l.pts*flow*mul})});
   checkDaily(line.links);questEvent("bank",{links:line.links,call:call});
+  if(typeof MP!=="undefined"&&PRUN&&PRUN.mode==="skate")MP.skBanked(line.links);
   var label=call==="stomp"?"Stomped":call==="landed"?"Landed":call==="heavy"?"Heavy landing":"Saved it";
   var tag=(n>1?"LINE ×"+flow.toFixed(2):"")+(call==="stomp"?(n>1?" · ":"")+"+600 +15%":call==="saved"||call==="heavy"?(n>1?" · ":"")+Math.round(factor*100)+"%":"");
   popTrick(label,"+"+fmt(total),tag,call==="saved"||call==="heavy"?"saved":"bank");
   sfx(call==="stomp"?"bank":"chime");
   updateLineHud();
+}
+var COMBO_T=1.5,LRANK={saved:0,heavy:1,landed:2,stomp:3};
+function comboLand(call,factor){
+  var l=S.line;l.worst=l.worst&&LRANK[l.worst]<LRANK[call]?l.worst:call;
+  if(call==="saved"||call==="heavy")l.mul=Math.max(0.5,(l.mul||1)*factor);
+  S.comboT=COMBO_T;updateLineHud();
+}
+function bankCombo(){
+  var l=S.line;if(!l||!l.links.length){S.line=null;updateLineHud();return}
+  var mul=l.mul||1;bankLine(mul<0.999?"saved":(l.worst||"landed"),mul);
+}
+// named gaps: jumping from one part of the park to another
+function zoneAt(x,z){
+  var rim=P.parts[0],dr=sdRR(x,z,rim),nm="Flat ground";
+  if(dr>rim.tw)return "Deck";
+  var onRamp=P.parts.some(function(q){return q.t==="ramp"&&partH(q,x,z)>0.05});
+  if(onRamp)return "Deck ramp";if(dr>0)return "Quarter pipe";
+  P.parts.forEach(function(q){if(!q.nm||q.t==="ramp")return;if(q.t==="spine"||q.t==="stair"){if(partH(q,x,z)>0.05)nm=q.nm;return}var d=partD(q,x,z);if(d!==null&&FM>0.05&&d<(q.t==="box"?q.sl:q.tw+q.dk+q.bk))nm=q.nm});
+  return nm;
+}
+function gapCheck(ar){
+  if(!ar||!ar.gz0||ar.t<0.45)return;
+  var to=zoneAt(R.x,R.z),from=ar.gz0,dist=Math.hypot(R.x-ar.gx0,R.z-ar.gzz0),name=null,skip={"Flat ground":1,"Deck":1};
+  var sp=P.parts.filter(function(q){return q.t==="spine"})[0];
+  if(sp&&from==="Spine"&&(ar.gzz0-sp.cz)*(R.z-sp.cz)<0)name="Spine transfer";
+  else if(from==="Stair set"&&to==="Flat ground"&&dist>5)name="Stair set gap";
+  else if(from!==to&&!skip[from]&&!skip[to])name=from+" to "+to;
+  else if(from===to&&(from==="Funbox"||from==="Hip"||from==="Deck ramp")&&dist>7)name=from+(from==="Hip"?" transfer":" gap");
+  else if(from==="Deck"&&to==="Deck"&&dist>9)name="Deck to deck";
+  else if(from==="Quarter pipe"&&to==="Deck")name="Lip to deck";
+  if(!name)return;
+  S.gaps++;addLink({kind:"gap",name:name.toUpperCase()+(/gap|transfer/i.test(name)?"":" GAP"),key:"GAP "+name,D:700+500*Math.min(ar.t,2.5)+60*dist});
+  var top=$("#pop").firstChild;if(top)top.classList.add("gap");
 }
 function loseLine(reason){
   var lost=S.line?S.line.links.reduce(function(s,l){return s+l.pts},0):0;S.line=null;R.railTrick=null;
@@ -2895,19 +3287,88 @@ function newAir(fromRail){
 }
 function pipeAt(x,z){if(!P.pipe)return null;for(var i=0;i<P.feats.length;i++){var f=P.feats[i];if(f.type==="p"&&z>=f.z0&&z<=f.z0+f.len&&Math.abs(x-f.x)<f.fw+f.tw+4)return f}return null}
 function takeoff(fromRail){
+  if(R.manual)manualEnd(true);
   A=newAir(fromRail);
-  if(!fromRail){var pf=pipeAt(R.x,R.z);if(pf&&Math.abs(R.x-pf.x)-pf.fw>pf.tw*0.5){var out=Math.sign(R.x-pf.x);if(R.vx*out>0){var acr=R.vx;R.vy=Math.min(9.5,Math.sqrt(Math.max(0,R.vy)*Math.max(0,R.vy)+acr*acr*0.2));R.vx=-out*Math.min(Math.abs(acr)*0.1,1.1)}A.pipe=true;A.fromKicker=true}}
+  if(!fromRail&&P.free){
+    var hs=Math.hypot(R.vx,R.vz),bx=R.x,bz=R.z;if(hs>0.1){bx-=R.vx/hs*0.35;bz-=R.vz/hs*0.35}
+    // start the air from the lean the rider actually has on screen, so there's no jump
+    A.n0=new THREE.Vector3(0,1,0).applyQuaternion(rider.pivot.quaternion);if(A.n0.y<0.15)normalAt(bx,bz,A.n0);A.wHeld=k("KeyW");A.sHeld=k("KeyS");
+    var we=0.25,wgx=(H(bx+we,bz)-H(bx-we,bz))/(2*we),wgz=(H(bx,bz+we)-H(bx,bz-we))/(2*we),ws=Math.hypot(wgx,wgz);
+    var onSpine=P.parts.some(function(q){return q.t==="spine"&&partH(q,bx,bz)>0.3});A.spine=onSpine;
+    if(ws>1.1&&R.vy>2.2&&!onSpine){var wnx=wgx/ws,wnz=wgz/ws,wout=R.vx*wnx+R.vz*wnz;
+      if(wout>0){var back=-Math.min(wout*0.12,0.75);R.vx+=wnx*(back-wout);R.vz+=wnz*(back-wout);R.vy=Math.sqrt(R.vy*R.vy+wout*wout*0.6);A.pipe=true;A.wallN=[wnx,wnz];A.fromKicker=true}}
+  }
+  else if(!fromRail){var pf=pipeAt(R.x,R.z);if(pf&&Math.abs(R.x-pf.x)-pf.fw>pf.tw*0.5){var out=Math.sign(R.x-pf.x);if(R.vx*out>0){var acr=R.vx;R.vy=Math.min(9.5,Math.sqrt(Math.max(0,R.vy)*Math.max(0,R.vy)+acr*acr*0.2));R.vx=-out*Math.min(Math.abs(acr)*0.1,1.1)}A.pipe=true;A.fromKicker=true}}
   if(!fromRail){R.q.setFromAxisAngle(YAX,R.hd+(R.sw?Math.PI:0)+R.butter);R.butter=0}
   A.q0=R.q.clone();R.mode="air";R.popExt=0.3+R.charge*0.35;
+  if(P.free){var gh=Math.hypot(R.vx,R.vz)||1;A.gz0=zoneAt(R.x,R.z);A.gx0=R.x-R.vx/gh*0.4;A.gzz0=R.z-R.vz/gh*0.4}
   var sp=Math.hypot(R.vx,R.vz);if(R.vy>2)sfx("lip",clamp(sp/20,0.3,1));
 }
 function pop(){
   var c=R.charge;R.charge=0;
-  if(R.mode==="ground"){R.vy=Math.max(R.vy,0)+0.9+1.3*c;takeoff(false);A.pop=c;A.popWindow=0;sfx("pop",0.5+c*0.5);burst(8,1.5)}
+  if(R.mode==="ground"){R.vy=Math.max(R.vy,0)+(P.free?1.8+2.4*c:0.9+1.3*c);takeoff(false);A.pop=c;A.popWindow=0;sfx("pop",0.5+c*0.5);burst(8,1.5)}
   else if(R.mode==="air"&&A&&A.popWindow>0&&A.t<0.3){R.vy+=0.5+0.9*c;A.pop=Math.max(A.pop,c);A.popWindow=0;sfx("pop",0.4+c*0.6)}
 }
 var steerNow=0;
+// flat skatepark riding: speed along the surface is kept honestly (up a wall you slow down, down it you speed up),
+// W pushes on the flat and pumps on the walls, S stops you dead so you can stand on a deck
+function manualEnd(ok){
+  var m=R.manual;R.manual=null;if(!m)return;
+  if(ok&&m.t>0.35)addLink({kind:"manual",name:m.nose>0?"NOSE MANUAL":"MANUAL",key:"MANUAL",R:250+650*m.t});
+}
+function groundFree(dt){
+  var steer=(k("KeyA")?1:0)-(k("KeyD")?1:0);steerNow=steer;
+  var e0=0.3,flatHere=Math.hypot(H(R.x+e0,R.z)-H(R.x-e0,R.z),H(R.x,R.z+e0)-H(R.x,R.z-e0))/(2*e0)<0.18,spd=Math.hypot(R.vx,R.vz);
+  if(k("KeyB")&&!R.manual&&flatHere&&spd>2.2)R.manual={t:0,bal:(Math.random()-0.5)*0.3,v:0,nose:0};
+  if(R.manual){var m=R.manual;
+    if(!k("KeyB")||spd<1.2)manualEnd(true);
+    else if(!flatHere)manualEnd(true);
+    else{m.t+=dt;var inp=(k("KeyW")?1:0)-(k("KeyS")?1:0);m.nose+=inp*dt;
+      // the balance wants to tip over, faster the longer you hold it; W/S push it back
+      m.v+=(m.bal*(2.2+m.t*0.25)+(Math.random()-0.5)*1.4+inp*-3.6)*dt;m.v*=Math.exp(-1.2*dt);m.bal+=m.v*dt;
+      if(Math.abs(m.bal)>1){R.manual=null;crash("Manual bail");return}}}
+  var butterOn=false;
+  if(k("Space"))R.charge=Math.min(1,R.charge+dt/0.7);
+  var e=0.25,gx=(H(R.x+e,R.z)-H(R.x-e,R.z))/(2*e),gz=(H(R.x,R.z+e)-H(R.x,R.z-e))/(2*e),den=1+gx*gx+gz*gz;
+  var sp0=Math.hypot(R.vx,R.vz),s0=sp0>1e-3?(gx*R.vx+gz*R.vz)/sp0:0,v3=sp0*Math.sqrt(1+s0*s0),y0=R.y;
+  // which way you're going: gravity pulls the line downhill, the edges hold it along the board
+  R.vx+=-G*gx/den*dt;R.vz+=-G*gz/den*dt;
+  var fx=Math.sin(R.hd),fz=Math.cos(R.hd),vf=R.vx*fx+R.vz*fz,vl=R.vx*fz-R.vz*fx;
+  if(vf<-0.3){R.hd+=Math.PI;R.sw=!R.sw;fx=-fx;fz=-fz;vf=-vf;vl=-vl}
+  var keep=Math.exp(-(R.butterOn?3:9)*dt),vl0=Math.abs(vl);vl*=keep;
+  var sg=Math.hypot(vf,vl),ndx=fx,ndz=fz;if(sg>1e-4){ndx=(fx*vf+fz*vl)/sg;ndz=(fz*vf-fx*vl)/sg}
+  // standing still on a slope: gravity gets you going
+  var ds=gx*ndx+gz*ndz;v3=Math.max(v3,sg*Math.sqrt(1+ds*ds)*(sp0<0.6?1:0));
+  var tuck=k("KeyW")&&!R.butterOn&&!R.manual,drag=0.0032*v3*v3+0.22+vl0*(1-keep)*2/dt*0.02;
+  var vs=(P.vs||58)/3.6;if(v3>vs){var ov=v3-vs;drag+=0.8*ov+0.45*ov*ov}
+  if(k("KeyS")&&!R.butterOn&&!R.manual)drag+=6+0.03*v3*v3;
+  if(R.butterOn)drag+=0.95;
+  // W pushes on the flat and pumps on the walls (pumping keeps building height in the pipe and bowl)
+  // pumping is capped by the ramp you're on: about 2.5 m of air over the halfpipe, 2 m in the bowl, 1.5 m on the mini ramp
+  var push=0;if(tuck){if(Math.abs(ds)<0.75){var iq=insideOf(R.x,R.z),fcap=iq?Math.min(11.5,Math.sqrt(2*G*(iq.H*1.6+0.3))):11.5;if(v3<fcap)push=v3<7?7:5}else{var wq=wallOf(R.x,R.z);if(wq){var vcap=Math.sqrt(Math.max(0,2*G*(wq.H*1.6+0.3-y0)));if(v3<vcap)push=6}}}
+  v3=Math.max(0,v3+(push-drag)*dt);
+  // horizontal step uses the slope half way along it, so steep walls don't get overshot
+  var hsp=v3/Math.sqrt(1+ds*ds),mx0=R.x+ndx*hsp*dt*0.5,mz0=R.z+ndz*hsp*dt*0.5,dsm=((H(mx0+e,mz0)-H(mx0-e,mz0))*ndx+(H(mx0,mz0+e)-H(mx0,mz0-e))*ndz)/(2*e);
+  hsp=v3/Math.sqrt(1+dsm*dsm);var nx=R.x+ndx*hsp*dt,nz=R.z+ndz*hsp*dt,hn=H(nx,nz);
+  // energy: whatever height you gain comes out of your speed
+  var v2=v3*v3-2*G*(hn-y0);v3=v2>0?Math.sqrt(v2):0;
+  var e2gx=(H(nx+e,nz)-H(nx-e,nz))/(2*e),e2gz=(H(nx,nz+e)-H(nx,nz-e))/(2*e),ds2=e2gx*ndx+e2gz*ndz,hs2=v3/Math.sqrt(1+ds2*ds2);
+  R.vx=ndx*hs2;R.vz=ndz*hs2;
+  if(R.butterOn){R.butter+=steer*Math.PI*2.3*dt;R.bT+=dt}
+  else R.hd+=steer*(v3<1?2.6:1.85/(1+v3*0.035))*dt;
+  R.lean=lerp(R.lean,R.butterOn?0:steer*Math.min(1,v3/10)*0.42,0.1);
+  var yb=R.y+R.vy*dt-0.5*G*dt*dt;R.x=nx;R.z=nz;
+  var vyT=(hn-R.y)/dt,aT=(vyT-(R.vyG==null?vyT:R.vyG))/dt;R.vyG=vyT;R.gT=(R.gT||0)+dt;
+  // dropping in: rolling off a deck onto a steep wall rides down the wall instead of falling off it
+  var dropIn=ds2<-0.9&&R.vy<0.6&&v3<9&&R.gT>0.05;
+  if(!dropIn&&((yb>hn+0.012&&(R.gT>0.06||R.vy>3))||(aT<-G*1.25&&v3>6&&R.gT>0.15&&!R.butterOn))){
+    if(R.vy>0.3&&!R.butterOn&&tryCope(true))return;
+    R.y=Math.max(yb,hn+0.002);R.vy-=G*dt;R.gT=0;R.vyG=null;if(R.butterOn)endButter();takeoff(false)}
+  else{R.vy=clamp(ds2*hs2,-30,30);R.y=hn}
+  checkRail();
+}
 function ground(dt){
+  if(P.free){groundFree(dt);return}
   var steer=(k("KeyA")?1:0)-(k("KeyD")?1:0);steerNow=steer;
   var butterOn=k("KeyB")&&R.bCD<=0;
   if(butterOn&&!R.butterOn){R.butterOn=true;R.bT=0;R.butter=0}
@@ -2949,7 +3410,8 @@ function endButter(){
 }
 function air(dt){
   A.t+=dt;if(A.popWindow>0)A.popWindow-=dt;
-  var spin=(k("KeyA")?1:0)-(k("KeyD")?1:0),fl=(k("KeyW")?1:0)-(k("KeyS")?1:0),rl=(k("ArrowLeft")?1:0)-(k("ArrowRight")?1:0);
+  if(A.wHeld&&!k("KeyW"))A.wHeld=false;if(A.sHeld&&!k("KeyS"))A.sHeld=false;
+  var spin=(k("KeyA")?1:0)-(k("KeyD")?1:0),fl=(k("KeyW")&&!A.wHeld?1:0)-(k("KeyS")&&!A.sHeld?1:0),rl=(k("ArrowLeft")?1:0)-(k("ArrowRight")?1:0);
   var boost=1+0.15*A.pop,wy=0,wx=0,wz=0;
   if(spin){wy=spin*SPIN*boost;if(fl){wx=fl*Math.abs(wy)*0.5;if(fl<0)A.cork=true;else A.bio=true}else if(rl){wz=rl*Math.abs(wy)*0.5;A.flat=true}}
   else if(fl)wx=fl*FLIP*boost;else if(rl)wz=rl*FLIP*boost;
@@ -2991,15 +3453,18 @@ function land(hg){
   var fwd=new THREE.Vector3(0,0,1).applyQuaternion(R.q);fwd.y=0;
   var sp=Math.hypot(R.vx,R.vz),vdx=sp>0.1?R.vx/sp:Math.sin(R.hd),vdz=sp>0.1?R.vz/sp:Math.cos(R.hd);
   var ar=A;A=null;
+  if(P.free&&ar&&ar.n0)tilt=up.angleTo(UP);
+  if(P.free){var vN=R.vx*tmpN.x+R.vy*tmpN.y+R.vz*tmpN.z,tx=R.vx-vN*tmpN.x,tz=R.vz-vN*tmpN.z,ts=Math.hypot(tx,tz);sp=ts;if(ts>0.1){vdx=tx/ts;vdz=tz/ts}}
   if(R.railTrick){addLink(evalRail(R.railTrick));R.railTrick=null}
   // tough legs: big drops are absorbed as heavy landings; only a huge drop or landing badly sideways/upside down crashes
-  var tiltMax=lerp(75,62,clamp((vn-14)/16,0,1))*D2R,heavy=vn>15,lp=pipeAt(R.x,R.z);
+  var tiltMax=lerp(75,62,clamp((vn-14)/16,0,1))*D2R,heavy=vn>15,lp=P.free?((ar&&ar.pipe)||tmpN.y<0.8):pipeAt(R.x,R.z);
   if(lp)tiltMax+=Math.acos(clamp(tmpN.y,-1,1))*0.5;
   if(vn>30||tilt>tiltMax||fwd.length()<0.15){crash(vn>30?"Dropped to the flat":"Crash");return}
   fwd.normalize();
   var dRaw=Math.acos(clamp(fwd.x*vdx+fwd.z*vdz,-1,1)),d=Math.min(dRaw,Math.PI-dRaw)/D2R;
   // in a pipe you come back down the wall you went up: count landings against the mirrored line too
-  if(lp){var dM=Math.acos(clamp(-fwd.x*vdx+fwd.z*vdz,-1,1));d=Math.min(d,Math.min(dM,Math.PI-dM)/D2R)}
+  if(lp){var wn=P.free?(ar&&ar.wallN?{x:ar.wallN[0],z:ar.wallN[1]}:(function(){var l=Math.hypot(tmpN.x,tmpN.z)||1;return {x:-tmpN.x/l,z:-tmpN.z/l}})()):{x:1,z:0},
+    vw=vdx*wn.x+vdz*wn.z,mx2=vdx-2*vw*wn.x,mz2=vdz-2*vw*wn.z,dM=Math.acos(clamp(fwd.x*mx2+fwd.z*mz2,-1,1));d=Math.min(d,Math.min(dM,Math.PI-dM)/D2R)}
   var grabbing=ar.grab&&ar.grabs[ar.grab]>0.1,lean=tilt/D2R>25;
   var call,factor=1;
   if(d<=17&&!lean&&!grabbing&&!heavy)call=ar.t>0.65?"stomp":"landed";
@@ -3007,37 +3472,44 @@ function land(hg){
   if(heavy&&call==="saved"&&d<=17&&!lean&&!grabbing)call="heavy";
   R.sw=dRaw>Math.PI/2;R.hd=Math.atan2(vdx,vdz);
   var keepSp=sp*(call==="saved"?0.88:call==="heavy"?0.93:0.97)*clamp(1-Math.max(0,vn-8)*0.022,0.6,1);
-  R.vx=vdx*keepSp;R.vz=vdz*keepSp;R.vy=slopeVy();R.mode="ground";R.charge=0;
+  R.vx=vdx*keepSp;R.vz=vdz*keepSp;R.vy=slopeVy();R.mode="ground";R.charge=0;R.gT=0;
+  if(vn>8)addShake(clamp((vn-8)/12,0,1)*0.42);
   var imp=clamp(vn/10,0.15,1);R.landComp=clamp(0.18+vn*0.06+Math.min(ar.t,2)*0.08,0.18,0.95);
   if(ar.t>0.25){sfx("land",imp);burst(Math.round(10+imp*30),2+imp*3)}
   addLink(evalAir(ar,ar.fromRail?"off":"jump"));
-  if(S.line&&S.line.links.length)bankLine(call,factor);
+  if(P.free)gapCheck(ar);
+  if(S.line&&S.line.links.length){if(P.free)comboLand(call,factor);else bankLine(call,factor)}
   $("#live").textContent="";
 }
 function crash(reason){
+  R.manual=null;
   R.mode="crash";R.crashT=1.7;S.crashes++;A=null;R.butterOn=false;R.charge=0;
   var csp=Math.hypot(R.vx,R.vz);R.crashAx=csp>0.5?new THREE.Vector3(R.vz/csp,0,-R.vx/csp):new THREE.Vector3(Math.cos(R.hd),0,-Math.sin(R.hd));
-  sfx("crash");burst(45,4);
+  sfx("crash");burst(45,4);addShake(0.5);
   loseLine(reason);$("#live").textContent="";
 }
 function crashStep(dt){
   R.crashT-=dt;
   var sp=Math.hypot(R.vx,R.vz),ns=Math.max(0,sp-7*dt),r=sp>0?ns/sp:0;R.vx*=r;R.vz*=r;
+  if(P.free&&R.y<=H(R.x,R.z)+0.02){var ce=0.25,cgx=(H(R.x+ce,R.z)-H(R.x-ce,R.z))/(2*ce),cgz=(H(R.x,R.z+ce)-H(R.x,R.z-ce))/(2*ce),cden=1+cgx*cgx+cgz*cgz;R.vx+=-G*cgx/cden*dt;R.vz+=-G*cgz/cden*dt}
   R.x+=R.vx*dt;R.z+=R.vz*dt;var h=H(R.x,R.z);
   if(R.y>h){R.vy-=G*dt;R.y+=R.vy*dt;if(R.y<h){R.y=h;R.vy=0}}else{R.y=h;R.vy=0}
   if(ns>2&&Math.random()<0.5)emit(R.x,R.y+0.2,R.z,(Math.random()-0.5)*2,1+Math.random()*2,(Math.random()-0.5)*2,0.6);
   if(R.crashT<=0){
     R.mode="ground";R.sw=false;R.hd=ns>1?Math.atan2(R.vx,R.vz):0;
-    if(Math.abs(wrapPi(R.hd))>1.2)R.hd=0;
-    var v=Math.max(3,ns);R.vx=Math.sin(R.hd)*v;R.vz=Math.cos(R.hd)*v;R.y=h;R.vy=slopeVy();
+    if(!P.free&&Math.abs(wrapPi(R.hd))>1.2)R.hd=0;
+    var v=P.free?ns:Math.max(3,ns);R.vx=Math.sin(R.hd)*v;R.vz=Math.cos(R.hd)*v;R.y=h;R.vy=slopeVy();
   }
 }
 function checkRail(){
   if(R.railCD>0)return false;
+  if(P.free&&R.mode==="air"&&tryCope(false))return true;
   for(var i=0;i<P.rails.length;i++){
     var r=P.rails[i];
-    if(R.z<r.zs-0.3||R.z>r.ze-0.5)continue;
-    if(Math.abs(R.x-r.x)>1.05)continue;
+    if(P.free&&R.vz<0){if(R.z>r.ze+0.3||R.z<r.zs+0.5)continue}
+    else if(R.z<r.zs-0.3||R.z>r.ze-0.5)continue;
+    if(Math.abs(R.x-r.x)>(P.free?1.35:1.05))continue;
+    if(P.free&&Math.abs(R.vz)<0.5*Math.hypot(R.vx,R.vz))continue;
     var ry=railY(r,R.z);
     if(R.y<ry-0.35||R.y>ry+0.6)continue;
     if(R.mode==="air"&&R.vy>2.5)continue;
@@ -3053,33 +3525,43 @@ function mountRail(r,ry){
   var by=wrapPi(bodyYaw());
   if(R.mode==="air"){var up=tmpV.set(0,1,0).applyQuaternion(R.q);if(up.y<0.4){crash("Crash");return}}
   var target=Math.round(by/(Math.PI/2))*(Math.PI/2);
-  var rs=Math.max(3,R.vz);
+  var rs=Math.max(3,P.free?Math.abs(R.vz):R.vz);R.rdir=P.free&&R.vz<0?-1:1;
+  if(P.free&&R.mode==="air"&&A&&A.fromRail&&R.lastRail&&R.lastRail!==r)addLink({kind:"gap",name:"RAIL TRANSFER",key:"GAP rail transfer",D:900});
   if(R.railTrick&&R.railTrick.rail===r){R.railTrick.hops++}
   else{
     if(R.railTrick){addLink(evalRail(R.railTrick))}
     if(R.mode==="air"&&A)addLink(evalAir(A,"on"));
     R.railTrick={rail:r,t:0,swaps:0,hops:0,slide:Math.abs(Math.sin(target))>0.5};
   }
-  R.mode="rail";R.rail=r;R.rs=rs;R.x=r.x;R.y=ry;R.vx=0;R.vy=0;R.vz=rs;R.railAng=by;R.railTarget=target;
+  R.mode="rail";R.rail=r;R.rs=rs;R.x=r.x;R.y=ry;R.vx=0;R.vy=0;R.vz=rs*R.rdir;R.railAng=by;R.railTarget=target;
   if(R.butterOn){R.butterOn=false;R.butter=0}
   A=null;$("#live").textContent="";sfx("clank",1);updateLineHud();
 }
 function railStep(dt){
-  var r=R.rail;
+  var r=R.rail;if(r.cope){copeStep(dt);return}
   R.rs+=(G*SLOPE*(P.slope||1)*0.85-0.45-0.0015*R.rs*R.rs)*dt;R.rs=Math.max(R.rs,2.5);
-  R.z+=R.rs*dt;R.x=r.x;R.y=railY(r,R.z);R.vz=R.rs;R.vx=0;
+  var rd=R.rdir||1;R.z+=R.rs*rd*dt;R.x=r.x;R.y=railY(r,R.z);R.vz=R.rs*rd;R.vx=0;
   R.railTrick.t+=dt;
   R.railAng=lerp(R.railAng,R.railTarget,Math.min(1,dt*14));
   if(Math.random()<0.25)emit(R.x+(Math.random()-0.5)*0.2,R.y,R.z,(Math.random()-0.5)*1.5,0.5+Math.random(),-1-Math.random()*2,0.35);
-  if(R.z>=r.ze)leaveRail(false);
+  if(rd>0?R.z>=r.ze:R.z<=r.zs)leaveRail(false);
 }
 function leaveRail(hop){
   R.q.setFromAxisAngle(YAX,R.railAng);
-  R.mode="air";R.vy=hop?3.4:0.8;R.vx=0;R.vz=R.rs;R.railCD=hop?0.12:0.5;
+  if(R.rail&&R.rail.cope){
+    // off the coping you drop back into the ramp you were grinding
+    var c=R.rail;copeAt(c,R.cs,CA);copeIn(c,CA.x,CA.z,CI);var rd=R.rdir||1;
+    R.mode="air";R.vy=hop?3.4:0.4;R.vx=CA.tx*rd*R.rs*0.85+CI.x*(hop?1.7:1.3);R.vz=CA.tz*rd*R.rs*0.85+CI.z*(hop?1.7:1.3);R.railCD=hop?0.15:0.5;
+    if(!hop&&R.railTrick){addLink(evalRail(R.railTrick));R.railTrick=null}
+    sfx(hop?"pop":"scrape",hop?0.5:1);
+    A=newAir(true);A.pop=hop?0.4:0;A.popWindow=0;A.q0=R.q.clone();A.n0=new THREE.Vector3(0,1,0);R.lastRail=c;
+    return;
+  }
+  R.mode="air";R.vy=hop?3.4:0.8;R.vx=0;R.vz=R.rs*(R.rdir||1);R.railCD=hop?0.12:0.5;
   if(!hop&&R.railTrick){addLink(evalRail(R.railTrick));R.railTrick=null}
-  if(hop)sfx("pop",0.5);
+  sfx(hop?"pop":"scrape",hop?0.5:1);
   R.sw=Math.abs(wrapPi(R.railAng))>Math.PI/2;
-  A=newAir(true);A.pop=hop?0.4:0;A.popWindow=0;A.q0=R.q.clone();
+  A=newAir(true);A.pop=hop?0.4:0;A.popWindow=0;A.q0=R.q.clone();R.lastRail=R.rail;
 }
 function physics(dt){
   if(R.bCD>0)R.bCD-=dt;if(R.railCD>0)R.railCD-=dt;
@@ -3087,6 +3569,7 @@ function physics(dt){
   else if(R.mode==="air")air(dt);
   else if(R.mode==="rail")railStep(dt);
   else if(R.mode==="crash")crashStep(dt);
+  if(P.free){freeBounds();freeCollide();return}
   // side boundary: the banks get sticky and turn you back before the tree line
   var ax=Math.abs(R.x),sg=R.x>0?1:-1;
   if(ax>HW+3&&R.mode!=="rail"){
@@ -3096,13 +3579,51 @@ function physics(dt){
     if(ax>HW+8){R.x=sg*(HW+8);if(R.vx*sg>0)R.vx=0;if(R.mode==="ground"||R.mode==="crash"){var hb=H(R.x,R.z);if(R.y<hb)R.y=hb}}
   }
 }
+// benches and the sides of rails are solid: you bump off them instead of riding through
+function freeCollide(){
+  if(R.mode!=="ground"&&R.mode!=="crash"&&R.mode!=="air")return;
+  var rad=0.38,O=P.obs||[];
+  for(var i=0;i<O.length;i++){var o=O[i];if(R.y>o.y+o.top||R.y<o.y-1)continue;
+    var dx=R.x-o.x,dz=R.z-o.z,lx=dx*o.c-dz*o.s,lz=dx*o.s+dz*o.c,px=o.hx+rad-Math.abs(lx),pz=o.hz+rad-Math.abs(lz);if(px<=0||pz<=0)continue;
+    var nlx=0,nlz=0;if(px<pz)nlx=Math.sign(lx)||1;else nlz=Math.sign(lz)||1;var pen=Math.min(px,pz);
+    var nx=nlx*o.c+nlz*o.s,nz=-nlx*o.s+nlz*o.c;bumpOut(nx,nz,pen)}
+  (P.copes||[]).forEach(function(c){if(!c.solid||R.mode==="rail")return;copeNear(c,R.x,R.z,CN);if(CN.d>=0.36)return;var cy=copeAt(c,CN.s,CA).y;if(R.y>cy-0.3)return;var nx=R.x-CN.x,nz=R.z-CN.z,l=Math.hypot(nx,nz)||1;bumpOut(nx/l,nz/l,0.36-CN.d)});
+  P.rails.forEach(function(r){
+    var ry=railY(r,R.z);if(R.mode==="rail"||R.y>ry-0.25||R.z<r.zs||R.z>r.ze)return;
+    var dx=R.x-r.x;if(Math.abs(dx)>=0.36)return;bumpOut(Math.sign(dx)||1,0,0.36-Math.abs(dx))});
+}
+function bumpOut(nx,nz,pen){
+  R.x+=nx*pen;R.z+=nz*pen;var into=-(R.vx*nx+R.vz*nz);
+  if(into>0){R.vx+=nx*into*1.35;R.vz+=nz*into*1.35;if(into>2.5){sfx("thud",clamp(into/8,0.3,1));addShake(clamp(into/10,0.1,0.35))}}
+}
+function sessionTick(dt){
+  // combo: keeps going while you keep landing tricks; banks when you stop for a moment on the ground
+  // on a transition the clock runs slowly (like a revert), so pipe and bowl lines keep going; on the flat it runs down fast
+  if(S.line&&S.line.links.length&&R.mode==="ground"&&!R.manual){var ce=0.3,csl=Math.hypot(H(R.x+ce,R.z)-H(R.x-ce,R.z),H(R.x,R.z+ce)-H(R.x,R.z-ce))/(2*ce);S.comboT-=dt*(csl<0.22?1:0.35);if(S.comboT<=0)bankCombo()}
+  if(!S.timed)return;
+  var before=Math.ceil(S.left);S.left=Math.max(0,S.left-dt);
+  if(S.left<=5&&Math.ceil(S.left)<before&&S.left>0)sfx("click");
+  if(S.left<=0){
+    if(!S.timeUp){S.timeUp=true;popTrick("Time!","","FINISH YOUR COMBO","bank");sfx("chime")}
+    S.upT+=dt;
+    // let the trick you're in finish, then end the session
+    if(R.mode==="crash"||(R.mode==="ground"&&!R.manual)||S.upT>6){if(S.line&&S.line.links.length&&R.mode!=="crash")bankCombo();finishRun()}
+  }
+}
+function freeBounds(){
+  var q=P.parts[0],lim=q.tw+q.dk+3.5,d=sdRR(R.x,R.z,q);if(d<=lim)return;
+  var e=0.2,nx=sdRR(R.x+e,R.z,q)-sdRR(R.x-e,R.z,q),nz=sdRR(R.x,R.z+e,q)-sdRR(R.x,R.z-e,q),l=Math.hypot(nx,nz)||1;nx/=l;nz/=l;
+  R.x-=nx*(d-lim);R.z-=nz*(d-lim);var out=R.vx*nx+R.vz*nz;if(out>0){R.vx-=nx*out*1.3;R.vz-=nz*out*1.3}
+  if(R.mode!=="air"){var hb=H(R.x,R.z);if(R.y<hb)R.y=hb}
+}
 function edges(){
   if(state!=="ride"||S.finished)return;
   if(released.Space)pop();
   if(released.KeyB&&R.butterOn)endButter();
   if(R.mode==="rail"){
-    if(pressed.KeyA){R.railTarget+=Math.PI/2;R.railTrick.swaps++;R.railTrick.slide=true;sfx("swap")}
-    if(pressed.KeyD){R.railTarget-=Math.PI/2;R.railTrick.swaps++;R.railTrick.slide=true;sfx("swap")}
+    var cp=R.rail&&R.rail.cope;
+    if(pressed.KeyA){if(cp)R.railRel+=Math.PI/2;else R.railTarget+=Math.PI/2;R.railTrick.swaps++;R.railTrick.slide=true;sfx("swap")}
+    if(pressed.KeyD){if(cp)R.railRel-=Math.PI/2;else R.railTarget-=Math.PI/2;R.railTrick.swaps++;R.railTrick.slide=true;sfx("swap")}
     if(pressed.Space)leaveRail(true);
   }
 }
@@ -3111,6 +3632,12 @@ function stuckFeature(){
   return null;
 }
 function zoneName(){
+  if(P.free&&R.mode!=="rail")return zoneAt(R.x,R.z);
+  if(P.free){if(R.mode==="rail"&&R.rail&&R.rail.cope)return R.rail.kind==="coping"?"Coping · "+R.rail.nm:R.rail.nm;var nm="Flat ground",rim=P.parts[0],dr=sdRR(R.x,R.z,rim);
+    var onRamp=P.parts.some(function(q){return q.t==="ramp"&&partH(q,R.x,R.z)>0.05});
+    if(dr>rim.tw)return "Deck";if(dr>0&&!onRamp)return "Quarter pipe";
+    P.parts.forEach(function(q){if(!q.nm)return;if(q.t==="ramp"){if(partH(q,R.x,R.z)>0.05&&partH(q,R.x,R.z)<q.H-0.05)nm=q.nm;return}var d=partD(q,R.x,R.z);if(d!==null&&FM>0.05&&d<(q.t==="box"?q.sl:q.tw+q.dk+q.bk))nm=q.nm});
+    P.rails.forEach(function(r){if(Math.abs(R.x-r.x)<3&&R.z>r.z0-2&&R.z<r.ze+4)nm=r.nm});return nm}
   if(R.z<15)return "Drop in";if(R.z>P.end-35)return "Finish";
   var best=null,bd=1e9;P.feats.forEach(function(f){var d=f.z0-R.z;if(d>-30&&d<bd){bd=d;best=f}});
   if(!best||bd>90)return "Cruiser";
@@ -3127,6 +3654,7 @@ window.addEventListener("mousemove",function(e){var nx=e.clientX/innerWidth*2-1,
 var FP_FLIP=new THREE.Quaternion().setFromEuler(new THREE.Euler(-0.26,Math.PI,0,"YXZ"));
 // hide the head and collar while looking through the goggles; everything comes back in third person
 function setFP(on){if(fpShown===on)return;fpShown=on;rider.head.visible=!on;if(rider.backG)rider.backG.visible=!on;if(rider.ahd)rider.ahd.visible=!on&&!rider.hoodUp.visible;rider.fpHide.forEach(function(m){m.visible=!on&&save.kit.top!=="tee"});if(rider.tneck)rider.tneck.visible=!on&&save.kit.top==="tee";camera.near=on?0.04:0.1;camera.updateProjectionMatrix()}
+var camShake=0;function addShake(a){camShake=Math.min(0.5,Math.max(camShake,a))}
 var PC={dt:1/60,tuck:0,spread:0,twist:0,look:0},qTarget=new THREE.Quaternion(),camAir=0,fovNow=58,camOff=new THREE.Vector3(),camLookOff=new THREE.Vector3(),camFeetY=0;
 /* ================= SKI / BOARD TRACKS =================
    Thin grooves pressed into the corduroy: two lines for skis, one wider line for a board,
@@ -3193,6 +3721,7 @@ function updateTracks(dt,ix,iz){
 }
 
 var PCA={spin:0,flip:0,roll:0,land:0},RV={land:0,cy:0},XAX=new THREE.Vector3(1,0,0);
+var airN=new THREE.Vector3(),airN2=new THREE.Vector3(),airQ=new THREE.Quaternion();
 function updateRiderVisual(dt){
   var ix=R.px==null?R.x:lerp(R.px,R.x,alphaI),iy=R.py==null?R.y:lerp(R.py,R.y,alphaI),iz=R.pz==null?R.z:lerp(R.pz,R.z,alphaI);
   if(Math.abs(ix-R.x)+Math.abs(iz-R.z)>3){ix=R.x;iy=R.y;iz=R.z}
@@ -3201,8 +3730,18 @@ function updateRiderVisual(dt){
   R.landComp=(R.landComp||0)*Math.exp(-dt*4.2);R.popExt=(R.popExt||0)*Math.exp(-dt*6);
   var grab=null,crouch=R.charge*0.9,tuck=0,spread=0,twist=0,look=0,follow=0;
   var airCtx=null;
+  if(R.mode!=="ground")PC.push=0;
   if(R.mode==="air"&&A){
     qTarget.copy(R.q);follow=0;
+    if(P.free&&A.n0){
+      // leave the wall leaning with it, straighten up in the air, and lean into the slope you're coming down on
+      // spins and flips turn around the angle you left the wall at (like real vert), and only blend into
+      // whatever you're about to land on right before touchdown
+      var hgV=H(R.x,R.z),ttv=R.vy<0?(R.y-hgV)/Math.max(0.5,-R.vy):9,nv=airN.copy(A.n0);
+      if(ttv<0.35)nv.lerp(normalAt(R.x,R.z,airN2),clamp((0.35-ttv)/0.35,0,1));
+      qTarget.premultiply(airQ.setFromUnitVectors(UP,nv.normalize()));
+      if(A.t<0.2)follow=28; // ease out of a carve's lean instead of popping straight
+    }
     var fr=Math.abs(A.wx||0)/FLIP,sr=Math.abs(A.wy||0)/SPIN,rr=Math.abs(A.wz||0)/FLIP,rot=fr+sr+rr;
     var hgA=H(R.x,R.z),tti=(R.y-hgA)/Math.max(0.5,-R.vy);
     var landT=R.vy<0?clamp((0.6-tti)/0.38,0,1)*(rot<0.35?1:0.35):0;
@@ -3235,7 +3774,11 @@ function updateRiderVisual(dt){
     var lean=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),-R.lean*(R.sw?-1:1));
     var tilt=new THREE.Quaternion().setFromUnitVectors(UP,tmpN);
     qTarget.copy(tilt).multiply(qYaw).multiply(lean);follow=14;
-    if(k("KeyW")&&!R.butterOn)crouch=Math.max(crouch,0.45);
+    if(R.manual){qTarget.multiply(qTmp.setFromAxisAngle(XAX,(R.manual.nose>0?0.22:-0.26)+R.manual.bal*0.14));crouch=Math.max(crouch,0.3)}
+    var pushing=P.free&&k("KeyW")&&!R.butterOn&&!R.manual&&Math.hypot(R.vx,R.vz)<11;
+    PC.push=damp(PC.push||0,pushing?1:0,6,dt);if(PC.push>0.01)PC.pushPh=(PC.pushPh||0)+dt*6.5;
+    if(pushing||PC.push>0.05)crouch=Math.max(crouch,0.18+0.22*PC.push*(0.5+0.5*Math.sin((PC.pushPh||0)+1.2)));
+    else if(k("KeyW")&&!R.butterOn&&!P.free)crouch=Math.max(crouch,0.45);
     if(k("KeyS"))crouch=Math.max(crouch,0.2);
     twist=-steerNow*0.18;
     var sp=Math.hypot(R.vx,R.vz);
@@ -3254,7 +3797,13 @@ function updateRiderVisual(dt){
   NETP.c=crouch;NETP.g=grab;NETP.a=airCtx?[PCA.spin,PCA.flip,PCA.roll,PCA.land]:0;
   // camera: lifts into the air, dips on impact, widens a touch at speed
   var sp2=Math.hypot(R.vx,R.vz);
-  if(sp2>1.5){tmpV.set(R.vx,0,R.vz).normalize();R.camDir.lerp(tmpV,1-Math.exp(-3.2*dt)).normalize()}
+  if(P.free){
+    var tgY=null;if(R.mode!=="air"){if(sp2>1.2)tgY=Math.atan2(R.vx,R.vz);else if(R.mode==="ground")tgY=R.hd}
+    if(tgY!==null){var cY=Math.atan2(R.camDir.x,R.camDir.z),dY=wrapPi(tgY-cY);
+      if(Math.abs(dY)>2.9)dY=Math.abs(dY)*(R.camTurn||1);else if(Math.abs(dY)>0.05)R.camTurn=Math.sign(dY);
+      var rY=Math.min(4.2,0.6+2.6*Math.abs(dY));cY+=Math.sign(dY)*Math.min(Math.abs(dY),rY*dt);R.camDir.set(Math.sin(cY),0,Math.cos(cY))}
+  }
+  else if(sp2>1.5){tmpV.set(R.vx,0,R.vz).normalize();R.camDir.lerp(tmpV,1-Math.exp(-3.2*dt)).normalize()}
   var st=save.set,pk=portraitK(),ch=st.camH*pk,cd=st.camD*pk;
   camAir=damp(camAir,R.mode==="air"?0.3:0,2.5,dt);
   // follow in the rider's own frame (no speed lag), with a little vertical float in the air
@@ -3266,9 +3815,13 @@ function updateRiderVisual(dt){
   camOff.lerp(wantOff,1-Math.exp(-(R.mode==="air"?4:6)*dt));
   camLookOff.lerp(lookOff,1-Math.exp(-8*dt));
   camera.position.copy(fy).add(camOff);
-  var gh=H(camera.position.x,camera.position.z)+0.6;if(camera.position.y<gh)camera.position.y=gh;
+  var gh=H(camera.position.x,camera.position.z)+0.6;
+  if(P.free){R.camMin=R.camMin==null?gh:damp(R.camMin,gh,gh>R.camMin?10:4,dt);var cmin=Math.max(R.camMin,gh-0.3);if(camera.position.y<cmin)camera.position.y=cmin}
+  else if(camera.position.y<gh)camera.position.y=gh;
   camLook.copy(feet).add(camLookOff);camLook.y=lerp(fy.y,iy,0.6)+camLookOff.y;
   camera.lookAt(camLook);
+  // a short shake on hard landings and crashes
+  if(camShake>0.002){var sa=camShake*camShake;camera.rotateX((Math.random()-0.5)*sa*0.5);camera.rotateZ((Math.random()-0.5)*sa*0.35);camera.position.y+=(Math.random()-0.5)*sa*0.4;camShake*=Math.exp(-9*dt)}else camShake=0;
   // first person: camera in the goggles, turning with the head through spins and flips (third person during a crash)
   var fpOn=!!st.fp&&R.mode!=="crash";setFP(fpOn);
   if(fpOn){
@@ -3286,7 +3839,8 @@ function updateRiderVisual(dt){
     camera.position.copy(fpEye);camera.quaternion.copy(fpCam).multiply(fpLookQ);
   }
   fpWas=fpOn;
-  fovNow=damp(fovNow,(fpOn?Math.max(baseFov(st.fov),74):baseFov(st.fov))+clamp((sp2-12)/14,0,1)*6,fpOn?6:2,dt);
+  var spF=P.free&&R.mode==="ground"?Math.hypot(R.vx,R.vy,R.vz):sp2;
+  fovNow=damp(fovNow,(fpOn?Math.max(baseFov(st.fov),74):baseFov(st.fov))+clamp(((P.free?spF*1.4:spF)-12)/14,0,1)*6,fpOn?6:2,dt);
   if(Math.abs(camera.fov-fovNow)>0.03){camera.fov=fovNow;camera.updateProjectionMatrix()}
   sun.target.position.set(ix,iy,iz+4);sun.position.copy(sun.target.position).add(sunOff);
 }
@@ -3305,6 +3859,7 @@ function liveName(){
 var mm=$("#minimap"),mx=mm.getContext("2d");
 var mmBase=null,mmFor=null;
 function drawMinimap(){
+  if(P.free){drawFreeMap();return}
   var w=mm.width,h=mm.height,z0=-12,z1=P.end,sx=function(x){return w/2+x*(w/2-4)/(HW+4)},sz=function(z){return 8+(z-z0)/(z1-z0)*(h-16)};
   if(mmFor!==P){
     mmFor=P;mmBase=document.createElement("canvas");mmBase.width=w;mmBase.height=h;var c=mmBase.getContext("2d");
@@ -3322,17 +3877,51 @@ function drawMinimap(){
   var rz=clamp(R.z,z0,z1),rx=clamp(R.x,-HW-6,HW+6);
   mx.fillStyle="#ff6a3d";mx.strokeStyle="#151619";mx.lineWidth=2.5;mx.beginPath();mx.arc(sx(rx),sz(rz),4.5,0,7);mx.stroke();mx.fill();
 }
+function drawFreeMap(){
+  var w=mm.width,h=mm.height,rim=P.parts[0],ex=rim.ax+rim.tw+rim.dk,ez=rim.az+rim.tw+rim.dk,k=Math.min((w-8)/(2*ex),(h-16)/(2*ez)),oy=h-8-2*ez*k,
+    sx=function(x){return w/2+x*k},sz=function(z){return oy+(z-(rim.cz-ez))*k};
+  function rr(q,off){var x0=sx(q.cx-q.ax-off),x1=sx(q.cx+q.ax+off),y0=sz(q.cz-q.az-off),y1=sz(q.cz+q.az+off),r=Math.max(1,(q.rc||0)+off)*k;mmBase.getContext("2d").beginPath();var c=mmBase.getContext("2d");c.roundRect?c.roundRect(x0,y0,x1-x0,y1-y0,r):c.rect(x0,y0,x1-x0,y1-y0)}
+  if(mmFor!==P){
+    mmFor=P;mmBase=document.createElement("canvas");mmBase.width=w;mmBase.height=h;var c=mmBase.getContext("2d");
+    c.fillStyle="rgba(255,255,255,.12)";rr(rim,rim.tw+rim.dk);c.fill();c.fillStyle="rgba(255,255,255,.2)";rr(rim,0);c.fill();c.strokeStyle="#9fd3ff";c.lineWidth=1.5;rr(rim,rim.tw);c.stroke();
+    P.parts.forEach(function(q){
+      if(q.t==="bowl"){c.fillStyle="rgba(159,211,255,.28)";rr(q,q.tw);c.fill();c.strokeStyle="#9fd3ff";c.lineWidth=1.5;rr(q,q.tw);c.stroke()}
+      else if(q.t==="pipe"){c.fillStyle="rgba(159,211,255,.28)";var x0=sx(q.cx-q.ax-q.tw),x1=sx(q.cx+q.ax+q.tw);c.fillRect(x0,sz(q.cz-q.az),x1-x0,2*q.az*k);c.strokeStyle="#9fd3ff";c.lineWidth=1.5;[x0,x1].forEach(function(xx){c.beginPath();c.moveTo(xx,sz(q.cz-q.az+q.tp));c.lineTo(xx,sz(q.cz+q.az-q.tp));c.stroke()})}
+      else if(q.t==="box"){c.fillStyle="rgba(255,255,255,.55)";rr(q,0);c.fill()}
+      else if(q.t==="ramp"){c.fillStyle="rgba(255,255,255,.4)";var a1=sz(Math.min(q.z0,q.z1)),a2=sz(Math.max(q.z0,q.z1));c.fillRect(sx(q.cx-q.w),a1,2*q.w*k,a2-a1)}
+    });
+    c.strokeStyle="#ffd27a";c.lineWidth=2;c.lineCap="round";P.rails.forEach(function(r){c.beginPath();c.moveTo(sx(r.x),sz(r.zs));c.lineTo(sx(r.x),sz(r.ze));c.stroke()});
+    (P.copes||[]).forEach(function(cp){if(cp.kind==="coping")return;c.beginPath();cp.pts.forEach(function(pt,i){if(i)c.lineTo(sx(pt[0]),sz(pt[1]));else c.moveTo(sx(pt[0]),sz(pt[1]))});c.stroke()});
+    P.parts.forEach(function(q){if(q.t==="spine"){c.strokeStyle="#9fd3ff";c.lineWidth=2;c.beginPath();c.moveTo(sx(q.cx-q.ax),sz(q.cz));c.lineTo(sx(q.cx+q.ax),sz(q.cz));c.stroke()}else if(q.t==="stair"){c.fillStyle="rgba(255,255,255,.45)";c.fillRect(sx(q.x0),sz(q.zb),(q.x1-q.x0)*k,(q.zt-q.zb)*k)}});
+  }
+  mx.clearRect(0,0,w,h);mx.drawImage(mmBase,0,0);
+  if(typeof MP!=="undefined")Object.keys(MP.pups).forEach(function(u){var pp=MP.pups[u];if(pp.r.root.visible){mx.fillStyle="#4aa6f2";mx.beginPath();mx.arc(sx(pp.r.root.position.x),sz(pp.r.root.position.z),3.5,0,7);mx.fill()}});
+  mx.fillStyle="#ff6a3d";mx.strokeStyle="#151619";mx.lineWidth=2;mx.beginPath();mx.arc(sx(R.x),sz(R.z),4,0,7);mx.stroke();mx.fill();
+  var hx=Math.sin(R.hd),hz=Math.cos(R.hd);mx.strokeStyle="#ff6a3d";mx.beginPath();mx.moveTo(sx(R.x)+hx*5,sz(R.z)+hz*5);mx.lineTo(sx(R.x)+hx*10,sz(R.z)+hz*10);mx.stroke();
+}
 var hudT=0;
 function hud(dt){
   hudT+=dt;
   $("#h-time").textContent=fmtClock(S.time);
   $("#h-score").textContent=fmt(S.score);
-  $("#h-speed").textContent=Math.round(Math.hypot(R.vx,R.vz)*3.6);
+  $("#h-speed").textContent=Math.round((P.free&&R.mode==="ground"?Math.hypot(R.vx,R.vy,R.vz):Math.hypot(R.vx,R.vz))*3.6);
   $("#h-prog").style.width=clamp((R.z+12)/(P.end+12),0,1)*100+"%";
   var cw=$("#h-chargew");cw.style.opacity=R.charge>0.02?1:0;$("#h-charge").style.width=(R.charge*100)+"%";
-  $("#live").textContent=R.mode==="air"?liveName():"";
+  var hb=$("#h-bal");hb.hidden=!R.manual;if(R.manual)hb.firstChild.style.left=(50+clamp(R.manual.bal,-1,1)*50)+"%";
+  $("#live").textContent=R.manual?(R.manual.nose>0?"NOSE MANUAL":"MANUAL")+" · "+R.manual.t.toFixed(1)+"s":R.mode==="air"?liveName():R.mode==="rail"&&R.railTrick?evalRail(R.railTrick).name+" · "+R.railTrick.t.toFixed(1)+"s":"";
   $("#h-lbar").style.width=R.mode==="ground"?"0%":"100%";
-  var h=$("#h-hint");if(R.still>3&&!S.finished){h.hidden=false;h.textContent="Hold W to push · R to restart"}else h.hidden=true;
+  var h=$("#h-hint"),wantHint=R.still>3&&!S.finished;
+  if(P.free){if(wantHint&&!S.hintOn){S.hintOn=true;S.hintN=(S.hintN||0)+1}if(!wantHint)S.hintOn=false;if((S.hintN||0)>2)wantHint=false}
+  if(wantHint){h.hidden=false;h.textContent=P.free?"Hold W to push · A/D to turn · Esc to end your session":"Hold W to push · R to restart"}else h.hidden=true;
+  if(!P.free)$("#h-clock").hidden=true;
+  if(P.free){
+    $("#h-prog").style.width=S.timed?(S.left/120*100)+"%":"0%";
+    if(S.line&&S.line.links.length)$("#h-lbar").style.width=(R.mode==="ground"&&!R.manual?clamp(S.comboT/COMBO_T,0,1)*100:100)+"%";
+    if(hudT>0.1){hudT=0;drawMinimap();$("#h-park").textContent=P.def.name+" / "+zoneName();
+      var hd=$("#h-dist"),hc=$("#h-clock");hc.hidden=!S.timed;
+      if(S.timed){var lf=Math.ceil(S.left);hc.textContent=S.timeUp?"Time!":Math.floor(lf/60)+":"+String(lf%60).padStart(2,"0");hc.classList.toggle("hurry",S.left<=10);hd.textContent="Session"}else{hd.textContent="Free ride"}
+      $("#h-left").textContent="Esc to end"}
+    return}
   if(hudT>0.1){hudT=0;drawMinimap();$("#h-park").textContent=P.def.name+" / "+zoneName();var left=Math.max(0,P.end-R.z);$("#h-dist").textContent=fmt(Math.max(0,R.z+12))+" m";$("#h-left").textContent=left>=1000?(left/1000).toFixed(1)+" km left":fmt(left)+" m left"}
 }
 
@@ -3356,7 +3945,10 @@ function syncScene(){
 }
 var snapCam=false;
 var baseMenu=false; // side menu open over the lobby / locker / park chooser
+var curT=0;
+window.addEventListener("mousemove",function(){document.body.classList.remove("cur-hide");clearTimeout(curT);if(state==="ride")curT=setTimeout(function(){if(state==="ride")document.body.classList.add("cur-hide")},1400)});
 function setState(s){
+  clearTimeout(curT);document.body.classList.toggle("cur-hide",s==="ride");
   var wasBase=inBase();
   state=s;
   if(s!=="ride"&&s!=="paused"&&s!=="results"&&typeof setFP==="function"&&rider)setFP(false);
@@ -3491,7 +4083,7 @@ function sendChat(){
     return Cloud.db.collection("chat").add({n:name,t:t,at:fb.firestore.FieldValue.serverTimestamp(),uid:u.uid,g:guest})})
   .catch(function(){chatNote("Couldn't send that. Check your internet and try again.");inp.value=raw});
 }
-function riderTag(){var t=$("#rider-tag");if(t)t.textContent=(save.name||"RIDER").slice(0,16)}
+function riderTag(){if(typeof TITLES!=="undefined"&&TITLES)levelUI();var t=$("#rider-tag");if(t)t.textContent=(save.name||"RIDER").slice(0,16)}
 function afterAccountChange(){if(typeof MP!=="undefined"&&MP.auth)MP.auth();riderTag();var rn=$("#rname");if(rn){rn.value=save.name||"";rn.readOnly=!!Cloud.user;rn.title=Cloud.user?"Your account name":""}refreshBest();acctRender()}
 function acctErr(e){var c=(e&&e.code)||"";return ({"name-taken":"That rider name is already taken. Try another one.","auth/email-already-in-use":"There's already an account with that email. Try logging in.","auth/invalid-email":"That email doesn't look right.","auth/weak-password":"Your password needs at least 6 characters.","auth/missing-password":"Type your password.","auth/user-not-found":"Wrong email or password.","auth/wrong-password":"Wrong email or password.","auth/invalid-credential":"Wrong email or password.","auth/invalid-login-credentials":"Wrong email or password.","auth/too-many-requests":"Too many tries. Wait a minute and try again.","auth/network-request-failed":"Can't reach the server. Check your internet and try again."})[c]||"Something went wrong. Please try again."}
 function acctRender(){
@@ -3630,8 +4222,9 @@ function selectPark(i){
   if(!P||P.def!==PARKS[i]){buildWorld(PARKS[i]);menuT=0}
   $("#plist").querySelectorAll(".ptag").forEach(function(b,j){b.setAttribute("aria-pressed",j===i)});
   var p=PARKS[i],kk=0,rr=0,ww=0;p.rows.forEach(function(r){for(var j=1;j<r.length;j++){if(r[j][0]==="k")kk++;else if(r[j][0]==="w")ww++;else rr++}});
-  $("#pi-name").textContent=p.name;$("#pi-meta").textContent=[p.diff.toUpperCase(),kk+" JUMPS",rr?rr+" RAILS":"",ww?ww+" ROLLERS":""].filter(Boolean).join(" · ");$("#pi-desc").textContent=p.desc;
-  $("#pi-best").textContent=save.best[p.id]?"Your best "+fmt(save.best[p.id]):"No run yet";
+  $("#pi-name").textContent=p.name;$("#pi-meta").textContent=p.free?[p.diff.toUpperCase(),"FLAT PARK","HALFPIPE · BOWL · "+p.parts.filter(function(q){return q.t==="rail"}).length+" RAILS"].join(" · "):[p.diff.toUpperCase(),kk+" JUMPS",rr?rr+" RAILS":"",ww?ww+" ROLLERS":""].filter(Boolean).join(" · ");$("#pi-desc").textContent=p.desc;
+  $("#pi-best").textContent=save.best[p.id]?"Your best "+fmt(save.best[p.id])+(p.free?" (2:00 session)":""):"No run yet";
+  $("#pmode").hidden=!p.free;pmodeUI();
   showBoard(p.id);
 }
 /* ---------- online leaderboards: top 10 account holders per park ---------- */
@@ -3652,9 +4245,13 @@ function drawBoard(id,rows){
   if(!me){var li=document.createElement("li");li.innerHTML='<span class="lb-empty">Log in to get your scores on the board.</span>';ol.appendChild(li)}
 }
 function fadeTo(fn){var f=$("#fade");f.classList.add("on");setTimeout(function(){fn();setTimeout(function(){f.classList.remove("on")},60)},240)}
-function openParks(){var go=function(){buildParkList();selectPark(parkIdx);setState("parks");setTimeout(function(){$("#drop").focus()},0)};if(inBase())fadeTo(go);else go()}
+function openParks(){
+  if(typeof MP!=="undefined"&&MP.pid&&MP.isLead()&&MP.partyMode()==="skate"){var sk=PARKS.map(function(p){return p.id}).indexOf("skate");if(sk>=0){mpFollowLead(sk);return}}
+  var go=function(){buildParkList();selectPark(parkIdx);setState("parks");setTimeout(function(){$("#drop").focus()},0)};if(inBase())fadeTo(go);else go()}
 $("#parks-back").addEventListener("click",function(){fadeTo(function(){setState("lobby")})});
 $("#drop").addEventListener("click",dropIn);
+function pmodeUI(){var m=save.skMode==="free"?"free":"timed";document.querySelectorAll("#pmode button").forEach(function(b){b.setAttribute("aria-checked",b.getAttribute("data-m")===m)})}
+document.querySelectorAll("#pmode button").forEach(function(b){b.addEventListener("click",function(){save.skMode=b.getAttribute("data-m");persist();pmodeUI();sfx("click")})});
 function dropIn(){
   if(typeof MP!=="undefined")MP.go(parkIdx);
   splash(900,function(){
@@ -3664,7 +4261,75 @@ function dropIn(){
   });
 }
 var finTimer=null;
-function startRide(){clearTimeout(finTimer);resetRun();trkReset();camInit=false;setState("ride")}
+function backToDeck(){
+  var spn=P.def.spawn;if(R.railTrick)R.railTrick=null;S.line=null;updateLineHud();A=null;
+  R.mode="ground";R.x=spn[0];R.z=spn[1];R.hd=spn[2];R.y=H(R.x,R.z);R.vx=R.vz=R.vy=0;R.sw=false;R.charge=0;R.butterOn=false;R.butter=0;R.still=0;R.landComp=0;R.camDir.set(Math.sin(R.hd),0,Math.cos(R.hd));R.px=R.x;R.py=R.y;R.pz=R.z;
+  trkReset();camInit=false;if(state!=="ride")setState("ride");popTrick("Back to the deck","","","");
+}
+function restartKey(){if(P&&P.free&&!S.finished)backToDeck();else startRide()}
+function keyHints(){var f=P&&P.free,t=function(c,a,b){var e=document.querySelector(c);if(e)e.textContent=f?a:b};
+  t(".kh-w","push · pump / front","tuck/front");t(".kh-s","stop · stall / back","brake/back");t(".kh-b","manual (W/S balance)","butter");t(".kh-r","back to start","restart")}
+/* ---- ghost of your best run (downhill parks) ---- */
+var GH={rec:[],recT:0,data:null,rider:null,kit:"",on:true};
+function ghostKey(id){return "freshline.ghost."+id}
+function ghostLoad(id){try{return JSON.parse(localStorage.getItem(ghostKey(id))||"null")}catch(e){return null}}
+function ghostSave(id,score){try{localStorage.setItem(ghostKey(id),JSON.stringify({s:Math.round(score),d:GH.rec}))}catch(e){}}
+function ghostEnsure(){
+  var ks=JSON.stringify(save.kit);if(GH.rider&&GH.kit===ks)return;
+  if(GH.rider){scene.remove(GH.rider.r.root);pupKill(GH.rider)}
+  var g=pupMake("ghost");pupKit(g,ks);GH.kit=ks;
+  g.r.root.traverse(function(o){if(!o.material)return;o.material=(Array.isArray(o.material)?o.material:[o.material]).map(function(m){var c=m.clone();c.transparent=true;c.opacity=0.34;c.depthWrite=false;return c});if(o.material.length===1)o.material=o.material[0];o.castShadow=false});
+  g.tag.firstChild.textContent="Your best";GH.rider=g;
+}
+function ghostStart(){
+  GH.rec=[];GH.recT=0;GH.data=null;
+  if(P&&!P.free&&save.set.ghost!==0){GH.data=ghostLoad(P.def.id);if(GH.data&&GH.data.d&&GH.data.d.length>10)ghostEnsure();else GH.data=null}
+  if(GH.rider){GH.rider.r.root.visible=false;GH.rider.tag.style.visibility="hidden"}
+}
+var ghV=new THREE.Vector3(),ghQ=new THREE.Quaternion(),ghQ2=new THREE.Quaternion();
+function ghostTick(dt){
+  if(!P||P.free)return;
+  // record this run, 10 times a second
+  if(!S.finished){GH.recT-=dt;if(GH.recT<=0){GH.recT=0.1;var rp=rider.root.position,q=rider.pivot.quaternion,r2=function(n){return Math.round(n*100)/100};GH.rec.push([r2(S.time),r2(rp.x),r2(rp.y),r2(rp.z),r2(q.x),r2(q.y),r2(q.z),r2(q.w),r2(NETP.c||0)]);if(GH.rec.length>6000)GH.rec.shift()}}
+  var g=GH.rider,d=GH.data&&GH.data.d;if(!g)return;
+  if(!d||save.set.ghost===0||S.time>d[d.length-1][0]){g.r.root.visible=false;g.tag.style.visibility="hidden";return}
+  var i=GH.i||0;if(i>=d.length-1||d[i][0]>S.time)i=0;while(i<d.length-2&&d[i+1][0]<=S.time)i++;GH.i=i;
+  var a=d[i],b=d[i+1],t=clamp((S.time-a[0])/Math.max(0.001,b[0]-a[0]),0,1);
+  g.r.root.position.set(lerp(a[1],b[1],t),lerp(a[2],b[2],t),lerp(a[3],b[3],t));ghQ.set(a[4],a[5],a[6],a[7]).normalize();ghQ2.set(b[4],b[5],b[6],b[7]).normalize();g.r.pivot.quaternion.copy(ghQ).slerp(ghQ2,t);
+  g.r.root.visible=true;var r0=rider;rider=g.r;g.r.carry.visible=false;g.ctx.dt=dt;g.ctx.air=null;poseRider(lerp(a[8],b[8],t),null,g.ctx);rider=r0;
+  g.r.head.getWorldPosition(ghV);ghV.y+=0.45;var dist=ghV.distanceTo(camera.position);ghV.project(camera);var on=ghV.z<1&&Math.abs(ghV.x)<1.05&&Math.abs(ghV.y)<1.05&&dist<90;
+  g.tag.style.visibility=on?"visible":"hidden";if(on){g.tag.style.left=((ghV.x+1)/2*window.innerWidth)+"px";g.tag.style.top=((1-ghV.y)/2*window.innerHeight)+"px";g.tag.style.opacity=String(clamp(1.2-dist/90,0.3,0.9))}
+}
+/* ---- instant replay: the last 12 seconds, from three camera angles ---- */
+var REP={buf:[],from:"",f:0,cam:0,camT:0,manual:false,slow:false,tri:new THREE.Vector3(),ctx:{dt:1/60,tuck:0,spread:0,twist:0,look:0,air:null},air:{spin:0,flip:0,roll:0,land:0}};
+var CAMN=["Chase cam","Side cam","Tripod cam"];
+function repRecord(){var rp=rider.root.position,q=rider.pivot.quaternion;REP.buf.push([rp.x,rp.y,rp.z,q.x,q.y,q.z,q.w,NETP.c||0,NETP.g||null,NETP.a?NETP.a.slice():0,R.vx,R.vz]);if(REP.buf.length>720)REP.buf.shift()}
+function startReplay(){
+  if(REP.buf.length<12){popTrick("Nothing to replay yet","","","");return}
+  REP.from=state;REP.f=0;REP.cam=0;REP.camT=0;REP.manual=false;REP.slow=false;setState("replay");$("#replay").hidden=false;repLabel();
+}
+function endReplay(){$("#replay").hidden=true;camInit=false;setState(REP.from==="results"?"results":"paused")}
+function repLabel(){$("#rp-cam").textContent=CAMN[REP.cam]+(REP.slow?" · slow-mo":"")}
+var rpV=new THREE.Vector3(),rpV2=new THREE.Vector3(),rpQ=new THREE.Quaternion(),rpQ2=new THREE.Quaternion(),rpLook=new THREE.Vector3();
+function replayTick(dt){
+  var B=REP.buf,n=B.length;if(n<2){endReplay();return}
+  REP.f+=dt*60*(REP.slow?0.35:1);if(REP.f>=n-1){REP.f=0;camInit=false}
+  var i=Math.floor(REP.f),t=REP.f-i,a=B[i],b=B[Math.min(n-1,i+1)];
+  rider.root.position.set(lerp(a[0],b[0],t),lerp(a[1],b[1],t),lerp(a[2],b[2],t));rpQ.set(a[3],a[4],a[5],a[6]);rpQ2.set(b[3],b[4],b[5],b[6]);rider.pivot.quaternion.copy(rpQ).slerp(rpQ2,t);
+  if(a[9]){REP.air.spin=a[9][0];REP.air.flip=a[9][1];REP.air.roll=a[9][2];REP.air.land=a[9][3];REP.ctx.air=REP.air}else REP.ctx.air=null;
+  REP.ctx.dt=dt;poseRider(a[7],a[8],REP.ctx);gearTick(rider,dt,Math.hypot(a[10],a[11]),!!a[9]);
+  // cameras: switch every few seconds unless you've picked one
+  REP.camT+=dt;if(!REP.manual&&REP.camT>3.6){REP.camT=0;REP.cam=(REP.cam+1)%3;REP.tri.set(0,0,0);repLabel()}
+  var p=rider.root.position,vh=Math.hypot(a[10],a[11]),dx=vh>0.5?a[10]/vh:0,dz=vh>0.5?a[11]/vh:1;
+  if(REP.cam===0)rpV.set(p.x-dx*4.2,p.y+1.9,p.z-dz*4.2);
+  else if(REP.cam===1)rpV.set(p.x+dz*6.5,p.y+1.4,p.z-dx*6.5);
+  else{if(REP.tri.lengthSq()===0)REP.tri.set(p.x+dz*7+dx*9,p.y+2.2,p.z-dx*7+dz*9);rpV.copy(REP.tri)}
+  var gh=H(rpV.x,rpV.z)+0.5;if(rpV.y<gh)rpV.y=gh;
+  if(!camInit||REP.cam===2){camera.position.copy(rpV);camInit=true}else camera.position.lerp(rpV,1-Math.exp(-5*dt));
+  rpLook.set(p.x,p.y+0.9,p.z);camera.lookAt(rpLook);
+  sun.target.position.copy(p);sun.position.copy(p).add(sunOff);
+}
+function startRide(){keyHints();clearTimeout(finTimer);REP.buf=[];resetRun();trkReset();camInit=false;ghostStart();setState("ride")}
 
 // locker
 var lockYaw=2.6,drag=null;
@@ -3730,6 +4395,9 @@ var GEAR=[
   {id:"bolt",slot:"wrap",name:"Thunderstruck",price:400,set:"frost",desc:"Yellow lightning bolts on electric blue."},
   {id:"galaxy",slot:"wrap",name:"Cosmos",price:500,set:"cosmo",desc:"Purple nebulae and a field of stars."},
   {id:"camo",slot:"wrap",name:"Snow Camo",price:350,set:"arctic",desc:"Winter camo in soft greys. Now you see it..."},
+  {id:"glacier",slot:"wrap",name:"Glacier",price:0,lvl:5,desc:"Ice-blue cracks with a navy band. Unlocked at rider level 5."},
+  {id:"goldrush",slot:"wrap",name:"Gold Rush",price:0,lvl:10,desc:"Brushed gold, for riders who've put the hours in. Unlocked at level 10."},
+  {id:"aurora",slot:"wrap",name:"Northern Lights",price:0,lvl:20,desc:"Green and violet aurora over a night sky. Unlocked at level 20."},
   {id:"canyon",slot:"boots",name:"Canyon Boots",price:700,desc:"Tan suede boots with red laces, a gum sole and a BOA dial. Ski boots come in matching tan with a red power strap."},
   {id:"orbit",slot:"eyes",name:"Aurora Goggles",price:800,desc:"Oversized frameless spherical goggles with a green-to-blue mirror lens and a wide black strap."},
   {id:"anorak",slot:"top",name:"Storm Anorak",price:1000,set:"storm",look:{jacket:0,stripe:0},desc:"A colour-block pullover worn hood-up over a black ski mask and goggles, with a kangaroo pocket and criss-cross drawcords."},
@@ -3758,7 +4426,7 @@ function shuffle(a,r){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor
 function shopToday(){
   var d=dayNum(),feat=SETS.map(function(st){return {set:st}}),inFeat={};
   feat.forEach(function(f){f.set.items.forEach(function(i){inFeat[i]=1})});
-  var pool=GEAR.filter(function(g){return !inFeat[g.id]&&g.id!=="bucket"&&g.id!=="pack"&&g.id!=="penguin"&&g.id!=="rocket"}),must=pool.filter(function(g){return g.slot==="top"||g.slot==="legs"||g.slot==="eyes"||g.slot==="boots"||g.id==="trapper"||g.id==="trapper2"});
+  var pool=GEAR.filter(function(g){return !g.lvl&&!inFeat[g.id]&&g.id!=="bucket"&&g.id!=="pack"&&g.id!=="penguin"&&g.id!=="rocket"}),must=pool.filter(function(g){return g.slot==="top"||g.slot==="legs"||g.slot==="eyes"||g.slot==="boots"||g.id==="trapper"||g.id==="trapper2"});
   var rest=shuffle(pool.filter(function(g){return must.indexOf(g)<0}),seeded(d*7+3)).slice(0,Math.max(0,6-must.length));
   var day=shuffle(must.concat(rest),seeded(d*13+1)).slice(0,6);
   var bi=day.indexOf(GBY.bucket);if(bi>=0){if(day.indexOf(GBY.orbit)<0)day[bi]=GBY.orbit;else{var alt2=pool.filter(function(g){return day.indexOf(g)<0&&g!==GBY.bucket&&g!==GBY.pack})[0];if(alt2)day[bi]=alt2;else day.splice(bi,1)}}
@@ -3991,6 +4659,9 @@ function openMenu(){
   document.querySelectorAll("#drawer [data-ctx]").forEach(function(el){el.hidden=el.getAttribute("data-ctx")!==(ride?"ride":"base")});
   $("#dr-ctx").textContent=ride?PARKS[parkIdx].name+" · Solo":"Basecamp";
   $("#dr-primary-t").textContent=ride?"Resume game":"Back to lobby";
+  $("#dr-end").hidden=!(ride&&P&&P.free);
+  var rsm=$("#dr-restart small");if(rsm)rsm.textContent=P&&P.free?"Back to the start deck · keeps your session":"Back to the top of the park";
+  var rsb=$("#dr-restart b");if(rsb)rsb.textContent=P&&P.free?"Back to start":"Restart run";
   if(ride){setState("paused")}else{baseMenu=true;$("#drawer").hidden=false}
   $("#dr-primary").focus();
 }
@@ -4009,7 +4680,11 @@ $("#dr-help").addEventListener("click",function(){openSettings("controls")});
 $("#dr-howto").addEventListener("click",function(){openSettings("controls")});
 $("#dr-credits").addEventListener("click",function(){openSettings("controls");setTimeout(function(){var c=$("#credits-sec");c&&c.scrollIntoView({block:"start"})},0)});
 $("#dr-locker").addEventListener("click",function(){baseMenu=false;openLocker()});
-$("#dr-restart").addEventListener("click",startRide);
+$("#dr-restart").addEventListener("click",restartKey);
+$("#dr-replay").addEventListener("click",function(){$("#drawer").hidden=true;startReplay()});
+$("#r-replay").addEventListener("click",startReplay);
+$("#binds-reset").addEventListener("click",function(){save.binds={};persist();bindsLoad();bindsUI()});
+$("#dr-end").addEventListener("click",function(){if(!P||!P.free)return;setState("ride");if(!S.finished)finishRun()});
 $("#dr-park2").addEventListener("click",function(){baseMenu=false;openParks()});
 $("#dr-lobby").addEventListener("click",goLobby);
 $("#dr-mute").addEventListener("click",function(){audioInit();setMute(!AU.muted)});
@@ -4024,7 +4699,7 @@ function openSettings(tab){
   if(setFromMenu)$("#drawer").hidden=true;
   $("#set-back2").innerHTML=setFromMenu?"‹ &nbsp;Back to menu":"‹ &nbsp;Back";
   $("#set-back .brush").textContent=setFromMenu?"Back to menu":"Back";
-  overlay=true;$("#settings").hidden=false;selectTab(tab||"camera");$("#set-back").focus();
+  overlay=true;$("#settings").hidden=false;selectTab(tab||"camera");bindWait=null;bindsUI();$("#set-back").focus();
 }
 function closeSettings(){
   overlay=null;$("#settings").hidden=true;
@@ -4042,22 +4717,38 @@ document.querySelectorAll("[data-reset]").forEach(function(b){b.addEventListener
 $("#r-again").addEventListener("click",startRide);
 $("#r-parks").addEventListener("click",openParks);
 $("#r-lobby").addEventListener("click",goLobby);
+/* ---- rider levels: XP from every run, wraps unlocked on the way ---- */
+var TITLES=[[1,"Rookie"],[5,"Park Rat"],[10,"Shredder"],[20,"Pro"],[30,"Legend"],[40,"Icon"]];
+function lvNeed(n){return 300+120*(n-1)}
+function lvOf(xp){var n=1;while(n<60&&xp>=lvNeed(n)){xp-=lvNeed(n);n++}return {n:n,into:xp,need:lvNeed(n)}}
+function lvTitle(n){var t="Rookie";TITLES.forEach(function(x){if(n>=x[0])t=x[1]});return t}
+function levelUI(){var L=lvOf(save.xp||0),e=$("#pass-lvl");if(e)e.textContent="Lvl "+L.n+" · "+lvTitle(L.n);var b=$("#pass-xpb");if(b)b.style.width=(L.into/L.need*100)+"%"}
+function giveXP(n){
+  var before=lvOf(save.xp||0).n;save.xp=(save.xp||0)+n;var L=lvOf(save.xp),got=[];
+  GEAR.forEach(function(g){if(g.lvl&&L.n>=g.lvl&&!gOwned(g.id)){save.owned["g:"+g.id]=1;got.push(g.name)}});
+  persist();levelUI();return {before:before,after:L.n,got:got,L:L};
+}
 function finishRun(){
   S.finished=true;
-  var p=PARKS[parkIdx],prev=save.best[p.id]||0,pb=S.score>prev;
-  if(pb&&S.score>0){save.best[p.id]=Math.round(S.score)}
+  var p=PARKS[parkIdx],prev=save.best[p.id]||0,pb=S.score>prev&&!S.freeRide;
+  if(pb&&S.score>0){save.best[p.id]=Math.round(S.score);if(!P.free)ghostSave(p.id,S.score)}
   // Flakes only come from quests: count what this run finished
   questEvent("run",{park:p.id,score:S.score,pb:pb&&S.score>0,crashes:S.crashes});if(pb&&S.score>0){Cloud.push();delete LB[p.id];LDALL=null}
   var fAll=0,why=[];(save.quests&&save.quests.list||[]).forEach(function(q){if(q.doneRun===S.runId){fAll+=q.reward;why.push(QBY[q.id].short)}});persist();
   clearTimeout(finTimer);finTimer=setTimeout(function(){
-    $("#r-park").textContent=p.name+" · Solo";$("#r-score").textContent=fmt(S.score);
-    $("#r-pb").textContent=pb&&S.score>0?"New personal best!":(prev?"Personal best "+fmt(prev):"");
+    var xpGain=Math.round(S.score/(S.freeRide?250:120))+(S.freeRide?5:25),lv=giveXP(xpGain);
+    $("#r-xp-t").textContent="+"+fmt(xpGain)+" XP";$("#r-xp-b").style.width=(lv.L.into/lv.L.need*100)+"%";
+    $("#r-xp-l").textContent=lv.after>lv.before?"Level up! Lvl "+lv.after+(lv.got.length?" · Unlocked "+lv.got.join(", "):""):"Lvl "+lv.after;
+    if(lv.after>lv.before)setTimeout(function(){sfx("bank")},400);
+    $("#r-park").textContent=p.name+" · "+(S.prun&&S.prun.mode==="battle"?"Trick battle":S.prun&&S.prun.mode==="skate"?"S.K.A.T.E.":S.freeRide?"Free ride":S.timed?"2:00 Session":"Solo");
+    RBATTLE=S.prun&&S.prun.mode==="battle"?S.prun.id:null;if(typeof MP!=="undefined")MP.battleFinish(S);pgResults();$("#r-score").textContent=fmt(S.score);
+    $("#r-pb").textContent=S.freeRide?"Free ride doesn't count for your best. Pick 2:00 Session for that":pb&&S.score>0?"New personal best!":(prev?"Personal best "+fmt(prev):"");
     $("#r-flk-n").textContent="+"+fmt(fAll);$("#r-flk-why").textContent=fAll?"Quest complete: "+why.join(" · ")+". Claim it in the lobby":"Finish daily quests to earn Flakes";flakesUI();
     $("#r-s1").textContent=fmt(S.sum.tricks);$("#r-s2").textContent=fmt(S.sum.grabs);$("#r-s3").textContent=fmt(S.sum.rails);$("#r-s4").textContent=fmt(S.sum.stomp);$("#r-time").textContent=fmtClock(S.time);$("#r-tricks").textContent=S.banked.length;$("#r-crash").textContent=S.crashes;$("#r-speed").textContent=Math.round(S.topSpeed*3.6)+" km/h";
     var top=S.banked.slice().sort(function(a,b){return b.pts-a.pts}).slice(0,3),ol=$("#r-top");
     ol.innerHTML=top.length?"":"<li>No tricks banked this run</li>";
     top.forEach(function(t){var li=document.createElement("li");li.innerHTML="<b></b><span></span>";li.querySelector("b").textContent=t.name;li.querySelector("span").textContent=fmt(t.pts);ol.appendChild(li)});
-    setState("results");$("#r-again").focus();
+    setState("results");pgResults();$("#r-again").focus();
   },1300);
 }
 
@@ -4081,12 +4772,17 @@ function globalKey(c,e){
   else if(state==="item"){if(c==="Escape")openShop();else if(c==="ArrowLeft"||c==="KeyA")stepItem(-1);else if(c==="ArrowRight"||c==="KeyD")stepItem(1)}
   else if(state==="ride"){
     if(c==="Escape"||c==="KeyP")pause();
-    else if(c==="KeyR")startRide();
+    else if(c==="KeyR")restartKey();
+    else if(c==="KeyG"&&P&&!P.free){save.set.ghost=save.set.ghost===0?1:0;persist();if(save.set.ghost&&!GH.data){GH.data=ghostLoad(P.def.id);if(GH.data)ghostEnsure()}popTrick(save.set.ghost?"Ghost on":"Ghost off",GH.data?"":"",save.set.ghost&&!GH.data?"SET A BEST RUN FIRST":"","")}
+    else if(c==="KeyT"){pause();$("#drawer").hidden=true;startReplay()}
     else if(c==="KeyH"){save.set.hints=save.set.hints?0:1;persist();applySettings()}
     else if(c==="KeyN")cycleLight();
     else if(c==="KeyV")toggleView();
   }
-  else if(state==="paused"){if(c==="Escape"||c==="KeyP")setState("ride");else if(c==="KeyR")startRide();else if(c==="KeyN")cycleLight();else if(c==="KeyV")toggleView()}
+  else if(state==="replay"){e.preventDefault();if(c==="Escape"||c==="KeyT")endReplay();else if(c==="KeyC"){REP.manual=true;REP.cam=(REP.cam+1)%3;REP.tri.set(0,0,0);camInit=false;repLabel()}else if(c==="Space"){REP.slow=!REP.slow;repLabel()}}
+  else if(state==="paused"&&c==="KeyT"){$("#drawer").hidden=true;startReplay()}
+  else if(state==="paused"){if(c==="Escape"||c==="KeyP")setState("ride");else if(c==="KeyR")restartKey();else if(c==="KeyN")cycleLight();else if(c==="KeyV")toggleView()}
+  else if(state==="results"&&c==="KeyT")startReplay();
   else if(state==="results"){if(c==="KeyR"){e.preventDefault();startRide()}else if(c==="Escape")goLobby()}
 }
 
@@ -4111,8 +4807,9 @@ function loop(now){
     var sp=Math.hypot(R.vx,R.vz);S.topSpeed=Math.max(S.topSpeed,sp);
     if(R.mode==="ground"&&sp<0.8)R.still+=dt;else R.still=0;
     if(R.mode==="ground"&&R.still>3&&!S.finished){var sf=stuckFeature();if(sf){R.z=sf.z0+sf.len+2;R.x=sf.x;R.y=H(R.x,R.z);R.hd=0;R.sw=false;R.vx=0;R.vz=7;R.vy=slopeVy();R.still=0;popTrick("The snow set you past it","","","")}}
-    if(!S.finished&&R.z>P.end)finishRun();
-    updateRiderVisual(dt);gearTick(rider,dt,Math.hypot(R.vx,R.vz),R.mode==="air");hud(dt);
+    if(!S.finished&&!P.free&&R.z>P.end)finishRun();
+    if(P.free&&!S.finished)sessionTick(dt);
+    updateRiderVisual(dt);gearTick(rider,dt,Math.hypot(R.vx,R.vz),R.mode==="air");hud(dt);repRecord();ghostTick(dt);
   }else if(inBase()&&basecamp){
     var lp=new THREE.Vector3(BC.x,BC.y+bcH(0,0),BC.z),wideL=window.innerWidth>760,isL=state==="locker";
     rider.root.position.copy(lp);
@@ -4125,6 +4822,7 @@ function loop(now){
     sun.target.position.copy(lp);sun.position.copy(lp).add(sunOff);
     if(state==="lobby"){var ft=new THREE.Vector3(lp.x,lp.y-0.05,lp.z).project(camera),tag=$("#rider-tag"),onS=ft.z<1&&Math.abs(ft.x)<1&&ft.y>-1;tag.style.left=((ft.x+1)/2*window.innerWidth)+"px";tag.style.top=((1-ft.y)/2*window.innerHeight+14)+"px";tag.style.visibility=onS&&camera.position.distanceTo(cw)<0.4?"visible":"hidden"}
     updateSmoke(dt);
+  }else if(state==="replay"){replayTick(dt);
   }else if(state==="parks"||state==="splash"){
     menuT+=dt*0.05;
     if(P&&state==="parks"||P&&!basecamp){
@@ -4169,6 +4867,7 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
     var self=this,nm=Cloud.name||"RIDER";
     this.ref("names/"+nm.toLowerCase()).set(uid).catch(function(){});
     this.on(this.ref(".info/connected"),"value",function(s){if(s.val()===true)self.presence()});
+    this.on(this.ref(".info/serverTimeOffset"),"value",function(s){self.off=+s.val()||0});
     this.on(this.ref("friends/"+uid),"value",function(s){self.gotFriends(s.val()||{})});
     this.on(this.ref("reqs/"+uid),"value",function(s){self.reqs=s.val()||{};frRender();frBadge()});
     this.on(this.ref("invites/"+uid),"value",function(s){var v=s.val()||{},old=self.invites;self.invites=v;
@@ -4194,7 +4893,7 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
       m.update({n:Cloud.name||"RIDER",kit:JSON.stringify(save.kit),st:this.st,pk:this.stPk,at:this.members[this.me]&&this.members[this.me].at||Date.now()}).catch(function(){})}
   },
   setStatus:function(s){
-    var st=s==="ride"||s==="paused"||s==="results"?"ride":"lobby",pk=st==="ride"&&PARKS[parkIdx]?PARKS[parkIdx].id:"";
+    var st=s==="ride"||s==="paused"||s==="results"||s==="replay"?"ride":"lobby",pk=st==="ride"&&PARKS[parkIdx]?PARKS[parkIdx].id:"";
     if(st===this.st&&pk===this.stPk)return;this.st=st;this.stPk=pk;
     if(!this.ok())return;
     this.ref("profiles/"+this.me).update({st:st,pk:pk}).catch(function(){});
@@ -4261,13 +4960,13 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
       if(!v[self.me]){if(old[self.me]){self.leave(true);mpToast("You left the party")}return}
       Object.keys(v).forEach(function(u){if(u!==self.me&&!old[u]&&Object.keys(old).length)mpToast((v[u].n||"A rider")+" joined the party")});
       Object.keys(old).forEach(function(u){if(u!==self.me&&!v[u])mpToast((old[u].n||"A rider")+" left the party")});
-      self.fixLead();self.syncPups();frRender();lobbyMode();chatTabs();
+      self.fixLead();self.syncPups();frRender();lobbyMode();chatTabs();pgResults();
     });
     pr(this.ref("parties/"+pid+"/go"),"value",function(s){var g=s.val(),first=!self.goSeen;
       if(first){self.goSeen=(g&&g.id)||"-";return}if(!g)return;
       if(g.id===self.goSeen)return;self.goSeen=g.id;if(self.lead===self.me)return;
       var pk=PARKS.map(function(p){return p.id}).indexOf(g.pk);if(pk<0)return;
-      if(inBase()||state==="parks"){mpToast((self.members[self.lead]||{}).n+" dropped in. Following to "+PARKS[pk].name);mpFollow(pk)}
+      if(inBase()||state==="parks"){PRUN=g.pm==="battle"||g.pm==="skate"?{mode:g.pm,id:g.id}:null;mpToast((self.members[self.lead]||{}).n+" dropped in"+(g.pm==="battle"?" for a trick battle":g.pm==="skate"?" for S.K.A.T.E.":"")+". Following to "+PARKS[pk].name);mpFollow(pk)}
       else mpToast((self.members[self.lead]||{}).n+" dropped in to "+PARKS[pk].name);
     });
     var cr=this.ref("parties/"+pid+"/chat").limitToLast(50);
@@ -4300,7 +4999,62 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
   kick:function(uid){if(this.lead===this.me&&this.pid)this.ref("parties/"+this.pid+"/m/"+uid).remove()},
   count:function(){return this.pid?Object.keys(this.members).length:1},
   isLead:function(){return !this.pid||this.lead===this.me},
-  go:function(pk){if(this.pid&&this.lead===this.me&&this.count()>1)this.ref("parties/"+this.pid+"/go").set({pk:PARKS[pk].id,id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),at:this.TS()}).catch(function(){})},
+  go:function(pk){
+    var fol=FOLLOWING;FOLLOWING=false;
+    if(this.pid&&this.lead===this.me&&this.count()>1){
+      var gid=Date.now().toString(36)+Math.random().toString(36).slice(2,6),pm=this.partyMode();
+      PRUN=pm==="ride"?null:{mode:pm,id:gid};if(pm==="skate")this.skStart(gid);
+      this.ref("parties/"+this.pid+"/go").set({pk:PARKS[pk].id,id:gid,pm:pm,at:this.TS()}).catch(function(){});
+    }else if(!fol)PRUN=null;
+  },
+  partyMode:function(){var m=this.pid&&this.members[this.lead];return m&&this.count()>1&&(m.pm==="battle"||m.pm==="skate")?m.pm:"ride"},
+  setMode:function(pm){if(this.pid&&this.lead===this.me)this.ref("parties/"+this.pid+"/m/"+this.me+"/pm").set(pm).catch(function(){})},
+  now:function(){return Date.now()+(this.off||0)},
+  /* ---- trick battle: everyone's score, live ---- */
+  battleT:0,
+  battleSend:function(dt){
+    if(!PRUN||PRUN.mode!=="battle"||!this.pid||typeof S==="undefined"||!S||S.prun!==PRUN)return;
+    this.battleT-=dt;if(this.battleT>0)return;this.battleT=1;
+    this.ref("parties/"+this.pid+"/m/"+this.me+"/bs").set({id:PRUN.id,s:Math.round(S.score),fin:!!S.finished}).catch(function(){});
+  },
+  battleFinish:function(st){if(st.prun&&st.prun.mode==="battle"&&this.pid){this.ref("parties/"+this.pid+"/m/"+this.me+"/bs").set({id:st.prun.id,s:Math.round(st.score),fin:true}).catch(function(){});PRUN=null}},
+  battleRows:function(id){
+    var self=this,rows=[];Object.keys(this.members).forEach(function(u){var m=self.members[u],b=m.bs;if(u===self.me)return;if(b&&b.id===id)rows.push({n:m.n||"RIDER",s:b.s||0,fin:b.fin,me:false})});
+    var mine=typeof S!=="undefined"&&S&&S.prun&&S.prun.id===id?{n:Cloud.name||save.name||"YOU",s:Math.round(S.score),fin:!!S.finished,me:true}:null;
+    if(!mine){var mm=this.members[this.me];if(mm&&mm.bs&&mm.bs.id===id)mine={n:mm.n,s:mm.bs.s,fin:mm.bs.fin,me:true}}
+    if(mine)rows.push(mine);rows.sort(function(a,b){return b.s-a.s});return rows;
+  },
+  /* ---- game of S.K.A.T.E.: the leader runs the rounds, everyone else reports their landed tricks ---- */
+  skStart:function(gid){
+    var self=this,order=Object.keys(this.members).sort(function(a,b){return (self.members[a].at||0)-(self.members[b].at||0)}),letters={};order.forEach(function(u){letters[u]=0});
+    this.skPut({id:gid,round:1,phase:"set",setter:order[0],trick:"",until:this.now()+45000,letters:letters,order:order,winner:""});
+  },
+  skPut:function(sk){this.ref("parties/"+this.pid+"/m/"+this.me+"/sk").set(sk).catch(function(){})},
+  sk:function(){var m=this.pid&&this.members[this.lead];return m&&m.sk&&PRUN&&PRUN.mode==="skate"&&m.sk.id===PRUN.id?m.sk:null},
+  skAlive:function(sk){return sk.order.filter(function(u){return (sk.letters[u]||0)<5&&MP.members[u]})},
+  skTick:function(){
+    var sk=this.sk();if(!sk||this.lead!==this.me||sk.phase==="over")return;
+    var self=this,now=this.now(),alive=this.skAlive(sk),nextSetter=function(){var i=sk.order.indexOf(sk.setter);for(var k=1;k<=sk.order.length;k++){var u=sk.order[(i+k)%sk.order.length];if(alive.indexOf(u)>=0)return u}return alive[0]},sub=function(u){var e=self.members[u]&&self.members[u].sks;return e&&e.id===sk.id&&e.round===sk.round?e:null};
+    if(alive.length<=1){sk.phase="over";sk.winner=alive[0]||"";this.skPut(sk);return}
+    if(sk.phase==="set"){
+      var st=sub(sk.setter);
+      if(st&&st.trick){sk.phase="match";sk.trick=st.trick;sk.until=now+45000;this.skPut(sk)}
+      else if(now>sk.until||alive.indexOf(sk.setter)<0){sk.setter=nextSetter();sk.round++;sk.trick="";sk.until=now+45000;this.skPut(sk)}
+    }else if(sk.phase==="match"){
+      var need=alive.filter(function(u){return u!==sk.setter}),done=need.every(function(u){var e=sub(u);return e&&e.ok});
+      if(done||now>sk.until){need.forEach(function(u){var e=sub(u);if(!(e&&e.ok))sk.letters[u]=(sk.letters[u]||0)+1});
+        alive=this.skAlive(sk);if(alive.length<=1){sk.phase="over";sk.winner=alive[0]||"";this.skPut(sk);return}
+        sk.setter=nextSetter();sk.round++;sk.phase="set";sk.trick="";sk.until=now+45000;this.skPut(sk)}
+    }
+  },
+  // called whenever you bank a line in a S.K.A.T.E. game
+  skBanked:function(links){
+    var sk=this.sk();if(!sk||sk.phase==="over")return;
+    var airs=links.filter(function(l){return l.kind==="air"});if(!airs.length)return;
+    var me=this.me,ref=this.ref("parties/"+this.pid+"/m/"+me+"/sks");
+    if(sk.phase==="set"&&sk.setter===me){var best=airs.slice().sort(function(a,b){return b.pts-a.pts})[0];ref.set({id:sk.id,round:sk.round,trick:trickBase(best.name)}).catch(function(){})}
+    else if(sk.phase==="match"&&sk.setter!==me&&airs.some(function(l){return trickBase(l.name)===sk.trick}))ref.set({id:sk.id,round:sk.round,ok:true}).catch(function(){});
+  },
   sendChat:function(t){if(!this.pid)return Promise.reject();return this.ref("parties/"+this.pid+"/chat").push({n:Cloud.name||"RIDER",t:t,at:this.TS(),uid:this.me})},
   /* ---- other riders: one 3D rider per party member ---- */
   syncPups:function(){
@@ -4328,6 +5082,7 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
     }
     // my outfit to the party when it changes
     this.kitT-=dt;if(this.kitT<=0){this.kitT=1.5;var ks=JSON.stringify(save.kit);if(ks!==this.lastKit){this.lastKit=ks;if(this.ok()&&this.pid)this.ref("parties/"+this.pid+"/m/"+this.me+"/kit").set(ks).catch(function(){})}}
+    this.battleSend(dt);this.skTick();pgHud();
     pupsTick(dt,ride);
   }
 };
@@ -4390,15 +5145,50 @@ function pupsTick(dt,ride){
     if(canAdd){var sl2=PSLOT[ids.length]||PSLOT[2];pupV.set(BC.x+sl2[0],BC.y+bcH(sl2[0],sl2[1])+1.0,BC.z+sl2[1]).project(camera);
       addB.style.left=((pupV.x+1)/2*window.innerWidth)+"px";addB.style.top=((1-pupV.y)/2*window.innerHeight)+"px";addB.style.visibility=pupV.z<1?"visible":"hidden"}}
 }
-function mpFollow(pk){
+var PRUN=null,FOLLOWING=false,RBATTLE=null;
+function mpFollowLead(pk){fadeTo(function(){parkIdx=pk;save.park=pk;persist();if(!P||P.def!==PARKS[pk])buildWorld(PARKS[pk]);setState("parks");dropIn()})}
+function mpFollow(pk){FOLLOWING=true;
   if(state==="parks"){parkIdx=pk;save.park=pk;persist();dropIn();return}
   fadeTo(function(){parkIdx=pk;save.park=pk;persist();if(!P||P.def!==PARKS[pk])buildWorld(PARKS[pk]);setState("parks");dropIn()});
 }
 function lobbyMode(){
   var big=document.querySelector(".mode2 .m-big"),cap=document.querySelector(".mode2 .m-cap"),txt=document.querySelector(".mode2 p");if(!big)return;
   var n=MP.count();
-  if(MP.pid&&n>1){big.textContent="Party · "+n;cap.textContent="Game mode · Ride together";txt.textContent=MP.isLead()?"You lead. Pick a park and everyone drops in with you":"Your leader picks the park. You'll drop in together"}
-  else{big.textContent="Solo";cap.textContent="Game mode · Free ride";txt.textContent=PARKS.length+" parks open · ride at your own pace"}
+  var sel=$("#pm-sel"),pm=MP.partyMode();
+  if(MP.pid&&n>1){
+    var lead=MP.isLead();sel.hidden=!lead;sel.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-checked",b.getAttribute("data-pm")===pm)});
+    if(pm==="battle"){big.textContent="Trick battle";cap.textContent="Party game · "+n+" riders";txt.textContent=lead?"Pick any park. Best score wins (2:00 in the skatepark)":"Highest score wins. Your leader picks the park"}
+    else if(pm==="skate"){big.textContent="S.K.A.T.E.";cap.textContent="Party game · "+n+" riders";txt.textContent="In the skatepark: copy the trick that's set or take a letter. Spell SKATE and you're out"}
+    else{big.textContent="Party · "+n;cap.textContent="Game mode · Ride together";txt.textContent=lead?"You lead. Pick a park and everyone drops in with you":"Your leader picks the park. You'll drop in together"}}
+  else{sel.hidden=true;big.textContent="Solo";cap.textContent="Game mode · Free ride";txt.textContent=PARKS.length+" parks open · ride at your own pace"}
+}
+document.querySelectorAll("#pm-sel button").forEach(function(b){b.addEventListener("click",function(){MP.setMode(b.getAttribute("data-pm"));sfx("click")})});
+var SKATE="SKATE";
+function pgRow(box,cls,left,right){var r=document.createElement("div");r.className="r"+(cls?" "+cls:"");var a=document.createElement("span");a.textContent=left;var b=document.createElement("span");if(typeof right==="string")b.textContent=right;else b.appendChild(right);r.appendChild(a);r.appendChild(b);box.appendChild(r)}
+function letterEl(n){var sp=document.createElement("span");sp.className="lt";for(var i=0;i<5;i++){var x=document.createElement(i<n?"b":"i");x.textContent=SKATE[i];sp.appendChild(x)}return sp}
+var pgT=0;
+function pgHud(){
+  var box=$("#h-pg");if(!box)return;pgT-=1/60;if(pgT>0)return;pgT=0.25;
+  var ride=state==="ride"||state==="paused";
+  if(!ride||!PRUN||!MP.pid){box.hidden=true;return}
+  box.hidden=false;box.textContent="";var h=document.createElement("h5");box.appendChild(h);
+  if(PRUN.mode==="battle"){h.textContent="Trick battle";MP.battleRows(PRUN.id).forEach(function(r){pgRow(box,r.me?"me":"",r.n+(r.fin?" ✓":""),fmt(r.s))});return}
+  var sk=MP.sk();h.textContent="S.K.A.T.E.";if(!sk){var w=document.createElement("div");w.className="pg-ph";w.textContent="Starting…";box.appendChild(w);return}
+  sk.order.forEach(function(u){var m=MP.members[u];if(!m)return;var n=sk.letters[u]||0;pgRow(box,(u===MP.me?"me":"")+(n>=5?" out":""),(m.n||"RIDER")+(sk.setter===u&&sk.phase!=="over"?" ★":""),letterEl(n))});
+  var ph=document.createElement("div");ph.className="pg-ph";var left=Math.max(0,Math.ceil((sk.until-MP.now())/1000)),setN=(MP.members[sk.setter]||{}).n||"RIDER";
+  if(sk.phase==="over")ph.textContent=sk.winner===MP.me?"You win! 🏆":((MP.members[sk.winner]||{}).n||"Nobody")+" wins";
+  else if((sk.letters[MP.me]||0)>=5)ph.textContent="You're out. Watch the rest";
+  else if(sk.phase==="set")ph.textContent=sk.setter===MP.me?"Your set! Land any trick · "+left+"s":"Waiting for "+setN+" to set a trick · "+left+"s";
+  else ph.textContent=sk.setter===MP.me?"They have to match your "+sk.trick+" · "+left+"s":"Match: "+sk.trick+" · "+left+"s";
+  box.appendChild(ph);
+}
+function pgResults(){
+  var box=$("#r-battle");if(!box)return;
+  if(!RBATTLE||state!=="results"){box.hidden=true;return}
+  var rows=MP.battleRows(RBATTLE);box.hidden=false;box.textContent="";
+  var all=rows.every(function(r){return r.fin}),w=document.createElement("b");w.className="win";
+  w.textContent=!all?"Waiting for the others to finish…":rows[0]&&rows[0].me?"You won the battle! 🏆":(rows[0]?rows[0].n+" won the battle":"");box.appendChild(w);
+  rows.forEach(function(r,i){pgRow(box,r.me?"me":"",(i+1)+". "+r.n+(r.fin?"":" (riding)"),fmt(r.s))});
 }
 /* ---- toasts ---- */
 function mpToast(text,btns){
@@ -4470,6 +5260,7 @@ function chatTabs(){var t=$("#chat-tabs");if(!t)return;var has=!!MP.pid;t.hidden
 document.querySelectorAll("#chat-tabs button").forEach(function(b){b.addEventListener("click",function(){Chat.tab=b.getAttribute("data-ct");if(Chat.tab==="p")MP.punread=0;Chat.stick=true;chatTabs();chatRender()})});
 
 /* ================= BOOT ================= */
+bindsLoad();levelUI();
 resize();applySettings();refreshBest();
 var fontsReady=document.fonts&&document.fonts.load?Promise.race([Promise.all([document.fonts.load("italic 800 40px 'Barlow Condensed'"),document.fonts.load("16px 'DM Sans'")]),new Promise(function(r){setTimeout(r,1500)})]):Promise.resolve();
 setState("splash");
