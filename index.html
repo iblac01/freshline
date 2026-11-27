@@ -4208,18 +4208,23 @@ var MP={db:null,me:"",pid:"",lead:"",members:{},friends:{},fprof:{},reqs:{},invi
       r.on("value",function(s){e.v=s.val();frRender()},function(){})});
     frRender();
   },
+  // searches every account (the same list the leaderboard uses), so riders who haven't logged in since parties came out still show up
+  allUsers:null,
   find:function(q){
-    var self=this;q=q.toLowerCase().replace(/[^a-z0-9_]/g,"");if(!q){this.search=[];frRender();return}
-    this.ref("names").orderByKey().startAt(q).endAt(q+"").limitToFirst(8).once("value").then(function(s){
-      var out=[];s.forEach(function(c){if(c.val()!==self.me)out.push({uid:c.val(),key:c.key})});
-      if($("#fr-q").value.toLowerCase().replace(/[^a-z0-9_]/g,"")!==q)return;
-      self.search=out;out.forEach(function(o){self.ref("profiles/"+o.uid+"/n").once("value").then(function(n){o.n=n.val()||o.key.toUpperCase();frRender()})});
-      if(!out.length)frNote("No rider called “"+q.toUpperCase()+"” yet.");else frNote("");frRender();
-    }).catch(function(){frNote("Search isn't working right now.")});
+    var self=this;q=String(q||"").toLowerCase().replace(/[^a-z0-9_]/g,"");if(!q){this.search=[];frNote("");frRender();return}
+    var cached=this.allUsers&&Date.now()-this.allUsers.at<30000?Promise.resolve(this.allUsers.rows):Cloud.users().limit(1000).get().then(function(snap){
+      var rows=[];snap.forEach(function(d){var v=d.data()||{};if(v.name)rows.push({uid:d.id,n:String(v.name).toUpperCase().slice(0,16)})});self.allUsers={at:Date.now(),rows:rows};return rows});
+    cached.then(function(rows){
+      if(String($("#fr-q").value||"").toLowerCase().replace(/[^a-z0-9_]/g,"")!==q)return;
+      var hits=rows.filter(function(r){return r.uid!==self.me&&r.n.toLowerCase().indexOf(q)>=0});
+      hits.sort(function(a,b){var pa=a.n.toLowerCase().indexOf(q)===0?0:1,pb=b.n.toLowerCase().indexOf(q)===0?0:1;return pa-pb||a.n.length-b.n.length||a.n.localeCompare(b.n)});
+      self.search=hits.slice(0,8).map(function(r){return {uid:r.uid,key:r.n.toLowerCase(),n:r.n}});
+      frNote(self.search.length?"":"No rider called \u201c"+q.toUpperCase()+"\u201d. Check the spelling.");frRender();
+    }).catch(function(){frNote("Search isn't working right now. Check your internet and try again.")});
   },
   add:function(uid,name){
     var self=this;if(this.reqs[uid]){this.accept(uid);return}
-    this.ref("reqs/"+uid+"/"+this.me).set({n:Cloud.name||"RIDER",at:this.TS()}).then(function(){self.sent[uid]=1;frNote("Friend request sent to "+name+".");frRender()}).catch(function(){frNote("Couldn't send that request.")});
+    this.ref("reqs/"+uid+"/"+this.me).set({n:Cloud.name||"RIDER",at:this.TS()}).then(function(){self.sent[uid]=1;frNote("Friend request sent to "+name+".");frRender()}).catch(function(){frNote("Couldn't send that request. The Realtime Database might not be switched on yet.")});
   },
   accept:function(uid){var u={};u["friends/"+this.me+"/"+uid]=true;u["friends/"+uid+"/"+this.me]=true;u["reqs/"+this.me+"/"+uid]=null;this.ref("").update(u).catch(function(){frNote("Couldn't add that friend.")})},
   decline:function(uid){this.ref("reqs/"+this.me+"/"+uid).remove()},
