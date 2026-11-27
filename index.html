@@ -70,7 +70,8 @@ button{cursor:pointer}
 .iconbtn{display:flex;align-items:center;gap:8px;background:rgba(21,22,25,.82);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;letter-spacing:.12em}
 .iconbtn:hover{background:rgba(40,42,48,.9)}
 .lob-col{position:absolute;left:44px;top:88px;bottom:26px;width:340px;max-width:calc(100% - 64px);display:flex;flex-direction:column;gap:10px}
-.lob-col>*{animation:cardIn .55s cubic-bezier(.2,.8,.2,1) both}
+.lob-col>*{flex-shrink:0;animation:cardIn .55s cubic-bezier(.2,.8,.2,1) both}
+@media (max-height:700px){.lob-col{overflow-y:auto;pointer-events:auto;scrollbar-width:none}.lob-col::-webkit-scrollbar{display:none}}
 .lob-col>*:nth-child(2){animation-delay:.06s}.lob-col>*:nth-child(3){animation-delay:.12s}.lob-col>*:nth-child(4){animation-delay:.18s}
 @keyframes cardIn{from{opacity:0;transform:translateX(-22px)}}
 .rider-card{background:linear-gradient(135deg,#4cae86,#2b7a5e);border-radius:12px;padding:12px 14px 14px;box-shadow:0 12px 30px rgba(0,0,0,.25);display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
@@ -530,6 +531,29 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
   .it-btns{width:100%}
 }
 @media (max-width:560px){.it-count{bottom:calc(56% + 18px)}}
+/* ---------- leaderboard page ---------- */
+#leaders{position:fixed;inset:0;z-index:4;display:flex;justify-content:center;align-items:flex-start;padding:84px 24px 24px;background:linear-gradient(180deg,rgba(10,14,34,.55),rgba(10,14,34,.78));color:#fff;pointer-events:auto}
+#leaders[hidden]{display:none}
+.ld-panel{width:min(720px,100%);max-height:100%;display:flex;flex-direction:column;gap:10px;padding:20px 22px 18px;border-radius:18px;background:rgba(18,22,40,.82);border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.ld-head{display:flex;align-items:baseline;justify-content:space-between}
+.ld-head h1{margin:0;font-size:46px;line-height:.9}
+.ld-sub{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.ld-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.ld-tabs button{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.ld-tabs button[aria-selected="true"]{background:#f5f1e8;color:#141517;border-color:#f5f1e8}
+.ld-cols{display:grid;grid-template-columns:44px 1fr auto;padding:0 12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.ld-list{list-style:none;margin:0;padding:0;overflow-y:auto;display:flex;flex-direction:column;gap:4px;min-height:120px}
+.ld-list li{display:grid;grid-template-columns:44px 1fr auto;align-items:center;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.04);font-size:15px}
+.ld-list li i{font-style:normal;font-weight:900;color:rgba(255,255,255,.5)}
+.ld-list li b{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ld-list li span{font-weight:800;font-variant-numeric:tabular-nums;color:#9fd3ff}
+.ld-list li.g1{background:linear-gradient(90deg,rgba(255,210,63,.22),rgba(255,255,255,.04))}.ld-list li.g1 i{color:#ffd23f}
+.ld-list li.g2{background:linear-gradient(90deg,rgba(217,221,226,.18),rgba(255,255,255,.04))}.ld-list li.g2 i{color:#e3e6ea}
+.ld-list li.g3{background:linear-gradient(90deg,rgba(232,161,92,.2),rgba(255,255,255,.04))}.ld-list li.g3 i{color:#e8a15c}
+.ld-list li.me{outline:2px solid #7fd0ff;background:rgba(127,208,255,.16)}
+.ld-list .ld-msg{display:block;grid-column:1/-1;text-align:center;color:rgba(255,255,255,.6);font-size:14px;padding:18px 8px}
+.ld-me{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;color:rgba(255,255,255,.75);min-height:20px}
+.ld-me button{border:0;border-radius:8px;padding:7px 12px;background:#ff6a3d;color:#fff;font:inherit;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
 /* ---------- flakes ---------- */
 .flk{display:inline-block;flex:none;filter:drop-shadow(0 1px 1.5px rgba(0,30,90,.45))}
 .flk-btn{gap:7px;padding-left:9px}
@@ -639,6 +663,8 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
 @media (max-width:860px){.nw-hero{grid-template-columns:1fr}.nw-hero-img{min-height:0;aspect-ratio:16/9}.nw-wrap{padding:20px 18px 40px}.nw-title{font-size:52px}.nw-hero h2{font-size:38px}.nw-hero-txt{padding:22px}}
 @media (max-width:560px){.nw-scroll{top:108px}}
 @media (prefers-reduced-motion:reduce){.trick,.drawer,.pulse,.daily .badge,.daily .badge svg{animation:none}}
+@media (max-height:860px){.lob-col{top:80px;bottom:16px;gap:8px}.quests{padding:10px 10px 8px;gap:6px}.q-list{gap:5px}.q{padding:7px 9px 8px}.q-t{font-size:12px}.q-foot{display:none}.mode2{padding:12px 14px 12px}.mode2 p{margin-bottom:10px}}
+
 </style>
 </head>
 <body>
@@ -660,6 +686,7 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
     <button type="button" class="tab brush" aria-current="true" id="nav-ride">Ride</button>
     <button type="button" class="tab brush" id="nav-shop">Shop</button>
     <button type="button" class="tab brush" id="nav-locker">Locker</button>
+    <button type="button" class="tab brush" id="nav-lead">Leaderboard</button>
     <button type="button" class="tab brush" id="nav-news">News</button>
     <button type="button" class="tab brush" id="nav-howto">How to play</button>
     <span class="sp"></span>
@@ -761,6 +788,16 @@ button.glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3)}
   <button type="button" class="it-arrow l" id="it-prev" aria-label="Previous item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button type="button" class="it-arrow r" id="it-next" aria-label="Next item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   <div class="it-keys"><span>Drag to spin</span><span><b class="kb">←</b><b class="kb">→</b> Browse</span><span><b class="kb">ESC</b> Back</span></div>
+</section>
+<!-- LEADERBOARD -->
+<section id="leaders" hidden aria-label="Leaderboard">
+  <div class="ld-panel">
+    <div class="ld-head"><h1 class="brush">Leaderboard</h1><span class="ld-sub">Top riders worldwide</span></div>
+    <div class="ld-tabs" id="ld-tabs" role="tablist"></div>
+    <div class="ld-cols"><span>#</span><span>Rider</span><span id="ld-colh">Total best</span></div>
+    <ol class="ld-list" id="ld-list"></ol>
+    <div class="ld-me" id="ld-me"></div>
+  </div>
 </section>
 <!-- NEWS -->
 <section id="news" hidden aria-label="News"><div class="nw-scroll" id="nw-scroll">
@@ -1938,7 +1975,7 @@ function buildRider(){
   var shaftG=loftGeo(sampleRings([[0.09,0.062,0.086,2.6,-0.026],[0.15,0.068,0.088,2.6,-0.01],[0.2,0.068,0.084,2.4,0.006],[0.22,0.064,0.078,2.4,0.012]],0.02),24,true,true);
   var cuffM=S(0xd9dde2,{roughness:0.35,envMapIntensity:0.5}),metalM=S(0xc9ced6,{metalness:0.8,roughness:0.28,envMapIntensity:0.9}),boardBootM=S(0x2e3238,{roughness:0.92}),randM=S(0x5b6068,{roughness:0.85}),laceM=S(0xe9e6df,{roughness:0.8}),bSoleM=S(0xeeeae2,{roughness:0.7}),gumM=S(0x7a4a24,{roughness:0.85}),bindM=S(0x1b1e22,{roughness:0.45,envMapIntensity:0.5,side:THREE.DoubleSide}),strapM=S(0x2c3038,{roughness:0.75}),padM2=S(0x50565f,{roughness:0.9});
   function rrect(w,h,r){var q=new THREE.Shape(),x=-w/2,y=-h/2;q.moveTo(x+r,y);q.lineTo(x+w-r,y);q.quadraticCurveTo(x+w,y,x+w,y+r);q.lineTo(x+w,y+h-r);q.quadraticCurveTo(x+w,y+h,x+w-r,y+h);q.lineTo(x+r,y+h);q.quadraticCurveTo(x,y+h,x,y+h-r);q.lineTo(x,y+r);q.quadraticCurveTo(x,y,x+r,y);return q}
-  var skiBoots=[],boardBoots=[],bootX=[];
+  var skiBoots=[],boardBoots=[],bootX=[],bindings=[];
   [-1,1].forEach(function(s){var f=new THREE.Group();f.position.set(s*SKW,0.04,0.02);feet.add(f);
     // --- ski boot: glossy hard shell, chunky sole with toe and heel lugs, buckles with metal bails, cuff hinge rivet ---
     var sk=new THREE.Group();sk.position.x=s*FO;sk.scale.set(1.36,1.04,1.06);f.add(sk);skiBoots.push(sk);
@@ -1972,13 +2009,14 @@ function buildRider(){
     var dl=add(new THREE.CylinderGeometry(0.022,0.024,0.016,20),S(0x1b1d21,{roughness:0.4}),s*0.07,0.13,-0.01,cx2);dl.rotation.z=Math.PI/2;
     var dr=add(new THREE.TorusGeometry(0.02,0.004,6,20),S(0xc8302a,{roughness:0.5}),s*0.079,0.13,-0.01,cx2);dr.rotation.y=Math.PI/2;
     var lp=add(new THREE.TorusGeometry(0.018,0.005,6,16,Math.PI),S(0xc8302a,{roughness:0.8}),0,0.21,-0.075,cx2);lp.rotation.y=Math.PI/2;
+    var bnd=new THREE.Group();bb.add(bnd);bindings.push(bnd);
     // binding: rounded baseplate, highback behind the calf, padded ankle strap, toe strap, ratchets
-    var bpg=new THREE.ExtrudeGeometry(rrect(0.18,0.3,0.06),{depth:0.008,bevelEnabled:false,curveSegments:6});bpg.rotateX(-Math.PI/2);add(bpg,bindM,0,-0.02,0.02,bb);
-    var hbk=add(new THREE.CylinderGeometry(0.074,0.072,0.085,22,1,true,Math.PI-1.05,2.1),bindM,0,0.035,-0.035,bb);hbk.rotation.x=0.1;hbk.scale.x=1.36;
-    var ank=add(new THREE.TorusGeometry(0.088,0.018,8,26,Math.PI),strapM,0,0.118,0.038,bb);ank.rotation.x=-0.45;ank.scale.set(1.12,1,2.2);
-    var ankP=add(new THREE.TorusGeometry(0.084,0.01,6,26,Math.PI),padM2,0,0.118,0.038,bb);ankP.rotation.x=-0.45;ankP.scale.set(1.12,1,3.2);
-    var toe=add(new THREE.TorusGeometry(0.073,0.011,8,22,Math.PI),strapM,0,0.045,0.135,bb);toe.rotation.x=0.55;toe.scale.set(1.36,1,1.6);
-    var rtM=S(0x3a3f47,{roughness:0.4,metalness:0.6});[[0.118,0.0,0.1],[0.05,0.13,0.088]].forEach(function(q){add(new THREE.BoxGeometry(0.008,0.02,0.026),rtM,s*q[2],q[0],q[1],bb)});
+    var bpg=new THREE.ExtrudeGeometry(rrect(0.18,0.3,0.06),{depth:0.008,bevelEnabled:false,curveSegments:6});bpg.rotateX(-Math.PI/2);add(bpg,bindM,0,-0.02,0.02,bnd);
+    var hbk=add(new THREE.CylinderGeometry(0.074,0.072,0.085,22,1,true,Math.PI-1.05,2.1),bindM,0,0.035,-0.035,bnd);hbk.rotation.x=0.1;hbk.scale.x=1.36;
+    var ank=add(new THREE.TorusGeometry(0.088,0.018,8,26,Math.PI),strapM,0,0.118,0.038,bnd);ank.rotation.x=-0.45;ank.scale.set(1.12,1,2.2);
+    var ankP=add(new THREE.TorusGeometry(0.084,0.01,6,26,Math.PI),padM2,0,0.118,0.038,bnd);ankP.rotation.x=-0.45;ankP.scale.set(1.12,1,3.2);
+    var toe=add(new THREE.TorusGeometry(0.073,0.011,8,22,Math.PI),strapM,0,0.045,0.135,bnd);toe.rotation.x=0.55;toe.scale.set(1.36,1,1.6);
+    var rtM=S(0x3a3f47,{roughness:0.4,metalness:0.6});[[0.118,0.0,0.1],[0.05,0.13,0.088]].forEach(function(q){add(new THREE.BoxGeometry(0.008,0.02,0.026),rtM,s*q[2],q[0],q[1],bnd)});
     boots.push(f)});
   // ---- pelvis + legs (IK) ----
   var hips=new THREE.Group();body.add(hips);
@@ -2341,7 +2379,7 @@ function buildRider(){
   root.updateMatrixWorld(true);
   SKINNED.forEach(function(k){k.m.bind(new THREE.Skeleton(k.bones))});
   aL.fore.rotation.x=-0.5;aR.fore.rotation.x=-0.5;
-  return {fpHide:fpHide,drape:drape,drapeK:0,feet:feet,bootM:bootM,bootX:bootX,bootMats:{bootM:bootM,cuffM:cuffM,boardBootM:boardBootM,laceM:laceM,bSoleM:bSoleM,gumM:gumM,randM:randM,def:[bootM,cuffM,boardBootM,laceM,bSoleM,gumM,randM].map(function(m){return m.color.getHex()})},skiBoots:skiBoots,boardBoots:boardBoots,root:root,pivot:pivot,stance:stance,body:body,hips:hips,spine:spine,torso:torso,head:head,legs:legs,boots:boots,aL:aL,aR:aR,mats:mats,gog1:gogG,gog2:gog2,strapParts:strapParts,tneck:tneck,gcuffs:gcuffs,face:face,nose:nose,skinM:skin,maskM:S(0x0b0c0f,{roughness:1,bumpMap:knitTex(),bumpScale:0.005,envMapIntensity:0.15}),hipStd:hipStd,hipBag:hipBag,heads:heads,backG:backG,backs:backs,tops:{puffer:[pg,pgT].concat(aL.puff,aR.puff),anorak:[ag].concat(aL.ano,aR.ano),tee:[tg].concat(aL.tee,aR.tee)},hoodUp:hu,ahd:ahd,skisG:skisG,boardG:boardG,carry:carry,carrySki:carrySki,carryBoard:carryBoard,crouch:0,top:torso,board:false};
+  return {fpHide:fpHide,drape:drape,drapeK:0,feet:feet,bootM:bootM,bootX:bootX,bindings:bindings,bootMats:{bootM:bootM,cuffM:cuffM,boardBootM:boardBootM,laceM:laceM,bSoleM:bSoleM,gumM:gumM,randM:randM,def:[bootM,cuffM,boardBootM,laceM,bSoleM,gumM,randM].map(function(m){return m.color.getHex()})},skiBoots:skiBoots,boardBoots:boardBoots,root:root,pivot:pivot,stance:stance,body:body,hips:hips,spine:spine,torso:torso,head:head,legs:legs,boots:boots,aL:aL,aR:aR,mats:mats,gog1:gogG,gog2:gog2,strapParts:strapParts,tneck:tneck,gcuffs:gcuffs,face:face,nose:nose,skinM:skin,maskM:S(0x0b0c0f,{roughness:1,bumpMap:knitTex(),bumpScale:0.005,envMapIntensity:0.15}),hipStd:hipStd,hipBag:hipBag,heads:heads,backG:backG,backs:backs,tops:{puffer:[pg,pgT].concat(aL.puff,aR.puff),anorak:[ag].concat(aL.ano,aR.ano),tee:[tg].concat(aL.tee,aR.tee)},hoodUp:hu,ahd:ahd,skisG:skisG,boardG:boardG,carry:carry,carrySki:carrySki,carryBoard:carryBoard,crouch:0,top:torso,board:false};
 }
 var rider=buildRider();scene.add(rider.root);
 function setGear(board){
@@ -2350,7 +2388,7 @@ function setGear(board){
   rider.skiBoots.forEach(function(b){b.visible=!board});rider.boardBoots.forEach(function(b){b.visible=board});
   updateGearVis();
 }
-function updateGearVis(){var c=rider.carry.visible;rider.skisG.visible=!c&&!rider.board;rider.boardG.visible=!c&&rider.board}
+function updateGearVis(){var c=rider.carry.visible;rider.skisG.visible=!c&&!rider.board;rider.boardG.visible=!c&&rider.board;if(rider.bindings)rider.bindings.forEach(function(b){b.visible=!c})}
 function drapeJacket(k){
   rider.drapeK=k;
   rider.drape.forEach(function(d){
@@ -2433,10 +2471,11 @@ function poseRider(crouch,grab,ctx){
   var L=rider.aL,R2=rider.aR;
   if(grab==="hold"){
     // basecamp: relaxed carry pose (angle based so the carried skis line up)
-    var tl={x:-0.12,z:0.22,f:-0.5},tr={x:-0.12,z:-0.2,f:-0.12};
-    [[L,tl],[R2,tr]].forEach(function(p){var a=p[0],t=p[1];a.sh.rotation.set(damp(a.sh.rotation.x,t.x,10,dt),0,damp(a.sh.rotation.z,t.z,10,dt));a.fore.rotation.x=damp(a.fore.rotation.x,t.f,10,dt);a.ik=0});
+    var tl={x:-0.12,z:0.22,f:-0.5},tr={x:-0.06,z:-0.34,f:-0.42};
+    [[L,tl],[R2,tr]].forEach(function(p){var a=p[0],t=p[1];a.sh.rotation.set(damp(a.sh.rotation.x,t.x,10,dt),0,damp(a.sh.rotation.z,t.z,10,dt));a.fore.rotation.x=damp(a.fore.rotation.x,t.f,10,dt);a.hand.rotation.y=damp(a.hand.rotation.y,-a.s*1.15,10,dt);a.ik=0});
     L.pole.visible=R2.pole.visible=false;return;
   }
+  L.hand.rotation.y=damp(L.hand.rotation.y,0,10,dt);R2.hand.rotation.y=damp(R2.hand.rotation.y,0,10,dt);
   // hand targets in torso space (x side, y up, z forward); s=+1 is the left arm
   function base(s,out){
     if(board)out.set(s*0.5,-0.02,0.1);
@@ -3211,7 +3250,7 @@ function hud(dt){
 /* ================= SCREENS ================= */
 var isTouch=window.matchMedia&&window.matchMedia("(pointer:coarse)").matches;if(isTouch)document.body.classList.add("touchui");
 var overlay=null; // "settings" sits over another state
-function inBase(){return state==="lobby"||state==="locker"||state==="news"||state==="shop"||state==="item"}
+function inBase(){return state==="lobby"||state==="locker"||state==="news"||state==="shop"||state==="item"||state==="leaders"}
 var LKEYS=["day","sunset","blue","night"],LNAMES=["Day","Sunset","Blue hour","Night"];
 function lightKey(){return inBase()?((save.set.light|0)===3?"night":"dusk"):LKEYS[save.set.light|0]}
 function setLight(v){save.set.light=v;persist();applySettings();var t=$("#dr-light-t");if(t)t.textContent=LNAMES[v]}
@@ -3232,13 +3271,13 @@ function setState(s){
   var wasBase=inBase();
   state=s;
   if(s!=="ride"&&s!=="paused"&&s!=="results"&&typeof setFP==="function"&&rider)setFP(false);
-  if(chatOpen&&s!=="lobby"&&s!=="news"&&s!=="locker"&&s!=="shop"&&s!=="item"){chatOpen=false;$("#chat").hidden=true}
+  if(chatOpen&&s!=="lobby"&&s!=="news"&&s!=="locker"&&s!=="shop"&&s!=="item"&&s!=="leaders"){chatOpen=false;$("#chat").hidden=true}
   if(inBase()&&!wasBase){snapCam=true;lockYaw=0.2}
-  $("#lobby").hidden=s!=="lobby";$("#news").hidden=s!=="news";$("#shop").hidden=s!=="shop";$("#item").hidden=s!=="item";if(s==="news")$("#nw-scroll").scrollTop=0;if(s==="lobby"&&typeof renderQuests==="function")renderQuests();$("#topnav").hidden=!(s==="lobby"||s==="locker"||s==="news"||s==="shop"||s==="item");$("#parks").hidden=s!=="parks";$("#locker").hidden=s!=="locker";
+  $("#lobby").hidden=s!=="lobby";$("#news").hidden=s!=="news";$("#shop").hidden=s!=="shop";$("#item").hidden=s!=="item";$("#leaders").hidden=s!=="leaders";if(s==="news")$("#nw-scroll").scrollTop=0;if(s==="lobby"&&typeof renderQuests==="function")renderQuests();$("#topnav").hidden=!(s==="lobby"||s==="locker"||s==="news"||s==="shop"||s==="item"||s==="leaders");$("#parks").hidden=s!=="parks";$("#locker").hidden=s!=="locker";
   $("#hud").hidden=!(s==="ride"||s==="paused"||s==="results");
   $("#drawer").hidden=!(s==="paused"||baseMenu);$("#results").hidden=s!=="results";
   $("#touch").hidden=!(s==="ride"&&isTouch);
-  document.querySelectorAll(".topnav .tab").forEach(function(t){t.setAttribute("aria-current",(t.id==="nav-ride"&&s==="lobby")||(t.id==="nav-locker"&&s==="locker")||(t.id==="nav-news"&&s==="news")||(t.id==="nav-shop"&&(s==="shop"||s==="item")))});
+  document.querySelectorAll(".topnav .tab").forEach(function(t){t.setAttribute("aria-current",(t.id==="nav-ride"&&s==="lobby")||(t.id==="nav-locker"&&s==="locker")||(t.id==="nav-news"&&s==="news")||(t.id==="nav-shop"&&(s==="shop"||s==="item"))||(t.id==="nav-lead"&&s==="leaders"))});
   syncScene();
 }
 function click(){sfx("click")}
@@ -3814,6 +3853,36 @@ function itemRender(dt){
   renderer.render(pv.scene,cam);
 }
 $("#nav-shop").addEventListener("click",openShop);
+/* ---------- global leaderboard page: overall (sum of park bests) and per park ---------- */
+var LDTAB="all",LDALL=null;
+function openLeaders(){setState("leaders");buildLdTabs();loadLeaders()}
+function buildLdTabs(){var t=$("#ld-tabs");t.innerHTML="";[["all","Overall"]].concat(PARKS.map(function(p){return [p.id,p.name]})).forEach(function(o){
+  var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=o[1];b.setAttribute("aria-selected",LDTAB===o[0]);
+  b.addEventListener("click",function(){LDTAB=o[0];buildLdTabs();drawLeaders()});t.appendChild(b)})}
+function ldMsg(m){$("#ld-list").innerHTML='<li><span class="ld-msg"></span></li>';$("#ld-list .ld-msg").textContent=m}
+function loadLeaders(){
+  $("#ld-me").innerHTML="";
+  if(!Cloud.on){ldMsg(FIREBASE_CONFIG?"Connecting to the leaderboard… if this doesn't change, check your internet connection.":"Online leaderboards aren't set up.");if(FIREBASE_CONFIG)setTimeout(function(){if(state==="leaders"&&Cloud.on)loadLeaders()},2500);return}
+  if(LDALL&&Date.now()-LDALL.at<60000){drawLeaders();return}
+  ldMsg("Loading…");
+  Cloud.users().limit(500).get().then(function(q){var rows=[];q.forEach(function(d){var v=d.data()||{};rows.push({uid:d.id,name:v.name||"RIDER",best:v.best||{}})});LDALL={at:Date.now(),rows:rows};if(state==="leaders")drawLeaders()})
+    .catch(function(e){ldMsg("Couldn't load the leaderboard. Check the Firestore rules are published.")});
+}
+function drawLeaders(){
+  if(!LDALL)return;var id=LDTAB,ol=$("#ld-list");
+  $("#ld-colh").textContent=id==="all"?"Total best":"Best score";
+  var rows=LDALL.rows.map(function(r){var sc=id==="all"?PARKS.reduce(function(a,p){return a+(+r.best[p.id]||0)},0):(+r.best[id]||0);return {uid:r.uid,name:r.name,score:sc}}).filter(function(r){return r.score>0});
+  rows.sort(function(a,b){return b.score-a.score});
+  var me=Cloud.user&&Cloud.user.uid,myRank=-1;rows.forEach(function(r,i){if(r.uid===me)myRank=i});
+  ol.innerHTML="";
+  if(!rows.length){ldMsg("No scores here yet. Be the first!")}
+  rows.slice(0,50).forEach(function(r,i){var li=document.createElement("li");li.className=(i<3?"g"+(i+1):"")+(r.uid===me?" me":"");
+    li.innerHTML="<i></i><b></b><span></span>";li.querySelector("i").textContent=i+1;li.querySelector("b").textContent=r.name;li.querySelector("span").textContent=fmt(r.score);ol.appendChild(li)});
+  var m=$("#ld-me");m.innerHTML="";
+  if(!me){var t=document.createElement("span");t.textContent="Your scores only count when you're logged in.";var b=document.createElement("button");b.type="button";b.textContent="Log in / sign up";b.addEventListener("click",openAcct);m.appendChild(t);m.appendChild(b)}
+  else{var t2=document.createElement("span");t2.textContent=myRank>=0?"You're #"+(myRank+1)+" of "+rows.length+" riders.":"Finish a run to get on this board.";m.appendChild(t2)}
+}
+$("#nav-lead").addEventListener("click",openLeaders);
 buildLocker();
 
 // side menu
@@ -3880,7 +3949,7 @@ function finishRun(){
   var p=PARKS[parkIdx],prev=save.best[p.id]||0,pb=S.score>prev;
   if(pb&&S.score>0){save.best[p.id]=Math.round(S.score)}
   // Flakes only come from quests: count what this run finished
-  questEvent("run",{park:p.id,score:S.score,pb:pb&&S.score>0,crashes:S.crashes});if(pb&&S.score>0){Cloud.push();delete LB[p.id]}
+  questEvent("run",{park:p.id,score:S.score,pb:pb&&S.score>0,crashes:S.crashes});if(pb&&S.score>0){Cloud.push();delete LB[p.id];LDALL=null}
   var fAll=0,why=[];(save.quests&&save.quests.list||[]).forEach(function(q){if(q.doneRun===S.runId){fAll+=q.reward;why.push(QBY[q.id].short)}});persist();
   clearTimeout(finTimer);finTimer=setTimeout(function(){
     $("#r-park").textContent=p.name+" · Solo";$("#r-score").textContent=fmt(S.score);
@@ -3909,6 +3978,7 @@ function globalKey(c,e){
   else if(state==="locker"){if(c==="Escape")openMenu()}
   else if(state==="news"){if(c==="Escape")setState("lobby")}
   else if(state==="shop"){if(c==="Escape")setState("lobby")}
+  else if(state==="leaders"){if(c==="Escape")setState("lobby")}
   else if(state==="item"){if(c==="Escape")openShop();else if(c==="ArrowLeft"||c==="KeyA")stepItem(-1);else if(c==="ArrowRight"||c==="KeyD")stepItem(1)}
   else if(state==="ride"){
     if(c==="Escape"||c==="KeyP")pause();
